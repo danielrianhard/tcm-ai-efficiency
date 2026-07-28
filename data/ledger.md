@@ -5,7 +5,9 @@
 - **Universe:** 345 companies (boss-provided Bloomberg screen, "AI adoption .pdf")
 - **Baseline:** Phase 1 deep verification completed 2026-07-21
 - **Methodology:** see `claude/AI_Efficiency_Methodology.md` (admission criteria, strictness filter, scoring rubric, run procedure)
-- **Last run:** (baseline — no automated runs yet)
+- **Last run:** 2026-07-28 (two passes: initial 21–28 Jul sweep, then a requeue pass)
+- **Standing:** 21 realized · 25 plan · 23 cut · 276 outside · 5 near-misses · 0 additions since baseline
+- **Pending requeue (next run):** ACGL, ACHC, AON, AXS, BG, CHE, CINF, CR, ENSG, HLT, HRI, ICLR, ITW, LSTR, PFG, PJT, PNR, RCL, SPGI, THG, UHS, UNM, VLTO, WERN, WM, XYL (26)
 
 ## Status codes
 

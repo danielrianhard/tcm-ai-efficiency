@@ -136,6 +136,7 @@ footer{{margin:50px 0 34px;padding-top:16px;border-top:1px solid #E3DEE9;
 
 NAV = [
     ("index.html",       "The Database"),
+    ("nearmisses.html",  "Near Misses"),
     ("evidence.html",    "Evidence Log"),
     ("rejections.html",  "Rejections"),
     ("universe.html",    "Universe (345)"),
@@ -156,7 +157,7 @@ def shell(title, subtitle, active, body, depth=0, meta_line=None):
     )
     meta_line = meta_line or (
         f"345-name watch universe &nbsp;·&nbsp; Baseline 21 Jul 2026 "
-        f"&nbsp;·&nbsp; Site built {date.today():%d %b %Y}"
+        f"&nbsp;·&nbsp; Last scan {date.today():%d %b %Y}"
     )
     return f"""<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -223,8 +224,8 @@ def page_index(st, adm):
             ("Realized",   len(realized), "criteria B"),
             ("Plan",       len(plan), "criteria A"),
             ("Rejected",   len(cut), "failed verification"),
-            ("Top Score",  top["score"], esc(top["ticker"])),
-        ]
+            ("Near Misses", len(st.get("near_misses", [])), "deep-reviewed, rejected"),
+                    ]
     )
 
     rows = []
@@ -492,6 +493,53 @@ written to the ledger and this site is rebuilt.</div>
     return shell("Run Log", "Scan history", "runlog.html", body)
 
 
+def page_nearmiss(st):
+    nms = st.get("near_misses", [])
+    if not nms:
+        blocks = '<p class="empty">No near-misses recorded yet.</p>'
+    else:
+        parts = []
+        for nm in nms:
+            quotes = "".join(
+                f'<blockquote>“{esc(q["q"])}”<span class="attr">{esc(q["who"])}</span></blockquote>'
+                for q in nm.get("quotes", [])
+            )
+            peer = (f'<div class="box box-push"><div class="h">● Peer check</div>{esc(nm["peer"])}</div>'
+                    if nm.get("peer") else "")
+            parts.append(f"""
+<h3 style="font-size:16px;margin-top:30px">{esc(nm['ticker'])} — {esc(nm['company'])}
+  <span class="b b-pending" style="margin-left:8px">Near Miss · scored {nm['score']}</span></h3>
+<p class="sm" style="font-family:Arial,sans-serif;font-size:11.5px;color:{GRAY}">
+  {esc(nm['sub_industry'])} &nbsp;·&nbsp; call {esc(nm['call_date'])} &nbsp;·&nbsp;
+  <a href="{esc(nm['url'])}">source transcript</a></p>
+<p><strong>{esc(nm['headline'])}</strong></p>
+{quotes}
+<div class="box box-signal"><div class="h">▲ What survived</div>{esc(nm['survives'])}</div>
+<div class="box box-persp"><div class="h">The kill</div>{esc(nm['kill'])}</div>
+{peer}
+<p><strong>Materiality.</strong> {esc(nm['materiality'])}</p>
+<p><strong>Watch item.</strong> {esc(nm['watch'])}</p>
+<div class="rule" style="margin-top:26px"></div>""")
+        blocks = "".join(parts)
+
+    body = f"""
+<h2>Near Misses</h2><div class="rule"></div>
+<p class="lede">Companies that passed the thin screen, earned a full deep review, and were
+<strong>rejected</strong>. Each was scored against the same rubric as an admitted name and fell
+short. They are the closest thing the universe currently has to a future admission, and they are
+re-tested when they next report.</p>
+
+<div class="box box-persp"><div class="h">Why these are worth reading</div>
+Every name here had a real, quoted, AI-attributed number — which is already rarer than it sounds.
+They failed on what happened next: the number measured activity rather than cost, the reported
+financials moved the other way, a peer achieved the same result with no AI story, or management's
+own explanation of its margin never mentioned the tool. This page is where the standard is
+actually visible.</div>
+{blocks}"""
+    return shell("Near Misses", f"{len(nms)} candidates deep-reviewed and rejected",
+                 "nearmisses.html", body)
+
+
 def page_method(st):
     body = """
 <h2>Admission Criteria</h2><div class="rule"></div>
@@ -585,6 +633,7 @@ def main():
 
     (OUT / "index.html").write_text(page_index(st, adm))
     (OUT / "rejections.html").write_text(page_rejections(st))
+    (OUT / "nearmisses.html").write_text(page_nearmiss(st))
     (OUT / "universe.html").write_text(page_universe(st))
     (OUT / "evidence.html").write_text(page_evidence(st))
     (OUT / "runlog.html").write_text(page_runlog(st))

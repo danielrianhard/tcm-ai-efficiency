@@ -385,9 +385,116 @@ Screened in Phase 1 with no qualifying evidence as of 2026-07-21. The daily scan
 Every ADD / PROMOTE / DEMOTE / CUT / score change gets one dated entry here with the quantified evidence quoted verbatim and its source. Baseline evidence lives in the Phase 1 deliverables.
 
 - 2026-07-21 — BASELINE — Phase 1 deep verification complete: 21 realized, 25 plan, 23 cut, 276 outside. Top score CHRW 87. Full evidence in TCM_AI_Efficiency_Database_FINAL.pdf/.xlsx.
+- 2026-07-28 — SCAN — 82 of the 345 reported 21–28 Jul. 62 screened; 3 passed the thin screen (AXP, FAF, GSHD) and all 3 were rejected on deep scan. AXP 22: CEO Squeri disclaimed his own 30–40% coding cycle-time figure one sentence later ("that's really not a savings"); opex ratio 150bp worse YoY and 62% of the pretax gain was a $321mm provision release. FAF 24: richest AI disclosure of the quarter, but order counts were flat-to-down while revenue per order rose 17.3%, so opex per closed order ROSE ~10.6%; peer Stewart posted a BETTER 210bp labour-ratio improvement with no AI story. GSHD 20: management's own bridge of 30% EBITDA growth omitted the AI tool entirely, and the CFO guided comp and G&A to grow ahead of core revenue. Zero admissions, zero score moves. Cut names MRSH/SCHW/WH rechecked — no new evidence (SCHW closest: 15–20% developer productivity, explicit attribution but no flow-through to any expense line).
+- 2026-07-28 — SCAN (second pass, same day) — finnhub earnings calendar unreachable this run (WebFetch returned PROVENANCE_REQUIRED on every attempt, including via subagent), so Tier 0 could add no new reporters; the queue was the 33 names in pending_requeue. 33 screened for transcript availability, 5 actually scanned. 26 remain requeued: 13 held calls on 28 Jul with no transcript published yet (SPGI, CINF, UHS, ITW, PNR, XYL, HLT, RCL, HRI, LSTR, WERN, PFG, PJT) and 13 hold calls on 29–30 Jul (AON, WM, ACGL, AXS, THG, ACHC, CHE, ENSG, ICLR, BG, CR, VLTO, UNM). Two thin-screen PASSes, both destroyed on deep scan. CNC 32: CEO London's AI legal-invoice agent saving "a point and a half" a month is real and honestly disclosed but bounds to 0.01–0.12% of SG&A; membership fell 7.6% while SG&A dollars rose $67mm, so SG&A per member per month ROSE 10.6% to $39.96 — the 20bp ratio gain is revenue leverage and Marketplace mix runoff, which management's own bridge says twice without mentioning AI. UPS 18: the 28% automated-building cost advantage is conveyor/sortation capex, not AI — the CEO's answer never says AI, the figure has been repeated unchanged for three quarters, and cost per piece ROSE ~8.5% adjusted (~17% GAAP) in the quarter automation penetration rose to 68.5%; FedEx delivered a larger, explicitly quantified $1bn cost-out on the identical mechanism with no AI story at all. BRO FAIL: named Anthropic, McKinsey and Accenture partnerships with explicit "faster cycle times, higher productivity" language but not one hard number — score held at 43, no move without evidence. IQV FAIL (90bp margin expansion attributed to broad productivity programmes; CFO Fedock: AI is "just another lever in that toolkit"; rest is AI-as-revenue). RGEN FAIL (no AI mention of any kind). GTLS removed from the queue — acquired by Baker Hughes, merger closed 16 Jul 2026, listing terminated. MLI removed — reported by press release only, no conference call exists to screen. Zero admissions, zero promotions, zero demotions, zero score moves.
 
 ## RUN LOG (append-only)
 
 One line per scan run: date · names checked (earnings since last scan) · adds/promotions/demotions · memo produced y/n.
 
 - 2026-07-21 — baseline established (Phase 1). No automated runs yet.
+- 2026-07-28 — First automated scan. 82 reporters identified · 62 screened · 3 deep reviews · 0 additions · 0 promotions · 0 demotions · 0 score moves · 3 near-misses recorded · 32 names requeued pending transcript publication. Memo: yes.
+- 2026-07-28 — Second scan of 28 Jul (requeue pass). Tier 0 blocked — finnhub calendar unreachable, no new reporters added · 33 queued · 5 scanned · 2 deep reviews · 0 additions · 0 promotions · 0 demotions · 0 score moves · 2 near-misses recorded (CNC 32, UPS 18) · 2 names retired from the queue (GTLS delisted, MLI no call) · 26 requeued. Memo: yes.
+
+
+## NEAR-MISSES (rejections worth recording)
+
+Borderline evidence is a rejection. Each entry records the kill reasoning and a watch item.
+
+### AXP — AMERICAN EXPRESS · Consumer Finance · score 22 · call 2026-07-24
+**CEO disclaimed his own AI number in the next sentence**
+
+> "anywhere from a 30 to 40% decrease in cycle time from a coding perspective." — Stephen Squeri, Chairman & CEO
+
+> "Now that's really not a savings because what that does is allows us to do more." — Stephen Squeri, Chairman & CEO
+
+> "a lack of acceleration in hiring of more travel representatives, more customer service reps, even as the business continues to grow" — Stephen Squeri, Chairman & CEO
+
+*Source:* https://www.investing.com/news/transcripts/earnings-call-transcript-american-express-beats-q2-2026-eps-shares-fall-93CH-4812024
+
+**Kill.** The CEO removes his own headline from contention one sentence later: the coding gain is recycled into backlog throughput, not harvested as cost. The financials agree — total expenses +12.3% on revenue +10.0%, opex ratio 150bp WORSE year over year, and 62% of the pretax increase comes from a $321mm provision release. The metric definition also drifted in a single quarter, from Q1's '30% benefit... coding and testing' to Q2's '30–40% decrease in cycle time... coding'.
+
+**What survives.** Management does attribute flat servicing hiring to AI tools — explicit, correctly ordered attribution. But it arrives with no rep count, no baseline and no cost figure. Attribution without quantification is a lead, not evidence.
+
+**Materiality.** Most generous construction: ~$23mm quarterly, 0.16% of the $14,482mm expense base — below the 0.5% floor.
+
+**Watch.** Q3 2026: if servicing headcount actually declines as Squeri predicts AND the opex ratio inflects below 72%, re-open with a quantified basis. Otherwise hard reject.
+
+### FAF — FIRST AMERICAN FINANCIAL · Property & Casualty Insurance · score 24 · call 2026-07-23
+**Richest AI disclosure of the quarter; unit costs went the wrong way**
+
+> "Using our new AI tools, we reduced the time required by 97%." — Mark Seaton, CEO
+
+> "It has now processed more than 50,000 orders, delivering 92% with no additional human review." — Mark Seaton, CEO
+
+> "We have also improved automation rates from 30% in Q1 to 34% in Q2, and so far in July, we are at 39%." — Mark Seaton, CEO
+
+*Source:* https://www.investing.com/news/transcripts/earnings-call-transcript-first-american-financial-tops-q2-2026-estimates-93CH-4809563
+
+**Kill.** Revenue rose 15% on a 17.3% lift in revenue per order while order counts were FLAT to DOWN (closes 2,145/day vs 2,161). Title firms staff to order count but bill on order value, so price and commercial mix compress the expense ratio with zero productivity gain. Opex per closed order actually ROSE ~10.6% and personnel per order ~8.4%. The 97% covers a one-time 1,300-form template update. Management's own success ratio MISSED at 66% against a 60% target.
+
+**What survives.** Endpoint's 30%→34%→39% series is genuinely consistently defined across two quarters — the single best piece of evidence in the file. The title-plant data moat is a credible mechanism.
+
+**Materiality.** Every AI figure is an activity metric with no dollar or headcount attached. Exam Assist's 50,000 cumulative orders is ~36% of ONE quarter's direct closes; Endpoint's 39% applies to one converted branch, with network rollout not due until end-2027.
+
+**Watch.** FNF, the decisive comparable, reports 2026-08-05. Re-scan after it prints and after two more Endpoint datapoints on a stable definition.
+
+### GSHD — GOOSEHEAD INSURANCE · Insurance Brokers · score 20 · call 2026-07-22
+**Management's own margin bridge omits the AI tool**
+
+> "Lily, our AI voice assistant, now handles approximately 20% of our inbound service calls from start to finish, with performance exceeding 30% during certain periods." — Mark Jones Jr., President & COO
+
+> "intelligent case routing, which has allowed us to reinvest roughly 40 full-time service team members towards more complex and value-added interactions" — Mark Miller, CEO (Q1 2026)
+
+> "comp and G&A to grow in the high teens to low 20% for the year, which will likely be in excess of core revenue growth" — John Martin, CFO
+
+*Source:* https://m.investing.com/news/transcripts/earnings-call-transcript-goosehead-beats-q2-2026-estimates-shares-rebound-after-hours-93CH-4807139
+
+**Kill.** Management bridged 30% adjusted EBITDA growth to retention of 86%, new business, carrier commission dynamics and bind rates — and did not mention AI. When management lists its own margin bridge and omits the tool, the analyst does not get to add it. The CFO then guided comp and G&A to grow AHEAD of core revenue, which is the opposite of harvesting service automation. The metric definition also narrowed: Q1's 'all inbound calls' became Q2's 'inbound service calls', mechanically inflating the ratio, so 19%→20% may be flat or down like-for-like.
+
+**What survives.** The peer check FAILS to kill it — Brown & Brown's margin went the other way (EBITDAC 35.7% vs 36.7%), so there is no sector tailwind explaining GSHD away. Its expansion is company-specific. The mechanism is also genuinely credible: 2.1m policies in force and labour-intensive personal-lines service calls are exactly where voice AI works.
+
+**Materiality.** The 40 redeployed FTEs are ~$4.9mm, ~1.7% of FY2025 opex — but they were REINVESTED, not removed. Realized disclosed saving: $0. Headcount leverage also predates Lily's deployment.
+
+**Watch.** Q3 2026: one disclosure — service headcount against policies in force, or cost per service interaction, on a stable definition — would put this into scoring range quickly.
+
+### CNC — CENTENE CORP · Managed Health Care · score 32 · call 2026-07-28
+**Real AI saving, honestly disclosed, roughly two orders of magnitude too small to reach the financials**
+
+> "Even our legal department has several high ROI adjunctive use cases in production." — Sarah London, Chief Executive Officer
+
+> "including one agent that reviews invoices from outside counsel firms and now saves us a point and a half in our legal bills every month" — Sarah London, Chief Executive Officer
+
+> "reflecting continued discipline and scale, as well as product mix." — Drew Asher, Chief Financial Officer
+
+*Source:* https://www.investing.com/news/transcripts/earnings-call-transcript-centene-beats-q2-2026-forecasts-but-shares-fall-93CH-4817133
+
+**Kill.** The saving is 1.5% of an undisclosed sub-line-item — outside counsel spend, which appears nowhere in Centene's income statement — so it is structurally unverifiable and bounds to roughly $1.5–$15mm a year, 0.01–0.12% of annualised SG&A. Management's own bridge explains the 20bp adjusted SG&A improvement (7.1% → 6.9%) twice without AI: the CFO cites "continued discipline and scale, as well as product mix", and the release cites "leveraging of expenses over higher revenues and reduced Marketplace membership, which operates at a meaningfully higher SG&A expense ratio". The unit-cost test is fatal — membership fell 7.6% (28.00mm → 25.89mm) while SG&A dollars ROSE $67mm to $3,103mm, so SG&A per member per month rose from $36.14 to $39.96, +10.6% (+20.6% ex-PDP). The ratio fell only because revenue per member rose 13.0%. The real SG&A lever is a $480mm workforce and enterprise optimisation programme that management never attributes to AI.
+
+**What survives.** The mechanism is genuine and the disclosure is unusually restrained — outside-counsel e-billing review is a mature, auditable AI application, and London volunteered a hard percentage while calling the use cases "adjunctive" and describing AI deployed "selectively, with a strong focus on return on investment rather than broad experimentation". No revenue conflation. CNC was also the only managed-care name in the peer set to improve its ratio at all (UNH +40bp, ELV +100bp, MOH +50bp) — but that gap is revenue growth (+4.5% vs Molina −4.8%), not productivity, so the peer test did not rescue it.
+
+**Materiality.** $1.5–$15mm a year on the disclosed 1.5%; 0.012–0.121% of ~$12.4bn annualised SG&A; explains 0.4–4.2% of the 20bp improvement. Below the 0.5% floor by an order of magnitude.
+
+**Watch.** Q3/Q4 2026: re-open only on (a) an absolute dollar AI-attributed SG&A saving, or disclosure of the legal spend base that makes "a point and a half" computable, AND (b) SG&A per member per month falling year over year — the test is a print below the $36.14 Q2-2025 baseline. Also watch whether any quantified share of the $480mm optimisation programme is attributed to AI-enabled workflows rather than headcount, and whether AI moves out of the legal department into claims, FWA or member services. A repeat of the legal-only anecdote with no dollar base is confirmation of immateriality, not corroboration.
+
+### UPS — UNITED PARCEL-B · Air Freight & Logistics · score 18 · call 2026-07-28
+**Conveyor automation wearing an AI label — and unit cost went the wrong way**
+
+> "We know that the cost per piece in an automated building is about 28% lower than a non-automated building." — Carol Tomé, Chairman & CEO
+
+> "By the end of the second quarter, 68.5% of the volume in our U.S. business was flowing through an automated building compared to 64% one year ago." — Carol Tomé, Chairman & CEO
+
+> "Strong base rate growth and increased productivity in our reconfigured network contributed to revenue per piece growing 130 basis points faster than the cost per piece growth rate." — Brian Dykes, Chief Financial Officer
+
+*Source:* https://www.investing.com/news/transcripts/earnings-call-transcript-ups-beats-q2-2026-estimates-but-shares-fall-93CH-4817084
+
+**Kill.** The 28%/68.5%/337mm-package evidence is not about artificial intelligence. It describes a UPS facility classification — conveyors, sortation and robotics, 127 automated buildings at end-2025 with 24 more planned — and Tomé's answer to Jordan Aliger (Goldman Sachs) never uses the word AI. The call's four AI references ("AI as the brain", an "AI-powered digital twin", "Our AI is constantly tracking network performance") carry no number, no named system and no baseline; joining them to the 28% is an inference the company never made. The 28% has been stated identically on three consecutive calls (Q4-2025, Q1-2026, Q2-2026), never dated and never reconciled to the segment P&L — a costing constant used to justify capex, not a measured saving. Decisively, unit cost moved the wrong way: revenue per piece +9.3% less the CFO's own 130bp spread implies cost per piece ROSE ~8.0% (adjusted arithmetic +8.5%, GAAP +17.2%) in the very quarter automation penetration rose 4.5pp. The full 100bp US Domestic adjusted margin gain reconciles arithmetically to price over cost, and Dykes' bridge names base rates, customer mix, fuel and "our reconfigured network" — automation and AI appear nowhere in it.
+
+**What survives.** UPS has the right SHAPE of disclosure — a repeated cost-per-piece ratio, a tracked penetration series (64% → 66.5% → 68.5%), and a package-equivalent conversion — and it beat its own quantified automation target (68% of US volume by year-end 2026) two quarters early, alongside $3.5bn of 2025 savings delivered and $3bn reaffirmed for 2026. RFID is fully deployed across all US delivery facilities and package cars and the network digital twin is a real system, not vapour. If a number is ever attached to either and it enters the CFO's bridge, UPS becomes a live candidate quickly.
+
+**Materiality.** Taken at face value the penetration shift is ~126bp of blended cost per piece, ~$170mm a quarter / ~$690mm annualised against a $13.7bn adjusted US Domestic cost base — material in size, but zero of it currently attributable to AI, and swamped by an 850bp actual increase in cost per piece.
+
+**Watch.** Q3 2026 (late Oct): (1) does adjusted cost per piece turn negative year over year — with the Amazon glide-down complete and ~2mm pieces/day gone, Q3 is the first clean read without the volume-deleverage alibi; (2) does the 28% move, get dated or get reconciled — a fourth identical print confirms it as a costing constant and it should be permanently discounted; (3) does automation or AI enter the CFO's margin bridge, which is the admission gate; (4) any number attached to RFID or the digital twin — misload rate, hours per building, planning cycle time. That, not the 28%, would be UPS's first genuine criteria-A datapoint.
+
+**Scoring note.** Adversarial reviewer recommended 3 after a −10 promotional-tone and −5 AI-revenue-conflation penalty against a gross of 18. The run analyst recorded the gross 18 and waived both: UPS never claimed the 28% for AI and its AI language is descriptive rather than promotional — the over-reading was the thin screen's, not management's. Either figure is far below the 38 floor; the rejection is unchanged.
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>S&amp;P GLOBAL INC (SPGI) · TCM AI Efficiency Database</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Times New Roman','Liberation Serif',Georgia,serif;color:#1F1F1F;
+      background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+a{color:#4A1A6B;text-decoration:none}
+a:hover{text-decoration:underline}
+.sans{font-family:Arial,'Liberation Sans',Helvetica,sans-serif}
+
+/* masthead */
+.band{background:linear-gradient(135deg,#2D0F4D 0%,#6D2EA3 100%);
+       border-bottom:4px solid #C5A421;padding:30px 0 26px}
+.eyebrow{font-family:Arial,'Liberation Sans',sans-serif;font-size:11px;letter-spacing:.18em;
+          color:#C5A421;font-weight:700;text-transform:uppercase}
+.eyebrow span{color:#C7B3DE;font-weight:400}
+h1.title{color:#fff;font-size:31px;font-weight:700;margin:9px 0 5px;letter-spacing:-.01em}
+.sub{color:#D6C7E8;font-size:14px;font-style:italic}
+.meta{color:#B49CCF;font-size:11.5px;margin-top:11px;font-family:Arial,sans-serif;letter-spacing:.03em}
+
+/* nav */
+nav{border-bottom:1px solid #E3DEE9;background:#FCFBFD}
+nav .wrap{display:flex;gap:26px;flex-wrap:wrap}
+nav a{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+       color:#6B6B6B;padding:13px 0;font-weight:600;border-bottom:3px solid transparent;
+       margin-bottom:-1px;text-decoration:none}
+nav a:hover{color:#4A1A6B;text-decoration:none}
+nav a.on{color:#4A1A6B;border-bottom-color:#C5A421}
+
+/* metric strip */
+.strip{display:flex;border-top:1px solid #DDD8E4;border-bottom:1px solid #DDD8E4;margin:26px 0 30px}
+.card{flex:1;padding:15px 14px;border-right:1px solid #E8E4EE;text-align:center}
+.card:last-child{border-right:none}
+.card .lab{font-family:Arial,sans-serif;font-size:9.5px;letter-spacing:.12em;color:#6B6B6B;
+            text-transform:uppercase;font-weight:700}
+.card .val{font-size:29px;color:#C5A421;font-weight:700;line-height:1.15;margin-top:3px}
+.card .note{font-size:10.5px;color:#6B6B6B;font-family:Arial,sans-serif;margin-top:2px}
+
+/* sections */
+h2{font-family:Arial,sans-serif;font-size:16px;color:#4A1A6B;margin:34px 0 4px;
+    text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:center;gap:9px}
+h2:before{content:'';width:11px;height:11px;background:#4A1A6B;display:inline-block;flex:none}
+h3{font-family:Arial,sans-serif;font-size:13.5px;color:#69398D;margin:22px 0 6px;font-weight:700}
+p{margin:9px 0;font-size:14.5px}
+p.lede{font-size:15px;color:#333}
+.rule{height:1px;background:#E3DEE9;margin:8px 0 16px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+thead th{background:#4A1A6B;color:#fff;font-family:Arial,sans-serif;font-size:10px;
+          letter-spacing:.07em;text-transform:uppercase;padding:9px 10px;text-align:left;
+          font-weight:700;white-space:nowrap}
+thead th.num{text-align:right}
+thead th.sortable{cursor:pointer;user-select:none}
+thead th.sortable:hover{background:#69398D}
+tbody td{padding:8px 10px;border-bottom:1px solid #EDEAF1;vertical-align:top}
+tbody tr:nth-child(even){background:#F6F4F9}
+tbody tr:hover{background:#F0EBF6}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.tick{font-weight:700;font-family:Arial,sans-serif;font-size:12.5px;white-space:nowrap}
+td.sm{font-size:11.5px;color:#6B6B6B;font-family:Arial,sans-serif}
+
+/* badges */
+.b{display:inline-block;font-family:Arial,sans-serif;font-size:9.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;padding:2.5px 7px;border-radius:2px;white-space:nowrap}
+.b-realized{background:#EFF5F1;color:#1E8050;border:1px solid #278050}
+.b-plan{background:#FBF7EC;color:#9A7B12;border:1px solid #C9B27A}
+.b-cut{background:#FBEEEE;color:#B3261E;border:1px solid #D9A6A2}
+.b-outside{background:#F2F2F4;color:#6B6B6B;border:1px solid #D5D2DA}
+.b-pending{background:#EAF4F3;color:#1F6F6B;border:1px solid #1F6F6B}
+
+.score{font-weight:700;font-family:Arial,sans-serif;font-size:14px}
+.s-hi{color:#1E8050} .s-mid{color:#9A7B12} .s-lo{color:#B3261E}
+
+/* boxes */
+.box{border-left:4px solid;padding:11px 14px;margin:14px 0;font-size:13.5px}
+.box .h{font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;
+         text-transform:uppercase;margin-bottom:4px}
+.box-signal{border-color:#278050;background:#EFF5F1} .box-signal .h{color:#1E8050}
+.box-persp{border-color:#C9B27A;background:#FBF7EC}  .box-persp .h{color:#9A7B12}
+.box-push{border-color:#1F6F6B;background:#EAF4F3}    .box-push .h{color:#1F6F6B}
+
+blockquote{border-left:4px solid #4A1A6B;background:#FAF8FC;padding:11px 15px;margin:12px 0;
+            font-style:italic;font-size:14px}
+blockquote .attr{font-style:normal;font-family:Arial,sans-serif;font-size:10px;color:#6B6B6B;
+                  text-transform:uppercase;letter-spacing:.07em;margin-top:6px;display:block}
+
+/* controls */
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 4px}
+input[type=search],select{font-family:Arial,sans-serif;font-size:12.5px;padding:7px 10px;
+   border:1px solid #D5D2DA;border-radius:3px;background:#fff;color:#1F1F1F}
+input[type=search]{min-width:270px}
+.count{font-family:Arial,sans-serif;font-size:11.5px;color:#6B6B6B;margin-left:auto}
+
+footer{margin:50px 0 34px;padding-top:16px;border-top:1px solid #E3DEE9;
+        font-size:11px;color:#6B6B6B;font-style:italic}
+.kv{display:grid;grid-template-columns:190px 1fr;gap:5px 16px;font-size:13.5px;margin:12px 0}
+.kv dt{font-family:Arial,sans-serif;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+        color:#6B6B6B;font-weight:700;padding-top:2px}
+.empty{color:#6B6B6B;font-style:italic;font-size:13.5px;padding:14px 0}
+@media(max-width:820px){
+  .strip{flex-wrap:wrap} .card{flex:0 0 33.33%;border-bottom:1px solid #E8E4EE}
+  .kv{grid-template-columns:1fr} h1.title{font-size:24px}
+}
+</style></head><body>
+<div class="band"><div class="wrap">
+  <div class="eyebrow">Thames Capital Management <span>· Equity Research</span></div>
+  <h1 class="title">S&amp;P GLOBAL INC (SPGI)</h1>
+  <div class="sub">Financial Exchanges &amp; Data — realized · score 60</div>
+  <div class="meta">345-name watch universe &nbsp;·&nbsp; Baseline 21 Jul 2026 &nbsp;·&nbsp; Site built 28 Jul 2026</div>
+</div></div>
+<nav><div class="wrap"><a href="../index.html" class="on">The Database</a><a href="../evidence.html" class="">Evidence Log</a><a href="../rejections.html" class="">Rejections</a><a href="../universe.html" class="">Universe (345)</a><a href="../methodology.html" class="">Methodology</a><a href="../runlog.html" class="">Run Log</a></div></nav>
+<div class="wrap">
+<div class="strip">
+  <div class="card"><div class="lab">Status</div><div class="val" style="font-size:20px">Realized</div><div class="note">criteria B</div></div>
+  <div class="card"><div class="lab">Score</div><div class="val">60</div><div class="note">rank 13 of 46</div></div>
+  <div class="card"><div class="lab">Mkt Cap</div><div class="val" style="font-size:22px">$129.1B</div><div class="note">US listing</div></div>
+  <div class="card"><div class="lab">Admitted</div><div class="val" style="font-size:18px">2026-07-21</div><div class="note">Phase 1 baseline</div></div>
+  <div class="card"><div class="lab">Last Scanned</div><div class="val" style="font-size:18px">2026-07-21</div><div class="note">Q1-2026 era (Phase 1)</div></div>
+  <div class="card"><div class="lab">Score Age</div><div class="val" style="font-size:20px">0Q</div><div class="note">moved this quarter</div></div>
+</div>
+
+<h2>Position</h2><div class="rule"></div>
+<dl class="kv">
+  <dt>Company</dt><dd>S&amp;P GLOBAL INC (SPGI)</dd>
+  <dt>Sub-industry</dt><dd>Financial Exchanges &amp; Data</dd>
+  <dt>Status</dt><dd><span class="b b-realized">realized</span></dd>
+  <dt>Score last moved</dt><dd>2026-07-21 — Phase 1 baseline</dd>
+  <dt>Peers in database</dt><dd><a href="FDS-US.html">FDS</a>, <a href="NDAQ-US.html">NDAQ</a></dd>
+</dl>
+
+<h2>Basis for Admission</h2><div class="rule"></div>
+<p>Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets)</p>
+
+<h2>Evidence Log</h2><div class="rule"></div>
+<table><thead><tr><th>Date</th><th>Entry</th></tr></thead><tbody><tr><td colspan="2" class="empty">No company-specific evidence entries yet. Baseline evidence was established in the Phase 1 deep verification; entries accumulate here as the machine verifies each subsequent quarter.</td></tr></tbody></table>
+
+<h2>Quantitative Panel</h2><div class="rule"></div>
+<div class="box box-push"><div class="h">● Pending</div>
+Operating-expense ratio, operating margin and revenue-per-head series are pulled from as-reported
+quarterly financials so a management claim can be tested against the statements rather than taken
+on trust. This panel populates on the first automated scan following this company's next report.</div>
+
+<h2>Kill-Step Checklist</h2><div class="rule"></div>
+<p>Before any score moves, the deep scan must rule out each competing explanation for an
+efficiency gain. Recorded per quarter:</p>
+<table><thead><tr><th>Competing explanation</th><th>Status</th></tr></thead><tbody>
+<tr><td>Volume leverage / operating leverage from growth</td><td class="sm">Assessed at Phase 1 baseline</td></tr><tr><td>Price or mix, not cost</td><td class="sm">Assessed at Phase 1 baseline</td></tr><tr><td>Lean, Six Sigma or conventional process re-engineering</td><td class="sm">Assessed at Phase 1 baseline</td></tr><tr><td>Offshoring or labour arbitrage</td><td class="sm">Assessed at Phase 1 baseline</td></tr><tr><td>Headcount reduction unrelated to AI</td><td class="sm">Assessed at Phase 1 baseline</td></tr><tr><td>Cycle recovery in the underlying industry</td><td class="sm">Assessed at Phase 1 baseline</td></tr><tr><td>Peer set showing the same delta without an AI story</td><td class="sm">Assessed at Phase 1 baseline</td></tr><tr><td>One-time saving presented as run-rate</td><td class="sm">Assessed at Phase 1 baseline</td></tr>
+</tbody></table>
+
+<footer>Thames Capital Management — internal research tool. Companies are excluded by default;
+admission requires quantified, AI-attributable operational-efficiency evidence that survives an
+explicit attempt to refute it. Figures are sourced from company filings, earnings calls and
+investor materials, and are attributed on each company page. Not investment advice.</footer>
+</div></body></html>

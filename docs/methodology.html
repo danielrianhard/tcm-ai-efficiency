@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Methodology · TCM AI Efficiency Database</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Times New Roman','Liberation Serif',Georgia,serif;color:#1F1F1F;
+      background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+a{color:#4A1A6B;text-decoration:none}
+a:hover{text-decoration:underline}
+.sans{font-family:Arial,'Liberation Sans',Helvetica,sans-serif}
+
+/* masthead */
+.band{background:linear-gradient(135deg,#2D0F4D 0%,#6D2EA3 100%);
+       border-bottom:4px solid #C5A421;padding:30px 0 26px}
+.eyebrow{font-family:Arial,'Liberation Sans',sans-serif;font-size:11px;letter-spacing:.18em;
+          color:#C5A421;font-weight:700;text-transform:uppercase}
+.eyebrow span{color:#C7B3DE;font-weight:400}
+h1.title{color:#fff;font-size:31px;font-weight:700;margin:9px 0 5px;letter-spacing:-.01em}
+.sub{color:#D6C7E8;font-size:14px;font-style:italic}
+.meta{color:#B49CCF;font-size:11.5px;margin-top:11px;font-family:Arial,sans-serif;letter-spacing:.03em}
+
+/* nav */
+nav{border-bottom:1px solid #E3DEE9;background:#FCFBFD}
+nav .wrap{display:flex;gap:26px;flex-wrap:wrap}
+nav a{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+       color:#6B6B6B;padding:13px 0;font-weight:600;border-bottom:3px solid transparent;
+       margin-bottom:-1px;text-decoration:none}
+nav a:hover{color:#4A1A6B;text-decoration:none}
+nav a.on{color:#4A1A6B;border-bottom-color:#C5A421}
+
+/* metric strip */
+.strip{display:flex;border-top:1px solid #DDD8E4;border-bottom:1px solid #DDD8E4;margin:26px 0 30px}
+.card{flex:1;padding:15px 14px;border-right:1px solid #E8E4EE;text-align:center}
+.card:last-child{border-right:none}
+.card .lab{font-family:Arial,sans-serif;font-size:9.5px;letter-spacing:.12em;color:#6B6B6B;
+            text-transform:uppercase;font-weight:700}
+.card .val{font-size:29px;color:#C5A421;font-weight:700;line-height:1.15;margin-top:3px}
+.card .note{font-size:10.5px;color:#6B6B6B;font-family:Arial,sans-serif;margin-top:2px}
+
+/* sections */
+h2{font-family:Arial,sans-serif;font-size:16px;color:#4A1A6B;margin:34px 0 4px;
+    text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:center;gap:9px}
+h2:before{content:'';width:11px;height:11px;background:#4A1A6B;display:inline-block;flex:none}
+h3{font-family:Arial,sans-serif;font-size:13.5px;color:#69398D;margin:22px 0 6px;font-weight:700}
+p{margin:9px 0;font-size:14.5px}
+p.lede{font-size:15px;color:#333}
+.rule{height:1px;background:#E3DEE9;margin:8px 0 16px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+thead th{background:#4A1A6B;color:#fff;font-family:Arial,sans-serif;font-size:10px;
+          letter-spacing:.07em;text-transform:uppercase;padding:9px 10px;text-align:left;
+          font-weight:700;white-space:nowrap}
+thead th.num{text-align:right}
+thead th.sortable{cursor:pointer;user-select:none}
+thead th.sortable:hover{background:#69398D}
+tbody td{padding:8px 10px;border-bottom:1px solid #EDEAF1;vertical-align:top}
+tbody tr:nth-child(even){background:#F6F4F9}
+tbody tr:hover{background:#F0EBF6}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.tick{font-weight:700;font-family:Arial,sans-serif;font-size:12.5px;white-space:nowrap}
+td.sm{font-size:11.5px;color:#6B6B6B;font-family:Arial,sans-serif}
+
+/* badges */
+.b{display:inline-block;font-family:Arial,sans-serif;font-size:9.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;padding:2.5px 7px;border-radius:2px;white-space:nowrap}
+.b-realized{background:#EFF5F1;color:#1E8050;border:1px solid #278050}
+.b-plan{background:#FBF7EC;color:#9A7B12;border:1px solid #C9B27A}
+.b-cut{background:#FBEEEE;color:#B3261E;border:1px solid #D9A6A2}
+.b-outside{background:#F2F2F4;color:#6B6B6B;border:1px solid #D5D2DA}
+.b-pending{background:#EAF4F3;color:#1F6F6B;border:1px solid #1F6F6B}
+
+.score{font-weight:700;font-family:Arial,sans-serif;font-size:14px}
+.s-hi{color:#1E8050} .s-mid{color:#9A7B12} .s-lo{color:#B3261E}
+
+/* boxes */
+.box{border-left:4px solid;padding:11px 14px;margin:14px 0;font-size:13.5px}
+.box .h{font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;
+         text-transform:uppercase;margin-bottom:4px}
+.box-signal{border-color:#278050;background:#EFF5F1} .box-signal .h{color:#1E8050}
+.box-persp{border-color:#C9B27A;background:#FBF7EC}  .box-persp .h{color:#9A7B12}
+.box-push{border-color:#1F6F6B;background:#EAF4F3}    .box-push .h{color:#1F6F6B}
+
+blockquote{border-left:4px solid #4A1A6B;background:#FAF8FC;padding:11px 15px;margin:12px 0;
+            font-style:italic;font-size:14px}
+blockquote .attr{font-style:normal;font-family:Arial,sans-serif;font-size:10px;color:#6B6B6B;
+                  text-transform:uppercase;letter-spacing:.07em;margin-top:6px;display:block}
+
+/* controls */
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 4px}
+input[type=search],select{font-family:Arial,sans-serif;font-size:12.5px;padding:7px 10px;
+   border:1px solid #D5D2DA;border-radius:3px;background:#fff;color:#1F1F1F}
+input[type=search]{min-width:270px}
+.count{font-family:Arial,sans-serif;font-size:11.5px;color:#6B6B6B;margin-left:auto}
+
+footer{margin:50px 0 34px;padding-top:16px;border-top:1px solid #E3DEE9;
+        font-size:11px;color:#6B6B6B;font-style:italic}
+.kv{display:grid;grid-template-columns:190px 1fr;gap:5px 16px;font-size:13.5px;margin:12px 0}
+.kv dt{font-family:Arial,sans-serif;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+        color:#6B6B6B;font-weight:700;padding-top:2px}
+.empty{color:#6B6B6B;font-style:italic;font-size:13.5px;padding:14px 0}
+@media(max-width:820px){
+  .strip{flex-wrap:wrap} .card{flex:0 0 33.33%;border-bottom:1px solid #E8E4EE}
+  .kv{grid-template-columns:1fr} h1.title{font-size:24px}
+}
+</style></head><body>
+<div class="band"><div class="wrap">
+  <div class="eyebrow">Thames Capital Management <span>· Equity Research</span></div>
+  <h1 class="title">Methodology</h1>
+  <div class="sub">Admission criteria, kill list, scoring and discipline rules</div>
+  <div class="meta">345-name watch universe &nbsp;·&nbsp; Baseline 21 Jul 2026 &nbsp;·&nbsp; Site built 28 Jul 2026</div>
+</div></div>
+<nav><div class="wrap"><a href="index.html" class="">The Database</a><a href="evidence.html" class="">Evidence Log</a><a href="rejections.html" class="">Rejections</a><a href="universe.html" class="">Universe (345)</a><a href="methodology.html" class="on">Methodology</a><a href="runlog.html" class="">Run Log</a></div></nav>
+<div class="wrap">
+<h2>Admission Criteria</h2><div class="rule"></div>
+<p class="lede">Companies are <strong>out by default</strong>. Admission is an event, and it is
+rare. Strictness is the product: a small database of verified names is worth more than a large
+database of claims.</p>
+
+<h3>A — Plan</h3>
+<p>A highly specific, quantified and credible plan for driving AI efficiency into the business.
+<em>Credible</em> means it makes operational sense — not a promotional management team telling
+investors what they want to hear. <em>Specific and quantified</em> means named systems, named
+workflows, numeric targets and timelines. "We are leaning into AI" is nothing.</p>
+
+<h3>B — Realized</h3>
+<p>Satisfies A, <strong>and</strong> the benefit is already visible in the financial statements
+with the company quantifying it — the CHRW standard: shipments per person per day, quantified
+opex reduction attributed to named AI tooling.</p>
+
+<h2>What Counts as Evidence</h2><div class="rule"></div>
+<p>A data point qualifies only if all four hold:</p>
+<table><thead><tr><th>Test</th><th>Requirement</th></tr></thead><tbody>
+<tr><td><strong>It is a number</strong></td><td>A percentage, dollar amount, ratio, headcount, throughput or unit-cost figure. Adjectives are not evidence.</td></tr>
+<tr><td><strong>It measures efficiency</strong></td><td>Cost, productivity per head, cycle time, unit economics, cost-driven margin — not revenue growth, and not revenue from selling AI products.</td></tr>
+<tr><td><strong>It is attributable to AI</strong></td><td>Either explicit company attribution, or a clean before/after around a named deployment with no better competing explanation.</td></tr>
+<tr><td><strong>It survives the noise checks</strong></td><td>See the kill list below.</td></tr>
+</tbody></table>
+
+<h2>The Kill List</h2><div class="rule"></div>
+<div class="box box-push"><div class="h">● The central problem</div>
+Nearly every company now talks about AI. Most efficiency gains attributed to AI are not caused by
+AI. The deep scan therefore runs two independent passes: one builds the case, a second tries to
+destroy it. A finding is admitted only if it survives the attempt to refute it.</div>
+<table><thead><tr><th>Failure mode</th><th>What it looks like</th></tr></thead><tbody>
+<tr><td><strong>AI-washing</strong></td><td>Gains actually driven by Lean, procurement, routing software, offshoring, layoffs or cycle recovery, relabelled as AI.</td></tr>
+<tr><td><strong>Promotional non-numbers</strong></td><td>"AI is transforming how we work." "Significant productivity gains." No figure, no evidence.</td></tr>
+<tr><td><strong>Immateriality</strong></td><td>A real number too small to matter — under roughly 0.5% of opex or operating income with no credible path to scale.</td></tr>
+<tr><td><strong>Unverifiable</strong></td><td>A number that appears once, is never reconciled to segment or financial data, and that management dodges on follow-up.</td></tr>
+<tr><td><strong>One-time vs run-rate</strong></td><td>A one-off saving presented as a recurring benefit. Always labelled.</td></tr>
+<tr><td><strong>Competing explanation</strong></td><td>Volume, price, mix, fuel or unrelated headcount cuts explain the delta. The peer set is checked: if the whole sub-industry posted the same move without an AI story, AI gets no credit.</td></tr>
+<tr><td><strong>AI as revenue</strong></td><td>Selling AI products is a different thesis. Logged, never scored.</td></tr>
+</tbody></table>
+
+<h2>Scoring</h2><div class="rule"></div>
+<p>Conviction 0–100, starting at zero and awarded stingily.</p>
+<table><thead><tr><th>Component</th><th class="num">Max</th><th>Basis</th></tr></thead><tbody>
+<tr><td>Quantification quality</td><td class="num">40</td><td>How hard, specific and repeated the numbers are. Verbatim AI-attributed financial figures reconciled to the statements score high; one soft number scores low.</td></tr>
+<tr><td>Financial-statement visibility</td><td class="num">25</td><td>Whether the effect is visible in reported margin, opex and headcount trends independent of management's narrative.</td></tr>
+<tr><td>Credibility of mechanism</td><td class="num">20</td><td>Whether the causal story makes operational sense for this business model. Named systems, plausible arithmetic.</td></tr>
+<tr><td>Track record</td><td class="num">15</td><td>Whether management has hit prior quantified targets, and whether the same metric has held its definition across quarters.</td></tr>
+<tr><td>Penalties</td><td class="num">—</td><td>Promotional tone with thin numbers (−10 to −20); AI-revenue conflation (−10); metric definitions that shift quarter to quarter (−15).</td></tr>
+</tbody></table>
+<div class="box box-persp"><div class="h">Score stability</div>
+A score <strong>does not move without new evidence</strong>. There is no periodic re-scoring pass,
+because a number that drifts run to run cannot be used to track progress. Instead, the date a
+score last moved is displayed alongside it, and names whose evidence has gone three or more
+quarters without refresh are flagged stale rather than silently marked down.</div>
+
+<h2>Calibration Anchors</h2><div class="rule"></div>
+<table><thead><tr><th>Name</th><th class="num">Score</th><th>Role</th></tr></thead><tbody>
+<tr><td><strong>CHRW</strong></td><td class="num">87</td><td>Best-in-class realized. Quantified AI productivity in shipments per person per day and in opex.</td></tr>
+<tr><td>Median admitted</td><td class="num">53</td><td>The centre of the admitted distribution.</td></tr>
+<tr><td><strong>USFD</strong></td><td class="num">38</td><td>Anchor retained by instruction despite failed attribution: the efficiency is real but Lean-, routing- and procurement-driven, and its AI-labelled products are revenue tools. The floor of what admission can mean.</td></tr>
+</tbody></table>
+<div class="box box-signal"><div class="h">▲ Why anchors matter</div>
+Every scan re-scores these three. If the anchors move, the run is treated as miscalibrated and is
+not written to the ledger. This is what keeps a score assigned in July comparable to one assigned
+in December.</div>
+
+<h2>Discipline Rules</h2><div class="rule"></div>
+<table><tbody>
+<tr><td>The ledger is the only state. The site and any exported workbook are renderings of it.</td></tr>
+<tr><td>The evidence log is append-only. History is never rewritten; corrections are new dated entries.</td></tr>
+<tr><td>Every quantified claim carries its source — call date and document.</td></tr>
+<tr><td>When evidence is borderline, the answer is no admission. Borderline names are recorded as near-misses and revisited next quarter.</td></tr>
+<tr><td>A cut name is not re-litigated without new evidence that specifically overcomes the recorded cut reason.</td></tr>
+<tr><td>If a transcript is not yet available for a company that has reported, its scan date is left unchanged so the next run retries it automatically.</td></tr>
+</tbody></table>
+<footer>Thames Capital Management — internal research tool. Companies are excluded by default;
+admission requires quantified, AI-attributable operational-efficiency evidence that survives an
+explicit attempt to refute it. Figures are sourced from company filings, earnings calls and
+investor materials, and are attributed on each company page. Not investment advice.</footer>
+</div></body></html>

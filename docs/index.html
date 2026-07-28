@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>AI Operational Efficiency Database · TCM AI Efficiency Database</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Times New Roman','Liberation Serif',Georgia,serif;color:#1F1F1F;
+      background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+a{color:#4A1A6B;text-decoration:none}
+a:hover{text-decoration:underline}
+.sans{font-family:Arial,'Liberation Sans',Helvetica,sans-serif}
+
+/* masthead */
+.band{background:linear-gradient(135deg,#2D0F4D 0%,#6D2EA3 100%);
+       border-bottom:4px solid #C5A421;padding:30px 0 26px}
+.eyebrow{font-family:Arial,'Liberation Sans',sans-serif;font-size:11px;letter-spacing:.18em;
+          color:#C5A421;font-weight:700;text-transform:uppercase}
+.eyebrow span{color:#C7B3DE;font-weight:400}
+h1.title{color:#fff;font-size:31px;font-weight:700;margin:9px 0 5px;letter-spacing:-.01em}
+.sub{color:#D6C7E8;font-size:14px;font-style:italic}
+.meta{color:#B49CCF;font-size:11.5px;margin-top:11px;font-family:Arial,sans-serif;letter-spacing:.03em}
+
+/* nav */
+nav{border-bottom:1px solid #E3DEE9;background:#FCFBFD}
+nav .wrap{display:flex;gap:26px;flex-wrap:wrap}
+nav a{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+       color:#6B6B6B;padding:13px 0;font-weight:600;border-bottom:3px solid transparent;
+       margin-bottom:-1px;text-decoration:none}
+nav a:hover{color:#4A1A6B;text-decoration:none}
+nav a.on{color:#4A1A6B;border-bottom-color:#C5A421}
+
+/* metric strip */
+.strip{display:flex;border-top:1px solid #DDD8E4;border-bottom:1px solid #DDD8E4;margin:26px 0 30px}
+.card{flex:1;padding:15px 14px;border-right:1px solid #E8E4EE;text-align:center}
+.card:last-child{border-right:none}
+.card .lab{font-family:Arial,sans-serif;font-size:9.5px;letter-spacing:.12em;color:#6B6B6B;
+            text-transform:uppercase;font-weight:700}
+.card .val{font-size:29px;color:#C5A421;font-weight:700;line-height:1.15;margin-top:3px}
+.card .note{font-size:10.5px;color:#6B6B6B;font-family:Arial,sans-serif;margin-top:2px}
+
+/* sections */
+h2{font-family:Arial,sans-serif;font-size:16px;color:#4A1A6B;margin:34px 0 4px;
+    text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:center;gap:9px}
+h2:before{content:'';width:11px;height:11px;background:#4A1A6B;display:inline-block;flex:none}
+h3{font-family:Arial,sans-serif;font-size:13.5px;color:#69398D;margin:22px 0 6px;font-weight:700}
+p{margin:9px 0;font-size:14.5px}
+p.lede{font-size:15px;color:#333}
+.rule{height:1px;background:#E3DEE9;margin:8px 0 16px}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+thead th{background:#4A1A6B;color:#fff;font-family:Arial,sans-serif;font-size:10px;
+          letter-spacing:.07em;text-transform:uppercase;padding:9px 10px;text-align:left;
+          font-weight:700;white-space:nowrap}
+thead th.num{text-align:right}
+thead th.sortable{cursor:pointer;user-select:none}
+thead th.sortable:hover{background:#69398D}
+tbody td{padding:8px 10px;border-bottom:1px solid #EDEAF1;vertical-align:top}
+tbody tr:nth-child(even){background:#F6F4F9}
+tbody tr:hover{background:#F0EBF6}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+td.tick{font-weight:700;font-family:Arial,sans-serif;font-size:12.5px;white-space:nowrap}
+td.sm{font-size:11.5px;color:#6B6B6B;font-family:Arial,sans-serif}
+
+/* badges */
+.b{display:inline-block;font-family:Arial,sans-serif;font-size:9.5px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;padding:2.5px 7px;border-radius:2px;white-space:nowrap}
+.b-realized{background:#EFF5F1;color:#1E8050;border:1px solid #278050}
+.b-plan{background:#FBF7EC;color:#9A7B12;border:1px solid #C9B27A}
+.b-cut{background:#FBEEEE;color:#B3261E;border:1px solid #D9A6A2}
+.b-outside{background:#F2F2F4;color:#6B6B6B;border:1px solid #D5D2DA}
+.b-pending{background:#EAF4F3;color:#1F6F6B;border:1px solid #1F6F6B}
+
+.score{font-weight:700;font-family:Arial,sans-serif;font-size:14px}
+.s-hi{color:#1E8050} .s-mid{color:#9A7B12} .s-lo{color:#B3261E}
+
+/* boxes */
+.box{border-left:4px solid;padding:11px 14px;margin:14px 0;font-size:13.5px}
+.box .h{font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;
+         text-transform:uppercase;margin-bottom:4px}
+.box-signal{border-color:#278050;background:#EFF5F1} .box-signal .h{color:#1E8050}
+.box-persp{border-color:#C9B27A;background:#FBF7EC}  .box-persp .h{color:#9A7B12}
+.box-push{border-color:#1F6F6B;background:#EAF4F3}    .box-push .h{color:#1F6F6B}
+
+blockquote{border-left:4px solid #4A1A6B;background:#FAF8FC;padding:11px 15px;margin:12px 0;
+            font-style:italic;font-size:14px}
+blockquote .attr{font-style:normal;font-family:Arial,sans-serif;font-size:10px;color:#6B6B6B;
+                  text-transform:uppercase;letter-spacing:.07em;margin-top:6px;display:block}
+
+/* controls */
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 4px}
+input[type=search],select{font-family:Arial,sans-serif;font-size:12.5px;padding:7px 10px;
+   border:1px solid #D5D2DA;border-radius:3px;background:#fff;color:#1F1F1F}
+input[type=search]{min-width:270px}
+.count{font-family:Arial,sans-serif;font-size:11.5px;color:#6B6B6B;margin-left:auto}
+
+footer{margin:50px 0 34px;padding-top:16px;border-top:1px solid #E3DEE9;
+        font-size:11px;color:#6B6B6B;font-style:italic}
+.kv{display:grid;grid-template-columns:190px 1fr;gap:5px 16px;font-size:13.5px;margin:12px 0}
+.kv dt{font-family:Arial,sans-serif;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+        color:#6B6B6B;font-weight:700;padding-top:2px}
+.empty{color:#6B6B6B;font-style:italic;font-size:13.5px;padding:14px 0}
+@media(max-width:820px){
+  .strip{flex-wrap:wrap} .card{flex:0 0 33.33%;border-bottom:1px solid #E8E4EE}
+  .kv{grid-template-columns:1fr} h1.title{font-size:24px}
+}
+</style></head><body>
+<div class="band"><div class="wrap">
+  <div class="eyebrow">Thames Capital Management <span>· Equity Research</span></div>
+  <h1 class="title">AI Operational Efficiency Database</h1>
+  <div class="sub">Quantified, AI-attributable operational efficiency — verified holdings list</div>
+  <div class="meta">345-name watch universe &nbsp;·&nbsp; Baseline 21 Jul 2026 &nbsp;·&nbsp; Site built 28 Jul 2026</div>
+</div></div>
+<nav><div class="wrap"><a href="index.html" class="on">The Database</a><a href="evidence.html" class="">Evidence Log</a><a href="rejections.html" class="">Rejections</a><a href="universe.html" class="">Universe (345)</a><a href="methodology.html" class="">Methodology</a><a href="runlog.html" class="">Run Log</a></div></nav>
+<div class="wrap">
+<div class="strip"><div class="card"><div class="lab">Universe</div><div class="val">345</div><div class="note">names screened</div></div><div class="card"><div class="lab">Admitted</div><div class="val">46</div><div class="note">13% of universe</div></div><div class="card"><div class="lab">Realized</div><div class="val">21</div><div class="note">criteria B</div></div><div class="card"><div class="lab">Plan</div><div class="val">25</div><div class="note">criteria A</div></div><div class="card"><div class="lab">Rejected</div><div class="val">23</div><div class="note">failed verification</div></div><div class="card"><div class="lab">Top Score</div><div class="val">87</div><div class="note">CHRW</div></div></div>
+
+<h2>The Database</h2><div class="rule"></div>
+<p class="lede">Companies from the 345-name watch universe that have produced
+<strong>specific, quantified and credible</strong> evidence of AI-driven operational efficiency.
+Two tiers: <strong>Plan</strong> (criteria A) is a highly specific quantified plan that makes
+operational sense; <strong>Realized</strong> (criteria B) additionally shows the benefit already
+landing in the financial statements, quantified by the company.</p>
+
+<div class="box box-persp"><div class="h">How to read the score</div>
+Conviction, 0–100, built from quantification quality (0–40), visibility in the reported
+financials (0–25), credibility of the causal mechanism (0–20) and management track record (0–15),
+less penalties for promotional tone, AI-revenue conflation and shifting metric definitions.
+<strong>A score only moves when new evidence arrives</strong> — the date it last moved is shown,
+so age is visible rather than silently decaying the number.</div>
+
+<div class="controls">
+  <input type="search" id="q" placeholder="Search ticker, company or sub-industry…">
+  <select id="f">
+    <option value="">All admitted (46)</option>
+    <option value="realized">Realized only (21)</option>
+    <option value="plan">Plan only (25)</option>
+  </select>
+  <span class="count" id="n"></span>
+</div>
+
+<table id="tbl"><thead><tr>
+  <th class="num sortable" data-c="0" data-n="1">#</th>
+  <th class="sortable" data-c="1">Ticker</th>
+  <th class="sortable" data-c="2">Company</th>
+  <th class="sortable" data-c="3">Sub-industry</th>
+  <th class="num sortable" data-c="4" data-n="1">Mkt Cap $B</th>
+  <th class="sortable" data-c="5">Status</th>
+  <th class="num sortable" data-c="6" data-n="1">Score</th>
+  <th class="sortable" data-c="7">Score last moved</th>
+</tr></thead><tbody><tr data-status="realized" data-t="chrw ch robinson air freight &amp; logistics"><td class="num">1</td><td class="tick"><a href="company/CHRW-US.html">CHRW</a></td><td>CH ROBINSON</td><td class="sm">Air Freight &amp; Logistics</td><td class="num">23.2</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">87</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="xpo xpo inc cargo ground transportation"><td class="num">2</td><td class="tick"><a href="company/XPO-US.html">XPO</a></td><td>XPO INC</td><td class="sm">Cargo Ground Transportation</td><td class="num">24.6</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">71</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="fds factset research financial exchanges &amp; data"><td class="num">3</td><td class="tick"><a href="company/FDS-US.html">FDS</a></td><td>FACTSET RESEARCH</td><td class="sm">Financial Exchanges &amp; Data</td><td class="num">9.4</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">70</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="hnge hinge health-a health care services"><td class="num">4</td><td class="tick"><a href="company/HNGE-US.html">HNGE</a></td><td>HINGE HEALTH-A</td><td class="sm">Health Care Services</td><td class="num">7.0</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">70</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="hood robinhood mark-a investment banking &amp; brokerage"><td class="num">5</td><td class="tick"><a href="company/HOOD-US.html">HOOD</a></td><td>ROBINHOOD MARK-A</td><td class="sm">Investment Banking &amp; Brokerage</td><td class="num">99.0</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">70</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="upst upstart holdings consumer finance"><td class="num">6</td><td class="tick"><a href="company/UPST-US.html">UPST</a></td><td>UPSTART HOLDINGS</td><td class="sm">Consumer Finance</td><td class="num">3.0</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">66</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="lmnd lemonade inc property &amp; casualty insurance"><td class="num">7</td><td class="tick"><a href="company/LMND-US.html">LMND</a></td><td>LEMONADE INC</td><td class="sm">Property &amp; Casualty Insurance</td><td class="num">5.4</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">66</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="xmtr xometry inc-a trading companies &amp; distributors"><td class="num">8</td><td class="tick"><a href="company/XMTR-US.html">XMTR</a></td><td>XOMETRY INC-A</td><td class="sm">Trading Companies &amp; Distributors</td><td class="num">5.3</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-hi">66</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="rkt rocket cos inc-a commercial &amp; residential mortgage finance"><td class="num">9</td><td class="tick"><a href="company/RKT-US.html">RKT</a></td><td>ROCKET COS INC-A</td><td class="sm">Commercial &amp; Residential Mortgage Finance</td><td class="num">39.4</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">64</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="trv travelers cos in property &amp; casualty insurance"><td class="num">10</td><td class="tick"><a href="company/TRV-US.html">TRV</a></td><td>TRAVELERS COS IN</td><td class="sm">Property &amp; Casualty Insurance</td><td class="num">72.6</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">64</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="pfsi pennymac financi commercial &amp; residential mortgage finance"><td class="num">11</td><td class="tick"><a href="company/PFSI-US.html">PFSI</a></td><td>PENNYMAC FINANCI</td><td class="sm">Commercial &amp; Residential Mortgage Finance</td><td class="num">4.2</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">63</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="arcb arcbest corp cargo ground transportation"><td class="num">12</td><td class="tick"><a href="company/ARCB-US.html">ARCB</a></td><td>ARCBEST CORP</td><td class="sm">Cargo Ground Transportation</td><td class="num">3.3</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">60</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="spgi s&amp;p global inc financial exchanges &amp; data"><td class="num">13</td><td class="tick"><a href="company/SPGI-US.html">SPGI</a></td><td>S&amp;P GLOBAL INC</td><td class="sm">Financial Exchanges &amp; Data</td><td class="num">129.1</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">60</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="navn navan inc-cl a hotels, resorts &amp; cruise lines"><td class="num">14</td><td class="tick"><a href="company/NAVN-US.html">NAVN</a></td><td>NAVAN INC-CL A</td><td class="sm">Hotels, Resorts &amp; Cruise Lines</td><td class="num">6.6</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">60</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="tost toast inc-a transaction &amp; payment processing services"><td class="num">15</td><td class="tick"><a href="company/TOST-US.html">TOST</a></td><td>TOAST INC-A</td><td class="sm">Transaction &amp; Payment Processing Services</td><td class="num">17.4</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">60</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="glbe global-e online broadline retail"><td class="num">16</td><td class="tick"><a href="company/GLBE-US.html">GLBE</a></td><td>GLOBAL-E ONLINE</td><td class="sm">Broadline Retail</td><td class="num">6.5</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">58</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="ingm ingram micro hol technology distributors"><td class="num">17</td><td class="tick"><a href="company/INGM-US.html">INGM</a></td><td>INGRAM MICRO HOL</td><td class="sm">Technology Distributors</td><td class="num">6.7</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">57</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="wmt walmart inc consumer staples merchandise retail"><td class="num">18</td><td class="tick"><a href="company/WMT-US.html">WMT</a></td><td>WALMART INC</td><td class="sm">Consumer Staples Merchandise Retail</td><td class="num">913.4</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">56</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="dave dave inc consumer finance"><td class="num">19</td><td class="tick"><a href="company/DAVE-US.html">DAVE</a></td><td>DAVE INC</td><td class="sm">Consumer Finance</td><td class="num">5.0</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">53</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="hqy healthequity inc managed health care"><td class="num">20</td><td class="tick"><a href="company/HQY-US.html">HQY</a></td><td>HEALTHEQUITY INC</td><td class="sm">Managed Health Care</td><td class="num">8.0</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">53</span></td><td class="sm">2026-07-21</td></tr><tr data-status="realized" data-t="oscr oscar health -a life &amp; health insurance"><td class="num">21</td><td class="tick"><a href="company/OSCR-US.html">OSCR</a></td><td>OSCAR HEALTH -A</td><td class="sm">Life &amp; Health Insurance</td><td class="num">9.5</td><td><span class="b b-realized">realized</span></td><td class="num"><span class="score s-mid">47</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="ifc intact financial property &amp; casualty insurance"><td class="num">22</td><td class="tick"><a href="company/IFC-CA.html">IFC</a></td><td>INTACT FINANCIAL</td><td class="sm">Property &amp; Casualty Insurance</td><td class="num">52.3</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">64</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="ryan ryan specialty h insurance brokers"><td class="num">23</td><td class="tick"><a href="company/RYAN-US.html">RYAN</a></td><td>RYAN SPECIALTY H</td><td class="sm">Insurance Brokers</td><td class="num">11.0</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">57</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="c citigroup inc diversified banks"><td class="num">24</td><td class="tick"><a href="company/C-US.html">C</a></td><td>CITIGROUP INC</td><td class="sm">Diversified Banks</td><td class="num">240.0</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">56</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="wtw willis towers wa insurance brokers"><td class="num">25</td><td class="tick"><a href="company/WTW-US.html">WTW</a></td><td>WILLIS TOWERS WA</td><td class="sm">Insurance Brokers</td><td class="num">27.9</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">54</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="adt adt inc specialized consumer services"><td class="num">26</td><td class="tick"><a href="company/ADT-US.html">ADT</a></td><td>ADT INC</td><td class="sm">Specialized Consumer Services</td><td class="num">5.4</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">54</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="aig american interna property &amp; casualty insurance"><td class="num">27</td><td class="tick"><a href="company/AIG-US.html">AIG</a></td><td>AMERICAN INTERNA</td><td class="sm">Property &amp; Casualty Insurance</td><td class="num">42.4</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">53</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="bac bank of america diversified banks"><td class="num">28</td><td class="tick"><a href="company/BAC-US.html">BAC</a></td><td>BANK OF AMERICA</td><td class="sm">Diversified Banks</td><td class="num">422.2</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">52</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="mfc manulife fin life &amp; health insurance"><td class="num">29</td><td class="tick"><a href="company/MFC-CA.html">MFC</a></td><td>MANULIFE FIN</td><td class="sm">Life &amp; Health Insurance</td><td class="num">97.4</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">52</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="cb chubb ltd property &amp; casualty insurance"><td class="num">30</td><td class="tick"><a href="company/CB-US.html">CB</a></td><td>CHUBB LTD</td><td class="sm">Property &amp; Casualty Insurance</td><td class="num">137.6</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">52</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="nu nu holdings lt-a diversified banks"><td class="num">31</td><td class="tick"><a href="company/NU-US.html">NU</a></td><td>NU HOLDINGS LT-A</td><td class="sm">Diversified Banks</td><td class="num">66.0</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">50</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="aon aon plc-class a insurance brokers"><td class="num">32</td><td class="tick"><a href="company/AON-US.html">AON</a></td><td>AON PLC-CLASS A</td><td class="sm">Insurance Brokers</td><td class="num">78.5</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">50</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="cm can impl bk comm diversified banks"><td class="num">33</td><td class="tick"><a href="company/CM-CA.html">CM</a></td><td>CAN IMPL BK COMM</td><td class="sm">Diversified Banks</td><td class="num">151.5</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">48</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="rsg republic svcs environmental &amp; facilities services"><td class="num">34</td><td class="tick"><a href="company/RSG-US.html">RSG</a></td><td>REPUBLIC SVCS</td><td class="sm">Environmental &amp; Facilities Services</td><td class="num">68.7</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">48</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="rdnt radnet inc health care services"><td class="num">35</td><td class="tick"><a href="company/RDNT-US.html">RDNT</a></td><td>RADNET INC</td><td class="sm">Health Care Services</td><td class="num">5.0</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">48</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="opch option care heal health care services"><td class="num">36</td><td class="tick"><a href="company/OPCH-US.html">OPCH</a></td><td>OPTION CARE HEAL</td><td class="sm">Health Care Services</td><td class="num">3.4</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">47</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="uwmc uwm holdings cor commercial &amp; residential mortgage finance"><td class="num">37</td><td class="tick"><a href="company/UWMC-US.html">UWMC</a></td><td>UWM HOLDINGS COR</td><td class="sm">Commercial &amp; Residential Mortgage Finance</td><td class="num">3.2</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">46</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="td toronto-dom bank diversified banks"><td class="num">38</td><td class="tick"><a href="company/TD-CA.html">TD</a></td><td>TORONTO-DOM BANK</td><td class="sm">Diversified Banks</td><td class="num">282.1</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">46</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="ry royal bank of ca diversified banks"><td class="num">39</td><td class="tick"><a href="company/RY-CA.html">RY</a></td><td>ROYAL BANK OF CA</td><td class="sm">Diversified Banks</td><td class="num">413.9</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-mid">45</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="ndaq nasdaq inc financial exchanges &amp; data"><td class="num">40</td><td class="tick"><a href="company/NDAQ-US.html">NDAQ</a></td><td>NASDAQ INC</td><td class="sm">Financial Exchanges &amp; Data</td><td class="num">50.5</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-lo">44</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="arx accelerant hol-a insurance brokers"><td class="num">41</td><td class="tick"><a href="company/ARX-US.html">ARX</a></td><td>ACCELERANT HOL-A</td><td class="sm">Insurance Brokers</td><td class="num">2.9</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-lo">44</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="bro brown &amp; brown insurance brokers"><td class="num">42</td><td class="tick"><a href="company/BRO-US.html">BRO</a></td><td>BROWN &amp; BROWN</td><td class="sm">Insurance Brokers</td><td class="num">23.5</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-lo">43</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="cacc credit acceptanc consumer finance"><td class="num">43</td><td class="tick"><a href="company/CACC-US.html">CACC</a></td><td>CREDIT ACCEPTANC</td><td class="sm">Consumer Finance</td><td class="num">6.5</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-lo">42</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="usfd us foods holding food distributors"><td class="num">44</td><td class="tick"><a href="company/USFD-US.html">USFD</a></td><td>US FOODS HOLDING</td><td class="sm">Food Distributors</td><td class="num">22.3</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-lo">38</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="hig hartford insuran property &amp; casualty insurance"><td class="num">45</td><td class="tick"><a href="company/HIG-US.html">HIG</a></td><td>HARTFORD INSURAN</td><td class="sm">Property &amp; Casualty Insurance</td><td class="num">38.6</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-lo">38</span></td><td class="sm">2026-07-21</td></tr><tr data-status="plan" data-t="pnc pnc financial se diversified banks"><td class="num">46</td><td class="tick"><a href="company/PNC-US.html">PNC</a></td><td>PNC FINANCIAL SE</td><td class="sm">Diversified Banks</td><td class="num">101.5</td><td><span class="b b-plan">plan</span></td><td class="num"><span class="score s-lo">37</span></td><td class="sm">2026-07-21</td></tr></tbody></table>
+
+<script>
+(function(){
+  var q=document.getElementById('q'),f=document.getElementById('f'),
+      tb=document.querySelector('#tbl tbody'),n=document.getElementById('n');
+  function filt(){
+    var s=(q?q.value:'').toLowerCase(), st=(f?f.value:''), c=0;
+    Array.prototype.forEach.call(tb.rows,function(r){
+      var ok=(!s||r.dataset.t.indexOf(s)>-1)&&(!st||r.dataset.status===st);
+      r.style.display=ok?'':'none'; if(ok)c++;
+    });
+    if(n)n.textContent=c+' shown';
+  }
+  if(q)q.addEventListener('input',filt); if(f)f.addEventListener('change',filt); filt();
+  var dir={};
+  Array.prototype.forEach.call(document.querySelectorAll('th.sortable'),function(th){
+    th.addEventListener('click',function(){
+      var c=+th.dataset.c, num=th.dataset.n==='1', d=dir[c]=-(dir[c]||1);
+      var rows=Array.prototype.slice.call(tb.rows);
+      rows.sort(function(a,b){
+        var x=a.cells[c].innerText.trim(), y=b.cells[c].innerText.trim();
+        if(num){x=parseFloat(x.replace(/[^0-9.\-]/g,''))||0;y=parseFloat(y.replace(/[^0-9.\-]/g,''))||0;
+                return (x-y)*d;}
+        return x.localeCompare(y)*d;
+      });
+      rows.forEach(function(r){tb.appendChild(r);});
+    });
+  });
+})();
+</script>
+
+
+<footer>Thames Capital Management — internal research tool. Companies are excluded by default;
+admission requires quantified, AI-attributable operational-efficiency evidence that survives an
+explicit attempt to refute it. Figures are sourced from company filings, earnings calls and
+investor materials, and are attributed on each company page. Not investment advice.</footer>
+</div></body></html>

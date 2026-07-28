@@ -289,7 +289,7 @@
       "score_last_moved": "2026-07-21",
       "score_last_moved_reason": "Phase 1 baseline",
       "pending_deep_review": false,
-      "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets)",
+      "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets) | 2026-07-28: Q2-2026 call held 28 Jul; no full transcript published on any permitted source after two checks (investing.com, fool, marketbeat, alphastreet, insidermonkey, stockanalysis, yahoo all top out at Q1-2026). MarketBeat highlights pages rejected as non-transcripts. Score held at 60, last_scanned NOT advanced. FLAG for the next run: SPGI has issued pro forma and recast financial results with updated segment information, so a metric that appears to shift definition may shift innocently through the recast — read the recast before concluding goalpost-shifting.",
       "cut_date": null,
       "cut_reason": null,
       "last_verdict": null
@@ -869,10 +869,10 @@
       "score_last_moved": "2026-07-21",
       "score_last_moved_reason": "Phase 1 baseline",
       "pending_deep_review": false,
-      "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets) | 2026-07-28: Q2-2026 call 2026-07-28: named AI partnerships (Anthropic, McKinsey, Accenture) and explicit efficiency language, but zero hard numbers. No score move.",
+      "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets) | 2026-07-28: Q2-2026 call 2026-07-28: named AI partnerships (Anthropic, McKinsey, Accenture) and explicit efficiency language, but zero hard numbers. No score move. | 2026-07-28 (admitted-name review): Q2-2026 call examined for ordinary cost control relabelled as AI. RELABELLING NOT DETECTED — management made no AI cost claim at all. Eleven quantified expense/margin items on the call, every one attributed to something else (lower interest income, contingents, Accession synergies, one-time accruals, staff departures); the AI-attributed list is empty. A demotion to 28 and a cut was drafted on metric abandonment (Q1's '25% of the end-to-end submission process' and 'saving more than 50,000 hours annually' were not restated), then DESTROYED on the adversarial pass and NOT taken. Reasons: the rubric's only staleness penalty is -5/quarter after FOUR quarters and BRO's evidence is one quarter old; nothing was contradicted or disowned and the submissions workstream was expressly reaffirmed; the -100bp adjusted EBITDAC margin is bridged by management to prior-year interest income on pre-funded Accession cash, with Retail EBITDAC +230bp, so no AI content either way; the 'timeline pushed out' pillar rested on a Q1 quote that could not be verified verbatim and was dropped; and the promotional-tone penalty was waived here on the same precedent applied to UPS in this run. Cohort test was decisive: AON (50) and WTW (54) are the same sub-industry, admitted the same day on the same Phase 1 vintage, and report 29-30 Jul — cutting BRO today would score the calendar, not the company. SCORE HELD AT 43, status held at plan. Q3-2026 TRIGGER (hard): if the Q3 call does not either restate/reconcile the 25%-of-submissions or 50,000-hours figures, or attach a new AI number to employee compensation ratio, other operating expenses or headcount, demote and cut. Re-score BRO, AON and WTW together on the same day once all three have reported.",
       "cut_date": null,
       "cut_reason": null,
-      "last_verdict": "FAIL"
+      "last_verdict": "FAIL — reviewed for demotion, HELD"
     },
     {
       "ticker": "CACC",
@@ -6953,6 +6953,10 @@
     {
       "date": "2026-07-28",
       "entry": "SCAN (second pass, same day) — finnhub earnings calendar unreachable this run (WebFetch returned PROVENANCE_REQUIRED on every attempt, including via subagent), so Tier 0 could add no new reporters; the queue was the 33 names in pending_requeue. 33 screened for transcript availability, 5 actually scanned. 26 remain requeued: 13 held calls on 28 Jul with no transcript published yet (SPGI, CINF, UHS, ITW, PNR, XYL, HLT, RCL, HRI, LSTR, WERN, PFG, PJT) and 13 hold calls on 29–30 Jul (AON, WM, ACGL, AXS, THG, ACHC, CHE, ENSG, ICLR, BG, CR, VLTO, UNM). Two thin-screen PASSes, both destroyed on deep scan. CNC 32: CEO London's AI legal-invoice agent saving \"a point and a half\" a month is real and honestly disclosed but bounds to 0.01–0.12% of SG&A; membership fell 7.6% while SG&A dollars rose $67mm, so SG&A per member per month ROSE 10.6% to $39.96 — the 20bp ratio gain is revenue leverage and Marketplace mix runoff, which management's own bridge says twice without mentioning AI. UPS 18: the 28% automated-building cost advantage is conveyor/sortation capex, not AI — the CEO's answer never says AI, the figure has been repeated unchanged for three quarters, and cost per piece ROSE ~8.5% adjusted (~17% GAAP) in the quarter automation penetration rose to 68.5%; FedEx delivered a larger, explicitly quantified $1bn cost-out on the identical mechanism with no AI story at all. BRO FAIL: named Anthropic, McKinsey and Accenture partnerships with explicit \"faster cycle times, higher productivity\" language but not one hard number — score held at 43, no move without evidence. IQV FAIL (90bp margin expansion attributed to broad productivity programmes; CFO Fedock: AI is \"just another lever in that toolkit\"; rest is AI-as-revenue). RGEN FAIL (no AI mention of any kind). GTLS removed from the queue — acquired by Baker Hughes, merger closed 16 Jul 2026, listing terminated. MLI removed — reported by press release only, no conference call exists to screen. Zero admissions, zero promotions, zero demotions, zero score moves."
+    },
+    {
+      "date": "2026-07-28",
+      "entry": "REVIEW (third pass, test fire) — SPGI and BRO taken as priority admitted names, plus a transcript re-check of the twelve 28 Jul callers. SPGI: still no published transcript after a second search across seven sources; MarketBeat/Markets Daily 'earnings call highlights' pages are AI-generated summaries and were rejected as transcript substitutes; score held at 60, last_scanned not advanced, requeued. Flag carried forward: SPGI has issued recast segment financials, which can move a metric definition innocently. BRO: full admitted-name review of the Q2-2026 call against the suspicion that -0.7% organic growth would tempt management to relabel ordinary cost control as AI. It did not — the AI-attributed quantified list is EMPTY, and all eleven quantified expense/margin items are bridged by management to lower interest income, contingents, Accession synergies, one-time accruals and staff departures. A demotion 43 -> 28 with a cut was drafted on the non-restatement of Q1's '25% of the end-to-end submission process' and 'saving more than 50,000 hours annually', then destroyed on the adversarial pass: the written rubric penalises staleness only after four quarters at -5/quarter, nothing was contradicted or disowned, the margin decline has no AI content, one pillar rested on an unverifiable quote, the promotional-tone penalty had already been waived for UPS in this same run, and the cohort test showed AON (50) and WTW (54) carry identical evidence vintage but report 29-30 Jul — so a cut would have scored disclosure timing rather than substance. BRO HELD at plan/43 with a hard Q3-2026 trigger recorded. Twelve 28 Jul callers (CINF, UHS, ITW, PNR, XYL, HLT, RCL, HRI, LSTR, WERN, PFG, PJT) re-checked: zero transcripts posted since the earlier pass, all remain requeued with last_scanned unchanged. Zero additions, zero promotions, zero demotions, zero score moves."
     }
   ],
   "run_log": [
@@ -6967,6 +6971,10 @@
     {
       "date": "2026-07-28",
       "entry": "Second scan of 28 Jul (requeue pass). Tier 0 blocked — finnhub calendar unreachable, no new reporters added · 33 queued · 5 scanned · 2 deep reviews · 0 additions · 0 promotions · 0 demotions · 0 score moves · 2 near-misses recorded (CNC 32, UPS 18) · 2 names retired from the queue (GTLS delisted, MLI no call) · 26 requeued. Memo: yes."
+    },
+    {
+      "date": "2026-07-28",
+      "entry": "Third pass (manual test fire). SPGI + BRO priority review · 14 names re-checked · 0 new transcripts · 0 additions · 0 promotions · 0 demotions · 0 score moves · 1 demotion drafted and rejected on adversarial review (BRO held at plan/43, Q3 trigger recorded) · 26 requeued. Memo: yes."
     }
   ],
   "near_misses": [

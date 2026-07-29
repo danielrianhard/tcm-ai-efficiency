@@ -122,7 +122,7 @@ Screened in Phase 1 with no qualifying evidence as of 2026-07-21. The daily scan
 | FDXF | FEDEX FREIGHT HO | Cargo Ground Transportation | 22.1 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | JBHT | HUNT (JB) TRANS | Cargo Ground Transportation | 26.7 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | KNX | KNIGHT-SWIFT TRA | Cargo Ground Transportation | 12.1 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
-| LSTR | LANDSTAR SYSTEM | Cargo Ground Transportation | 7.2 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
+| LSTR | LANDSTAR SYSTEM | Cargo Ground Transportation | 7.2 | 2026-07-29 | Q2-2026 FAIL — CEO Lonegro: agent-office AI rollout starts mid-Q3; nothing quantified |
 | ODFL | OLD DOMINION FRT | Cargo Ground Transportation | 48.4 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | R | RYDER SYSTEM INC | Cargo Ground Transportation | 10.3 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | SAIA | SAIA INC | Cargo Ground Transportation | 11.5 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
@@ -291,7 +291,7 @@ Screened in Phase 1 with no qualifying evidence as of 2026-07-21. The daily scan
 | MC | MOELIS & CO-CL A | Investment Banking & Brokerage | 5.0 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | MRX | MAREX GROUP LTD | Investment Banking & Brokerage | 4.7 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | PIPR | PIPER SANDLER CO | Investment Banking & Brokerage | 5.1 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
-| PJT | PJT PARTNERS - A | Investment Banking & Brokerage | 7.0 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
+| PJT | PJT PARTNERS - A | Investment Banking & Brokerage | 7.0 | 2026-07-29 | Q2-2026 FAIL — CEO Taubman: AI an unquantified expense headwind; rest is AI-as-deal-flow |
 | RJF | RAYMOND JAMES | Investment Banking & Brokerage | 32.5 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | SF | STIFEL FINANCIAL | Investment Banking & Brokerage | 11.5 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | SNEX | STONEX GROUP INC | Investment Banking & Brokerage | 8.9 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
@@ -305,7 +305,7 @@ Screened in Phase 1 with no qualifying evidence as of 2026-07-21. The daily scan
 | IAG·CN | IA FINANCIAL COR | Life & Health Insurance | 18.0 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | LNC | LINCOLN NATL CRP | Life & Health Insurance | 7.8 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | MET | METLIFE INC | Life & Health Insurance | 59.9 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
-| PFG | PRINCIPAL FINL | Life & Health Insurance | 24.5 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
+| PFG | PRINCIPAL FINL | Life & Health Insurance | 24.5 | 2026-07-29 | Q2-2026 FAIL — CEO Strable frames AI as spend, not a measured outcome |
 | POW·CN | POWER CORP CDA | Life & Health Insurance | 56.1 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | PRI | PRIMERICA INC | Life & Health Insurance | 9.7 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | PRU | PRUDENTL FINL | Life & Health Insurance | 40.3 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
@@ -344,7 +344,7 @@ Screened in Phase 1 with no qualifying evidence as of 2026-07-21. The daily scan
 | AFG | AMER FINL GROUP | Property & Casualty Insurance | 11.9 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | AIZ | ASSURANT INC | Property & Casualty Insurance | 13.9 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | AXS | AXIS CAPITAL | Property & Casualty Insurance | 8.4 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
-| CINF | CINCINNATI FIN | Property & Casualty Insurance | 28.4 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
+| CINF | CINCINNATI FIN | Property & Casualty Insurance | 28.4 | 2026-07-29 | Q2-2026 FAIL — CFO Sewell: "AI, this and that"; no named system, no number |
 | ERIE | ERIE INDEMNITY-A | Property & Casualty Insurance | 12.9 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | FAF | FIRST AMERICAN F | Property & Casualty Insurance | 7.1 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |
 | FFH·CN | FAIRFAX FINL HLD | Property & Casualty Insurance | 54.1 | 2026-07-21 | no qualifying evidence (Phase 1 screen) |

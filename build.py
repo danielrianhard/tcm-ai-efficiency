@@ -363,18 +363,38 @@ def page_company(c, st, adm):
     age = qtrs_since(c.get("score_last_moved"))
     age_txt = "this quarter" if not age else f"~{age} quarter{'s' if age != 1 else ''} ago"
 
-    qs = split_quarters(c.get('evidence_detail'))
-    if qs:
-        quarters_html = ('<table><thead><tr><th style="width:110px">Period</th>'
-                         '<th>Quantified evidence, as disclosed</th></tr></thead><tbody>'
-                         + "".join(
-                             f'<tr><td class="tick">{esc(lab) or "&mdash;"}</td><td>{esc(txt)}</td></tr>'
-                             for lab, txt in qs)
-                         + '</tbody></table>')
-        if c.get('qtrs_with_progress'):
-            quarters_html += (f'<p class="sm" style="font-family:Arial,sans-serif;font-size:11.5px;'
-                              f'color:{GRAY}">Quarters showing progress: '
-                              f'<strong>{esc(int(c["qtrs_with_progress"]))} of 5</strong> reviewed.</p>')
+    rows = c.get('evidence_rows') or []
+    if rows:
+        trs = []
+        for r in rows:
+            live = str(r.get('added_by','')).startswith('scan')
+            mark = ('<span class="b b-realized" style="margin-left:6px">Qualifies</span>'
+                    if r.get('qualifies') else
+                    '<span class="b b-outside" style="margin-left:6px">None disclosed</span>')
+            src = ''
+            if r.get('source_url'):
+                src = (f'<br><span class="sm" style="font-size:10.5px">'
+                       f'<a href="{esc(r["source_url"])}">{esc(r.get("source") or "source")}</a></span>')
+            elif r.get('source'):
+                src = f'<br><span class="sm" style="font-size:10.5px">{esc(r["source"])}</span>'
+            scan_tag = ('<span class="b b-pending" style="margin-left:6px">Added by scan</span>'
+                        if live else '')
+            trs.append(
+                f'<tr><td class="tick" style="white-space:nowrap">{esc(r["period"])}{scan_tag}</td>'
+                f'<td>{esc(r["finding"])}{src}</td>'
+                f'<td style="white-space:nowrap">{mark}</td></tr>')
+        q = sum(1 for r in rows if r.get('qualifies'))
+        quarters_html = (
+            '<table><thead><tr><th style="width:130px">Period</th>'
+            '<th>Quantified evidence, as disclosed</th>'
+            '<th style="width:110px">Verdict</th></tr></thead><tbody>'
+            + "".join(trs) + '</tbody></table>'
+            + f'<p class="sm" style="font-family:Arial,sans-serif;font-size:11.5px;color:{GRAY}">'
+              f'<strong>{q} of {len(rows)}</strong> recorded quarters carry a qualifying, '
+              f'AI-attributed efficiency number. Rows marked <em>Added by scan</em> were written '
+              f'by the automated machine; the rest are the Phase 1 baseline. This table is '
+              f'append-only — every scanned quarter is recorded, including quarters where '
+              f'nothing was disclosed.</p>')
     else:
         quarters_html = ('<div class="box box-push"><div class="h">&#9679; Pending</div>'
                          'No quantified evidence on file for this name. It populates on the first '

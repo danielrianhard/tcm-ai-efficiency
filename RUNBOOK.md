@@ -125,8 +125,35 @@ The near-miss page is where the standard is visible, so write those entries prop
 
 ## 6. Write state, render, deliver
 
-1. Update `data/state.json`: statuses, scores, `last_scanned`, `last_verdict`, near-misses,
-   `meta.last_run`, `meta.pending_requeue`.
+**THE MOST IMPORTANT WRITE — the per-company evidence row.** Every time you read a company's
+transcript you MUST append one row to that company's `evidence_rows`, whether or not anything
+qualified and whether or not the score moved. This is the database. A scan that reads a call and
+files no row has thrown its own work away.
+
+```json
+{"period": "Q3 2026", "sort": [2026, 3],
+ "finding": "verbatim quote with speaker, plus what it measures and why it did or did not qualify",
+ "qualifies": true,
+ "source": "Q3 2026 earnings call, 2026-10-28",
+ "source_url": "https://www.investing.com/news/transcripts/...",
+ "added_by": "scan-2026-10-28", "added_on": "2026-10-28"}
+```
+
+Rules for the row:
+- `qualifies: false` rows are REQUIRED when a company discloses nothing. "No AI-attributed
+  efficiency number disclosed this quarter" is a finding, and the series of them is how
+  disclosure attrition becomes visible. A company that quantified for four quarters and then
+  went quiet is the single most valuable signal this system produces — it is how the LMND
+  dropped-metric flag and the HOOD demotion trigger were both caught.
+- Never edit or delete an existing row. The table is append-only; corrections are new rows.
+- Always carry the source URL so every number on the site is one click from its transcript.
+- Note explicitly in the `finding` when a metric's DEFINITION changed from the prior row.
+
+Distinguish clearly: a score moves only on NEW qualifying evidence, but a row is written on
+EVERY scanned quarter. Confirming evidence still gets filed — it is what proves durability.
+
+1. Update `data/state.json`: `evidence_rows` (above), statuses, scores, `last_scanned`,
+   `last_verdict`, near-misses, `meta.last_run`, `meta.pending_requeue`.
 2. Append to `evidence_log` (append-only — corrections are new dated entries, never rewrites) and
    one line to `run_log`.
 3. Mirror material changes into `data/ledger.md`, and write the same summary back to the

@@ -1,0 +1,126 @@
+{
+ "schema": "frozen-calibration-suite/1",
+ "purpose": "Immutable (evidence -> score) pairs used to detect RUBRIC DRIFT. These are sealed snapshots of the evidence as it stood on 2026-07-21, NOT live companies. The live companies of the same name are free to move on new evidence; these cases never change. If a re-score of this frozen text lands outside tolerance, the scoring model has drifted and the run's SCORE DECISIONS are suspect.",
+ "how_to_run": "Each scan, before writing any score change, re-score every case below from its evidence text alone, with no knowledge of the expected score and no reference to the live company's current state or subsequent news. Compare to expected_score.",
+ "on_failure": "If any case lands outside tolerance: do NOT write score changes, promotions, demotions or admissions this run. DO still write evidence_rows, last_scanned and the run log \u2014 recording a verbatim disclosure is a fact, not a judgement, and must not be suppressed. Log a CALIBRATION FAILURE entry naming the case, the expected score and the score returned.",
+ "cases": [
+  {
+   "case_id": "CHRW-2026-07-21",
+   "sealed_on": "2026-07-21",
+   "role": "ceiling",
+   "expected_score": 87,
+   "tolerance": 3,
+   "note": "Best-in-class realized as of the seal date. Anchors the top of the scale: quantified AI productivity in shipments per person per day AND in opex, across five consecutive quarters. NOTE: the live CHRW is under an open demotion review. That is irrelevant to this case \u2014 this case is the July evidence, frozen, and it scores 87 forever.",
+   "company_context": {
+    "ticker": "CHRW",
+    "company": "CH ROBINSON",
+    "sub_industry": "Air Freight & Logistics",
+    "status_at_seal": "realized"
+   },
+   "thesis": "CHRW is the cleanest realized AI-operational-efficiency story in freight brokerage: a genuinely decoupled headcount/volume curve backed by a mechanism-specific, monotonically improving productivity-per-head metric explicitly credited to generative AI. Across all five of the last five quarters, average NAST headcount fell 11-13% YoY while volume held flat-to-up, and shipments per person per day rose from +30% (Q1'25) to +50%+ (Q1'26) since 2022, driving NAST operating margin from 34.3% (Q1'25) to ~39% (Q3'25) and +310bps YoY ex-restructuring in both Q4'25 and Q1'26. Management substantiates the AI attribution with hard throughput numbers (LTL-classification agent: 10 min to 10 sec on ~2,000 orders/day; 95% of missed-pickup checks automated, 350 hours/day saved; RFQ cycle 17-20 min to 32 seconds) rather than slogans. The main caveat: the headcount reductions carry recurring restructuring charges and a 'lean' baseline, so AI is the incremental productivity offset on top of a deliberate RIF, not the sole driver.",
+   "evidence": [
+    {
+     "period": "Q1 2025",
+     "finding": "Generative AI named the key driver of a >30% productivity increase (2023-2024); AI agents performed 3M+ shipping tasks, 1M+ price quotes, 1M+ orders. Avg headcount -11% YoY; NAST operating margin 34.3% (up YoY and sequentially); total opex -6.5% YoY (-$34M)."
+    },
+    {
+     "period": "Q2 2025",
+     "finding": "LTL freight-classification AI agent determines class/code for ~2,000 orders/day, cutting processing from 10+ min to 10 sec/shipment. Productivity +35% since 2022; avg headcount -11.2% YoY; NAST operating margin ~38%; NAST gross margin +80bps YoY."
+    },
+    {
+     "period": "Q3 2025",
+     "finding": "450+ in-house engineers/data scientists; fleet of AI agents across quote-to-cash plus an 'always-on logistics planner' with 30+ connected agents, scaling only on token cost (no incremental tech spend). Productivity +40% since 2022 (NAST), +55% Global Forwarding; avg headcount -10.8% YoY decoupled from +3% volume; NAST adjusted operating margin 39%."
+    },
+    {
+     "period": "Q4 2025",
+     "finding": "30+ custom AI agents deployed; 95% of missed-LTL-pickup checks automated (350 hrs/day saved, 42% fewer return trips); RFQ completion 60%->100% and cycle 17-20 min -> 32 sec. NAST operating margin +310bps YoY ex-restructuring (company +320bps); avg headcount -12.9% YoY; shipments/person +40%+ since 2022, double-digit for FY2025."
+    },
+    {
+     "period": "Q1 2026",
+     "finding": "Shipments per person per day now >50% higher than 2022; double-digit NAST productivity again in Q1. Avg headcount -12.3% YoY; personnel expense (ex-restructuring) -$13.4M / -3.9% YoY; NAST operating margin +310bps YoY; company operating margin +210bps YoY; total NAST volume flat vs CAS index -6.2%."
+    }
+   ],
+   "risks": "Attribution entanglement is the core risk: headcount cuts carry recurring restructuring charges (e.g., $9.7M Q3'25, $3.9M Q2'25), so margin gains are quoted 'ex-restructuring' and AI is the productivity offset on top of a deliberate RIF plus a 'single-digit-per-year' lean baseline \u2014 AI is the incremental delta, not the whole gain. Gross-margin improvements (+140/+80/+70/+20bps) partly reflect pricing/contract-mix (contractual TL rose to ~70%) and spot-rate spread, not AI. The gains are occurring during a prolonged freight recession (CAS -6% to -8% YoY); an up-cycle could change the cost dynamics and lap increasingly tough productivity comps (already +50% since 2022), risking deceleration, and part of the 2026 guide is 'over-indexed to H2,' i.e. still forward promise. Management is heavily promoting a 'Lean AI'/AgenTeq narrative, so some AI-washing risk exists \u2014 but the specific per-head throughput metrics are hard and verifiable, which keeps it well above washing. Attribution is management's framing, not an independently decomposable fact. The headline margin expansion (34.3%->~39%; +310bps YoY) is driven primarily by an 11-13% YoY headcount reduction \u2014 a deliberate RIF carrying recurring restructuring charges \u2014 and \"shipments per person per day\" is a ratio that rises mechanically as heads are cut, whether or not AI did the cutting. Management never quantifies the AI share vs. RIF/process discipline, so \"explicitly credited to generative AI\" means credited by the CEO/CFO, not verified as AI-caused. Second, the productivity % (30/35/40/50%) is cumulative off a fixed 2022 base, so the quarter-over-quarter \"acceleration\" partly reflects a receding base year, not necessarily faster AI adoption. Third, NAST gross-margin/AGP moves also reflect truckload buy-sell spreads in a soft freight cycle \u2014 margin attribution to AI is looser than the (genuinely strong) task-throughput attribution. Net: the mechanism anecdotes are real and specific, which is why this survives; but the thesis should not treat management's AI credit for the aggregate margin/productivity numbers as independently proven."
+  },
+  {
+   "case_id": "HQY-2026-07-21",
+   "sealed_on": "2026-07-21",
+   "role": "median",
+   "expected_score": 53,
+   "tolerance": 3,
+   "note": "Sits at the median of the admitted distribution at the seal date. Anchors the middle of the scale, where most genuine-but-unspectacular evidence should land.",
+   "company_context": {
+    "ticker": "HQY",
+    "company": "HEALTHEQUITY INC",
+    "sub_industry": "Managed Health Care",
+    "status_at_seal": "realized"
+   },
+   "thesis": "HealthEquity shows a genuine multi-quarter AI/automation program with verifiable operational output, but the case is more entangled than a \"realized\" label implies. Cleanest realized AI signals: 9% fewer teammates YoY (Q2 FY26) with service costs down even excluding fraud, plus specific Q1 FY27 automation outputs (25% less manual email handling, >90% automation of targeted card/claims workflows, up to 50% faster processing, 50,000+ fewer card-related contacts \u2014 stated by CEO Cutler, not CFO Lucania). Confirmed headline: fraud reimbursements fell ~90% YoY, $3.2M->$0.3M, full-year 1.1bp. HOWEVER: (1) the dollarized service-cost declines ($10M Q3, $17M Q4, ~$6M ex ~$2M [not $2.9M] one-time in Q1 FY27) are substantially fraud NORMALIZATION off an abnormally elevated FY2025 breach base, not pure incremental AI; (2) consolidated gross-margin expansion (65%->72%) is dominated by rate-driven custodial net investment income, not cost-to-serve; (3) the AI-specific evidence is operational, not cleanly tied to P&L dollars. Real signal, hard to size \u2014 belongs in the entangled band.",
+   "evidence": [
+    {
+     "period": "Phase 1",
+     "finding": "Q1"
+    },
+    {
+     "period": "FY2026",
+     "finding": "Direct fraud costs fell from ~$11M (Q4 FY2025) to ~$3M; AI-driven expedited claims serving 7,000+ clients collapsed adjudication from 1-2 weeks to real-time, 'reducing processing costs' (CEO Scott Cutler). Gross margin 68% vs 65%.\n\nQ2"
+    },
+    {
+     "period": "FY2026",
+     "finding": "~9% fewer teammates YoY while service costs declined YoY both reported AND excluding fraud (Cutler/CFO Lucania) \u2014 labor/volume decoupling. v5 platform 100% cloud: 92% faster response, 80% fewer delays. Gross margin record 71%, adj EBITDA margin 46%.\n\nQ3"
+    },
+    {
+     "period": "FY2026",
+     "finding": "Service costs declined $10M YoY despite volume growth (CFO Lucania); fraud reimbursements ~$300K, ahead of 1bp target; call-deflection design to cut 5-10 min routine interactions to <1 min via agentic IVR (Parloa partnership). Adj EBITDA margin 44% (+460bps YoY).\n\nQ4"
+    },
+    {
+     "period": "FY2026",
+     "finding": "Service costs down $17M YoY, attributed to fraud reduction and service-efficiency; full-year fraud 1.1bp (top percentile in Visa network); CEO: AI 'becoming an earnings engine...lowering costs to serve.' Gross margin 68% (+700bps YoY).\n\nQ1"
+    },
+    {
+     "period": "FY2027",
+     "finding": "Fraud costs down ~90% YoY ($3.2M\u2192$0.3M); AI cut manual email handling 25%, drove 90%+ reduction in targeted card-servicing/claims workflows, up to 50% faster processing, and 50,000+ fewer card-related service contacts (CFO Lucania). Service costs improved ~$6M YoY ex $2.9M one-time; gross margin record 72%."
+    }
+   ],
+   "risks": "Attribution ambiguity is the central risk: consolidated gross-margin expansion (65%\u219272%) is driven mostly by rate-sensitive custodial net investment income on HSA cash, not AI, so the headline margin story overstates the AI contribution \u2014 the true AI signal lives in the smaller service-cost line ($6-17M on a ~$1.3B revenue base). The ~90% fraud-cost reduction, the single largest quantified item, is substantially normalization off an abnormally elevated FY2025 fraud/breach base and is credited to security hardening (passkeys, card-network controls) as much as 'AI,' making it partly ordinary remediation dressed in AI language. The most granular AI-productivity metrics (25% email, 90% workflow, 50k contacts) are concentrated in the single most recent quarter, limiting durability of the specific automation claims, and management commentary is turning promotional ('earnings engine,' 'early innings'), raising promotional risk. Fraud-normalization risk: much of the visible service-cost improvement is a return-to-normal after an anomalous FY2025 fraud/breach spike; once the base laps (largely by FY2027) the YoY \"AI savings\" tailwind fades and comps get harder. Rate risk: gross-margin and EBITDA-margin records are heavily levered to custodial cash yields (net investment income); a rate-cut cycle would compress margins regardless of AI. Dollarization gap: the strongest AI proof points are operational counts (emails, contacts, processing time), not isolable P&L savings \u2014 management has not disclosed a clean AI-attributed dollar figure, so the earnings contribution is asserted. Execution risk on forward items: Q3 Parloa agentic-IVR 5-10min->under-1min is a design goal, not realized; benefit is unproven. Note also that Q4 stock saw its biggest drop in 3+ years on soft guidance, indicating the market is not paying up for the AI-efficiency narrative."
+  },
+  {
+   "case_id": "USFD-2026-07-21",
+   "sealed_on": "2026-07-21",
+   "role": "floor",
+   "expected_score": 38,
+   "tolerance": 3,
+   "note": "The floor of what admission can mean. Efficiency is real but Lean/routing/procurement-driven, and the AI-labelled items are revenue tools. A model that scores this case ABOVE ~45 has gone soft on attribution; one that scores it near zero has lost the ability to distinguish 'real efficiency, wrong cause' from 'no efficiency at all'.",
+   "company_context": {
+    "ticker": "USFD",
+    "company": "US FOODS HOLDING",
+    "sub_industry": "Food Distributors",
+    "status_at_seal": "plan"
+   },
+   "thesis": "US Foods runs a genuinely strong, durable operational-efficiency machine \u2014 gross profit per case has grown ~100-180 bps faster than opex per case, cases-per-mile hit records, and adjusted EBITDA per case set records ($2.52 in Q2 2025, $2.34 Q4 2025) \u2014 but the drivers are Lean process standardization, commercial routing software, and procurement/inventory initiatives, NOT AI. Management itself describes UMOS (the source of the \"+3% warehouse/selector productivity\") as a \"supply chain process standardization and continuous improvement platform\" and attributes opex leverage to \"routing enhancements, greater process standardization\" \u2014 not AI. The prior 64 score AI-washed a Lean + third-party-software efficiency program. The items US Foods explicitly calls AI (MOXe AI search: +3% conversion / ~1.3M incremental cases; AI photo/PDF ordering; MenuIQ) are revenue/demand tools, not internal operational efficiency, which fails the bar. Net: real efficiency, weak AI attribution \u2014 a cut on the AI-efficiency thesis.",
+   "evidence": [
+    {
+     "period": "Q2 2025",
+     "finding": "Record cases per mile, +2% YoY / ~6% over two years (Descartes, framed as routing optimization not AI); Ops QC ~28% YoY; adjusted EBITDA per case record $2.52. Generative-AI 'automated order guide' cited for sales proposals but with no P&L quantification. UMOS explicitly framed as operating consistency, not AI."
+    },
+    {
+     "period": "Q3 2025",
+     "finding": "MOXe AI-powered search drove +3% conversion / ~1.3M incremental cases annualized \u2014 this is AI-explicit but a REVENUE/demand uplift, not internal operational efficiency; and cases per mile +2.3% (Descartes, not labeled AI); Ops QC +24% YoY (UMOS process, not AI)."
+    },
+    {
+     "period": "Q3 2025",
+     "finding": "AI sales-proposal / order-guide tool cuts proposal generation from 2-3 hours to 15-20 minutes \u2014 a genuine AI-attributed internal productivity gain, but anecdotal and not quantified into headcount, margin bps, or G&A leverage in the financials."
+    },
+    {
+     "period": "Q4 2025",
+     "finding": "~2% improvement in cases per mile on broad-line deliveries via Descartes routing software; opex per case held to +0.3% by 'routing enhancements, greater process standardization.' Management does NOT call this AI; only MOXe ordering was described as 'embedded AI.'"
+    },
+    {
+     "period": "Q1 2026",
+     "finding": "Warehouse and selector productivity +3% YoY, explicitly credited to UMOS rollout across 70 markets \u2014 but management defines UMOS as a 'supply chain process standardization and continuous improvement platform' (Lean-style operating system), NOT AI. Attribution to AI is unsupported."
+    }
+   ],
+   "risks": "Attribution ambiguity is the fatal flaw: the quantified P&L gains (opex per case, cases per mile, Ops QC) are management-attributed to Lean process standardization (UMOS), commercial routing software (Descartes), and procurement/inventory programs \u2014 not AI \u2014 so counting them as AI efficiency is AI-washing. The clearly-AI initiatives (MOXe AI search, photo/PDF ordering, MenuIQ) are revenue/demand tools, disqualified as internal operational efficiency. The one clean AI internal-productivity item (order-guide time savings) is unquantified and not visible in the financials. Promotional risk is moderate: US Foods is actually fairly disciplined in its language (it does NOT overclaim AI), so the overstatement originated in the prior analyst note, not the company. Reversibility is low because the underlying efficiency is real \u2014 but it would persist with or without AI, which is precisely why it does not support an AI-efficiency thesis.  INCLUDED AS BOSS-DESIGNATED ANCHOR. Deep 5-quarter review found the efficiency gains are driven by Lean process standardization + Descartes routing software + procurement \u2014 which management explicitly does NOT attribute to AI. The items US Foods labels \"AI\" (MOXe search) are revenue/demand tools, not internal operational efficiency. Score reflects weak AI-attribution, not weak operations."
+  }
+ ]
+}

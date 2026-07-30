@@ -113,9 +113,30 @@ Only if new evidence arrived. Quantification quality 0–40, financial-statement
 credibility of mechanism 0–20, track record 0–15. Penalties: promotional tone with thin numbers
 −10 to −20, AI-revenue conflation −10, shifting metric definitions −15.
 
-Anchors, which every run must respect: **CHRW 87** (best-in-class realized), **median admitted 53**,
-**USFD 38** (efficiency real but Lean/routing/procurement-driven — the floor of what admission can
-mean). A candidate scoring below the USFD floor is not admissible.
+### Calibration — run this BEFORE writing any score
+
+Calibration runs against `data/calibration.json`: three **frozen evidence snapshots** sealed on
+2026-07-21, with expected scores of 87 (ceiling), 53 (median) and 38 (floor). They are sealed
+text, not live companies.
+
+Re-score each case from its evidence alone — no knowledge of the expected score, no reference to
+the live company of the same name, no subsequent news. Compare to `expected_score` (tolerance ±3).
+
+- **In tolerance** → the rubric is stable; proceed to write score decisions.
+- **Out of tolerance** → the scoring model has drifted. Write NO score changes, promotions,
+  demotions or admissions this run. Still write `evidence_rows`, `last_scanned` and the run log —
+  recording a verbatim disclosure is a fact, not a judgement, and must never be suppressed. Log a
+  CALIBRATION FAILURE naming the case, the expected score and the score returned.
+
+**Why frozen and not live.** A live company's score must be free to move on new evidence; a
+yardstick must not. If the anchors were live names, a legitimate demotion would be
+indistinguishable from rubric drift and would falsely block the run — which is exactly the
+situation CHRW's open demotion review would have triggered. The frozen case scores 87 forever;
+the live CHRW may fall to 35 tomorrow. Both are correct, and they no longer interfere.
+
+The scale these anchors define still governs live scoring: 87 is best-in-class realized, 53 is the
+median of genuine-but-unspectacular evidence, and 38 is the floor — real efficiency, wrong cause.
+A candidate scoring below the floor is not admissible.
 
 **A score never moves without new evidence.** There is no periodic re-scoring pass. Record
 `score_last_moved` and the reason. Evidence age is displayed rather than decayed.

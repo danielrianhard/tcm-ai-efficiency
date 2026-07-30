@@ -175,10 +175,20 @@ quarters without refresh are flagged stale rather than silently marked down.</di
 <tr><td>Median admitted</td><td class="num">53</td><td>The centre of the admitted distribution.</td></tr>
 <tr><td><strong>USFD</strong></td><td class="num">38</td><td>Anchor retained by instruction despite failed attribution: the efficiency is real but Lean-, routing- and procurement-driven, and its AI-labelled products are revenue tools. The floor of what admission can mean.</td></tr>
 </tbody></table>
-<div class="box box-signal"><div class="h">▲ Why anchors matter</div>
-Every scan re-scores these three. If the anchors move, the run is treated as miscalibrated and is
-not written to the ledger. This is what keeps a score assigned in July comparable to one assigned
-in December.</div>
+<div class="box box-signal"><div class="h">▲ How calibration actually works</div>
+These anchors are <strong>frozen evidence snapshots</strong>, not live companies. Each seals the
+exact evidence as it stood on 21 July 2026 together with the score it produced. Before writing any
+score decision, a scan re-scores that sealed text from scratch, blind to the expected answer. If it
+returns within three points, the rubric is stable and the run proceeds. If it drifts, the run may
+still record what companies disclosed, but is barred from moving any score, and the failure is
+logged by name.
+<br><br>
+The distinction is the whole point. A live company must be free to move on new evidence — C.H.
+Robinson is under an open demotion review as this page is written. A yardstick must not move at
+all. Were the anchors live names, a legitimate demotion would be indistinguishable from model
+drift and would falsely block the run on precisely the day the machine was working correctly. The
+frozen case scores 87 permanently; the live company may fall tomorrow. Both are true, and neither
+interferes with the other.</div>
 
 <h2>Discipline Rules</h2><div class="rule"></div>
 <table><tbody>

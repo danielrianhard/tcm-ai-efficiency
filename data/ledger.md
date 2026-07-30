@@ -5,9 +5,9 @@
 - **Universe:** 345 companies (boss-provided Bloomberg screen, "AI adoption .pdf")
 - **Baseline:** Phase 1 deep verification completed 2026-07-21
 - **Methodology:** see `claude/AI_Efficiency_Methodology.md` (admission criteria, strictness filter, scoring rubric, run procedure)
-- **Last run:** 2026-07-29 (Tier 0 degraded — finnhub unreachable a second consecutive run; 4 of 56 queued names actually screened, all FAIL)
-- **Standing:** 21 realized · 25 plan · 23 cut · 276 outside · 5 near-misses · 0 additions since baseline
-- **Pending requeue (next run):** ACGL, ACHC, ADPT, AER, ALGN, AON, ARCB, AVTR, AXS, BG, CHE, CHEF, CHRW, CLH, CR, ENSG, EVR, FLS, FTV, GFL, GRMN, HLI, HLT, HOOD, HRI, HUM, ICLR, IEX, ITW, LMND, MC, MTG, ODFL, OMF, OPCH, PFSI, PNR, RCL, SFM, SITE, SOFI, SPGI, SWK, THG, TTEK, UHS, UNM, VLTO, WERN, WM, WSO, XYL (52) — backlog doubled from 26; the binding constraint is transcript-source lag, not screening capacity
+- **Last run:** 2026-07-30 (Tier 0 degraded a third consecutive run — finnhub blocked; calendar rebuilt from earningscall.biz. 88 queued, 27 scanned to full transcript, 3 Tier 2 deep reviews, 0 additions)
+- **Standing:** 21 realized · 25 plan · 23 cut · 276 outside · 6 near-misses · 0 additions since baseline
+- **Pending requeue (next run):** CHRW, SPGI, XPO, ADT, WTW, RYAN, AGCO, AJG, ALHC, AXS, BG, BGC, CI, COIN, CR, DAR, FLS, GATX, GFL, GH, H, HGV, ICE, ICLR, ILMN, ITW, L, LECO, LH, LNC, LPLA, MKL, MMSI, MTG, NCLH, PIPR, PRU, RCL, SAIA, SCI, SPXC, TEM, TTEK, TW, VIRT, WCC, WERN (47) — CHRW is first: it carries `pending_deep_review` and an open demotion review that cannot close until the peer-set check runs. The binding constraint remains transcript-source lag plus, this run, an exhausted session WebSearch budget.
 
 ## Status codes
 
@@ -504,3 +504,26 @@ Borderline evidence is a rejection. Each entry records the kill reasoning and a 
 **Watch.** Q3 2026 (late Oct): (1) does adjusted cost per piece turn negative year over year — with the Amazon glide-down complete and ~2mm pieces/day gone, Q3 is the first clean read without the volume-deleverage alibi; (2) does the 28% move, get dated or get reconciled — a fourth identical print confirms it as a costing constant and it should be permanently discounted; (3) does automation or AI enter the CFO's margin bridge, which is the admission gate; (4) any number attached to RFID or the digital twin — misload rate, hours per building, planning cycle time. That, not the 28%, would be UPS's first genuine criteria-A datapoint.
 
 **Scoring note.** Adversarial reviewer recommended 3 after a −10 promotional-tone and −5 AI-revenue-conflation penalty against a gross of 18. The run analyst recorded the gross 18 and waived both: UPS never claimed the 28% for AI and its AI language is descriptive rather than promotional — the over-reading was the thin screen's, not management's. Either figure is far below the 38 floor; the rejection is unchanged.
+
+
+---
+
+## Run 2026-07-30 — material changes
+
+**No additions. No promotions. No demotions. No score moves.** Standing unchanged at 21 realized · 25 plan · 23 cut · 276 outside.
+
+**WM — reopen request DENIED, cut of 2026-07-21 stands (new near-miss).** The Q2-2026 call produced the run's only cut-name reopen candidate: Jim Fish, CEO — *"our Smart Truck platform, which is a combination of artificial intelligence and other forms of technology, certainly, $300 million of run rate EBITDAs is significant."* The figure is new; the platform is not. John Morris dated the truck hardware to *"closer to a decade"* on the pre-cut Q1-2026 call, so the $300m is an accumulated program total newly given a run-rate label — roughly $30m a year, 0.17% of the $18.2bn opex base, three times below the materiality floor. It is arithmetically impossible as an incremental item: $300m is 114bp of margin against 40bp of actual expansion, and the CFO's bridge names price-to-cost spread first and puts technology on the *headwind* side at −40bp. Fish twice refuses the AI framing. Collection unit cost rose 2.1%. Peer set decisive: Clean Harbors +190bp and a record margin with no AI story at all; Waste Connections, with genuinely rigorous AI disclosure, books $20m realized against WM's unitemized $300m.
+
+**CHRW — demotion review OPENED, score HELD at 87, `pending_deep_review` set.** The adversarial pass made a serious case for cutting the anchor to ~35 and demoting realized → plan: the productivity metric definition was withdrawn this quarter (prior calls named *shipments per person per day*; the Q2 8-K says only "productivity" and merges the previously separate NAST and Global Forwarding series into one ">60%" floor), operating expenses **rose** $4.9m YoY so 112% of the operating-income gain came from adjusted gross profit, personnel cost per employee rose 13.2% on headcount down 10.8%, $26.8m of H1 severance is co-mingled with the AI headcount story, and CHRW's own disclosure of truckload rate per mile +25.5% points to rate inflation. **Held** because the peer-set check — the runbook's single most decisive test, mandatory every run — could not be run once the session WebSearch budget was exhausted, and no full Q2 transcript was obtainable. A 52-point cut to the calibration anchor of the entire scale will not be taken on an incomplete Tier 2. First in the queue next run.
+
+**CHRW evidence correction.** The claim that the Lean AI Engineer *"can assess a supply chain in 25 to 30 minutes, compared with assessments that can take up to four weeks"* originates in a BusinessWire product-launch release dated 2026-05-20, **not** an earnings call, and is struck from the earnings-call evidence set. The "more than 450 in-house engineers and data scientists" figure has been unchanged for four quarters and is a static input metric, not evidence.
+
+**PFSI — held at 63.** Genuinely new quantified framework (150 mapped origination tasks, 25% automated, 80% by YE2027, 40–80% cycle-time reduction), but the score move was killed: Spector attributes the $60m to *"rates being higher"* and a smaller market, with AI credited only for making the cut safe (*"while preserving operational capacity"*); CFO Perotti's entire expense bridge names volume and capacity and never AI; the 25% is an unweighted count of self-defined task types Spector concedes is *"low-hanging fruit"*; production expenses rose 35% YoY across five consecutive quarters. Realized AI-attributed saving this quarter: **$0**. No mortgage peer had reported Q2, so there is no control group.
+
+**SPGI — held at 60.** Goalpost check passes cleanly (end-2027 deadline unchanged since Q4-2025), but attribution is blended ("AI-driven efficiencies **and other** productivity initiatives"), $100m is ~1.3% of company expenses, and Cheung's margin bridge credits "disciplined expense management" with no AI. Third consecutive run with no speaker-attributed primary source. Q3 trigger recorded: if "nearly 60%" has not advanced, that becomes the demotion trigger this quarter was not.
+
+**Disclosure-attrition flags: HOOD (realized/70), AON (plan/50), OPCH (plan/47)** — all three reported and quantified nothing. None is a demotion yet; a second consecutive absent quarter makes each one.
+
+**Closest outside names, all rejected:** GWO (Empower CEO ties AI and straight-through processing to *"driving our unit cost lower"* — no figure), FTV (Gordian Flash AI, *"days to minutes"*, unquantified and customer-facing), THG (named tool Triage Pro, zero quantification), MC (Moelis discussed AI at length; the CFO expressly declined to quantify it).
+
+**MORN flagged structural** — Morningstar holds no earnings conference call and can never yield a transcript-based verdict. Removed from the transcript requeue.

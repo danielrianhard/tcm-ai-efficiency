@@ -337,12 +337,84 @@ def split_quarters(text):
     return out
 
 
+# Abbreviations whose trailing period does NOT end a sentence.
+_ABBREV = {"vs", "e.g", "i.e", "etc", "approx", "est", "incl", "no", "nos", "cf", "al",
+           "mr", "mrs", "ms", "dr", "st", "jr", "sr", "co", "corp", "inc", "ltd", "fig",
+           "u.s", "u.k", "bn", "mn", "yr", "q1", "q2", "q3", "q4", "fy", "h1", "h2"}
+
+
 def split_bullets(text):
-    """Split a risks blob into sentences/clauses that read as separate risks."""
+    """Split a risks blob into separate risks without breaking on abbreviations."""
     if not text:
         return []
-    parts = re.split(r'(?<=[.;])\s+(?=[A-Z(])', text)
-    return [x.strip() for x in parts if x and len(x.strip()) > 3]
+    cuts = []
+    for m in re.finditer(r'(?<=[.;])\s+(?=[A-Z(])', text):
+        before = text[:m.start()].rstrip('.;')
+        last = re.split(r'[\s(]', before)[-1].lower() if before else ""
+        if last in _ABBREV:
+            continue
+        cuts.append((m.start(), m.end()))
+    parts, prev = [], 0
+    for a, b in cuts:
+        parts.append(text[prev:a])
+        prev = b
+    parts.append(text[prev:])
+    out = []
+    for x in [p.strip() for p in parts if p and p.strip()]:
+        if out and len(x) < 40:          # a fragment too short to stand alone
+            out[-1] = out[-1].rstrip() + " " + x
+        else:
+            out.append(x)
+    return [x for x in out if len(x) > 3]
+
+
+# Spell out on first use, then leave the short form. Longest keys first so that
+# e.g. "LTL" is matched before "TL".
+GLOSSARY = {
+    "LTL": "less-than-truckload",
+    "TL": "truckload",
+    "RIF": "reduction in force, i.e. layoffs",
+    "LAE": "loss adjustment expense, the cost of handling claims",
+    "IFP": "in-force premium",
+    "NAST": "North American Surface Transportation, C.H. Robinson's largest segment",
+    "STP": "straight-through processing",
+    "PPNR": "pre-provision net revenue",
+    "NII": "net interest income",
+    "ARPO": "average revenue per order",
+    "CIP": "continuous improvement program",
+    "ROTCE": "return on tangible common equity",
+    "EBITDAC": "earnings before interest, tax, depreciation, amortisation and change in earn-outs",
+    "SG&A": "selling, general and administrative expense",
+    "G&A": "general and administrative expense",
+    "FTE": "full-time equivalent employee",
+    "KPI": "key performance indicator",
+    "ADR": "average daily rate",
+    "bps": "basis points, i.e. hundredths of a percentage point",
+    "YoY": "year over year",
+    "QoQ": "quarter over quarter",
+    "opex": "operating expense",
+    "OpEx": "operating expense",
+    "P&C": "property and casualty",
+    "MBA": "Mortgage Bankers Association",
+    "IRRRL": "Interest Rate Reduction Refinance Loan",
+    "GPU": "graphics processing unit",
+}
+_GLOSSARY_ORDER = sorted(GLOSSARY, key=len, reverse=True)
+
+
+def dejargon(text, seen):
+    """Expand each abbreviation the first time it appears on a page."""
+    if not text:
+        return text
+    for abbr in _GLOSSARY_ORDER:
+        if abbr in seen:
+            continue
+        pattern = r'(?<![A-Za-z0-9&])' + re.escape(abbr) + r'(?![A-Za-z0-9&])'
+        m = re.search(pattern, text)
+        if m:
+            text = text[:m.start()] + f"{GLOSSARY[abbr]} ({abbr})" + text[m.end():]
+            seen.add(abbr)
+    return text
 
 
 def page_company(c, st, adm):
@@ -363,6 +435,8 @@ def page_company(c, st, adm):
     age = qtrs_since(c.get("score_last_moved"))
     age_txt = "this quarter" if not age else f"~{age} quarter{'s' if age != 1 else ''} ago"
 
+    seen = set()
+    thesis_txt = dejargon(c.get('thesis'), seen) if c.get('thesis') else None
     rows = c.get('evidence_rows') or []
     if rows:
         trs = []
@@ -381,7 +455,7 @@ def page_company(c, st, adm):
                         if live else '')
             trs.append(
                 f'<tr><td class="tick" style="white-space:nowrap">{esc(r["period"])}{scan_tag}</td>'
-                f'<td>{esc(r["finding"])}{src}</td>'
+                f'<td>{esc(dejargon(r["finding"], seen))}{src}</td>'
                 f'<td style="white-space:nowrap">{mark}</td></tr>')
         q = sum(1 for r in rows if r.get('qualifies'))
         quarters_html = (
@@ -400,7 +474,7 @@ def page_company(c, st, adm):
                          'No quantified evidence on file for this name. It populates on the first '
                          'automated scan following its next report.</div>')
 
-    rs = split_bullets(c.get('risks'))
+    rs = [dejargon(x, seen) for x in split_bullets(c.get('risks'))]
     risks_html = ('<div class="box box-persp"><div class="h">What would break this thesis</div><ul style="margin:6px 0 0 18px">'
                   + "".join(f'<li style="margin:4px 0">{esc(x)}</li>' for x in rs)
                   + '</ul></div>') if rs else '<p class="empty">No risks recorded.</p>'
@@ -429,7 +503,7 @@ def page_company(c, st, adm):
 </dl>
 
 <h2>Investment Thesis</h2><div class="rule"></div>
-{('<p class="lede">' + esc(c['thesis']) + '</p>') if c.get('thesis') else
+{('<p class="lede">' + esc(thesis_txt) + '</p>') if thesis_txt else
  '<p>' + esc(c.get('notes') or 'Admitted in the Phase 1 deep verification.') + '</p>'}
 
 <h2>Quantified Evidence</h2><div class="rule"></div>

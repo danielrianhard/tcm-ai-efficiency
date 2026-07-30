@@ -321,6 +321,30 @@ TABLE_JS = """
 """
 
 
+
+def split_quarters(text):
+    """Split a 'Q1 2025: ... Q2 2025: ...' blob into (label, body) pairs."""
+    if not text:
+        return []
+    parts = re.split(r'(?=(?:Q[1-4]|FY|H[12])\s*(?:20)?\d{2}\s*:)', text)
+    out = []
+    for chunk in [x.strip() for x in parts if x and x.strip()]:
+        m = re.match(r'^((?:Q[1-4]|FY|H[12])\s*(?:20)?\d{2})\s*:\s*(.*)$', chunk, re.S)
+        if m:
+            out.append((m.group(1).strip(), m.group(2).strip()))
+        else:
+            out.append(("", chunk))
+    return out
+
+
+def split_bullets(text):
+    """Split a risks blob into sentences/clauses that read as separate risks."""
+    if not text:
+        return []
+    parts = re.split(r'(?<=[.;])\s+(?=[A-Z(])', text)
+    return [x.strip() for x in parts if x and len(x.strip()) > 3]
+
+
 def page_company(c, st, adm):
     peers = [p for p in adm if p["sub_industry"] == c["sub_industry"] and p["ticker"] != c["ticker"]]
     peer_html = ", ".join(
@@ -338,6 +362,32 @@ def page_company(c, st, adm):
 
     age = qtrs_since(c.get("score_last_moved"))
     age_txt = "this quarter" if not age else f"~{age} quarter{'s' if age != 1 else ''} ago"
+
+    qs = split_quarters(c.get('evidence_detail'))
+    if qs:
+        quarters_html = ('<table><thead><tr><th style="width:110px">Period</th>'
+                         '<th>Quantified evidence, as disclosed</th></tr></thead><tbody>'
+                         + "".join(
+                             f'<tr><td class="tick">{esc(lab) or "&mdash;"}</td><td>{esc(txt)}</td></tr>'
+                             for lab, txt in qs)
+                         + '</tbody></table>')
+        if c.get('qtrs_with_progress'):
+            quarters_html += (f'<p class="sm" style="font-family:Arial,sans-serif;font-size:11.5px;'
+                              f'color:{GRAY}">Quarters showing progress: '
+                              f'<strong>{esc(int(c["qtrs_with_progress"]))} of 5</strong> reviewed.</p>')
+    else:
+        quarters_html = ('<div class="box box-push"><div class="h">&#9679; Pending</div>'
+                         'No quantified evidence on file for this name. It populates on the first '
+                         'automated scan following its next report.</div>')
+
+    rs = split_bullets(c.get('risks'))
+    risks_html = ('<div class="box box-persp"><div class="h">What would break this thesis</div><ul style="margin:6px 0 0 18px">'
+                  + "".join(f'<li style="margin:4px 0">{esc(x)}</li>' for x in rs)
+                  + '</ul></div>') if rs else '<p class="empty">No risks recorded.</p>'
+
+    src = c.get('sources_detail')
+    sources_html = (f'<p class="sm" style="font-size:12px;line-height:1.6">{esc(src)}</p>'
+                    if src else '<p class="empty">Sources are recorded per evidence entry.</p>')
 
     body = f"""
 <div class="strip">
@@ -358,8 +408,18 @@ def page_company(c, st, adm):
   <dt>Peers in database</dt><dd>{peer_html}</dd>
 </dl>
 
-<h2>Basis for Admission</h2><div class="rule"></div>
-<p>{esc(c.get('notes') or 'Admitted in the Phase 1 deep verification.')}</p>
+<h2>Investment Thesis</h2><div class="rule"></div>
+{('<p class="lede">' + esc(c['thesis']) + '</p>') if c.get('thesis') else
+ '<p>' + esc(c.get('notes') or 'Admitted in the Phase 1 deep verification.') + '</p>'}
+
+<h2>Quantified Evidence</h2><div class="rule"></div>
+{quarters_html}
+
+<h2>Key Risks &amp; Red Flags</h2><div class="rule"></div>
+{risks_html}
+
+<h2>Sources</h2><div class="rule"></div>
+{sources_html}
 
 <h2>Evidence Log</h2><div class="rule"></div>
 <table><thead><tr><th>Date</th><th>Entry</th></tr></thead><tbody>{ev_html}</tbody></table>

@@ -2,56 +2,31 @@
  "meta": {
   "universe_count": 345,
   "baseline_date": "2026-07-21",
-  "last_run": "2026-07-30",
+  "last_run": "2026-07-31",
   "methodology_doc": "claude/AI_Efficiency_Methodology.md",
   "pending_requeue": [
-   "ADT",
-   "AGCO",
-   "AJG",
-   "ALHC",
-   "AXS",
    "BG",
    "BGC",
+   "CBOE",
    "CHRW",
    "CI",
-   "COIN",
    "CR",
-   "DAR",
    "FLS",
    "GATX",
-   "GFL",
    "GH",
-   "H",
-   "HGV",
-   "ICE",
-   "ICLR",
-   "ILMN",
    "ITW",
    "L",
    "LECO",
-   "LH",
    "LNC",
-   "LPLA",
-   "MKL",
    "MMSI",
-   "MTG",
-   "NCLH",
-   "PIPR",
    "PRU",
    "RCL",
    "RYAN",
    "SAIA",
-   "SCI",
-   "SPGI",
    "SPXC",
-   "TEM",
    "TTEK",
-   "TW",
    "VIRT",
-   "WCC",
-   "WERN",
-   "WTW",
-   "XPO"
+   "WERN"
   ]
  },
  "companies": [
@@ -70,10 +45,10 @@
    "score_last_moved": "2026-07-21",
    "score_last_moved_reason": "Phase 1 baseline",
    "pending_deep_review": true,
-   "notes": "Phase 1 top score. Realized anchor: quantified AI productivity in shipments/person/day and opex. | 2026-07-30 CORRECTION: the \"Lean AI Engineer assesses a supply chain in 25-30 minutes vs up to four weeks\" claim originates in a BusinessWire product-launch release dated 2026-05-20, NOT an earnings call, and is struck from the earnings-call evidence set. The \"more than 450 engineers and data scientists\" figure has been unchanged for four quarters and is a static input metric, not new evidence.",
+   "notes": "Phase 1 top score. Realized anchor: quantified AI productivity in shipments/person/day and opex. | 2026-07-30 CORRECTION: the \"Lean AI Engineer assesses a supply chain in 25-30 minutes vs up to four weeks\" claim originates in a BusinessWire product-launch release dated 2026-05-20, NOT an earnings call, and is struck from the earnings-call evidence set. The \"more than 450 engineers and data scientists\" figure has been unchanged for four quarters and is a static input metric, not new evidence. | 2026-07-31: mandatory peer-set test COMPLETED (Landstar, RXO, Expeditors, Forward Air) \u2014 result SURVIVES; the cycle explanation is refuted. Proposed 87->72 markdown DENIED pending the primary source. last_scanned NOT advanced; pending_deep_review retained; first in the queue.",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "Q2-2026 DEMOTION REVIEW OPENED, SCORE HELD AT 87. Adversarial review proposed 87 to ~35 and realized to plan on: metric definition withdrawn (prior calls named \"shipments per person per day\"; Q2 8-K says only \"productivity\" and merges the previously separate NAST and Global Forwarding series into one \">60%\" floor); opex ROSE $4.9m YoY so 112% of the operating-income gain came from adjusted gross profit; personnel cost per employee +13.2%; $26.8m H1 severance co-mingled with the AI headcount story; truckload rate per mile +25.5% suggests rate inflation. HELD because the peer-set check \u2014 the runbook's single most decisive test, mandatory every run \u2014 COULD NOT BE RUN (session WebSearch budget exhausted), no full Q2 transcript was obtainable, and a 52-point cut to the calibration anchor of the entire scale will not be taken on an incomplete Tier 2.",
+   "last_verdict": "Q2-2026 DEMOTION REVIEW REMAINS OPEN, SCORE HELD AT 87, STATUS HELD AT realized. The mandatory peer-set test was run on 2026-07-31 and returned SURVIVES: the 2026 freight market is a RATE UPCYCLE, not a recession, and it compressed peer broker margins \u2014 Landstar revenue +18.2% on loads +1.9% with revenue per load +17.0%, operating margin FLAT 4.6% vs 4.6%, SG&A +22.4%, and CFO Jim Todd citing \"a 129 basis point compression in our brokerage net revenue margin\"; RXO brokerage gross margin -50bp sequentially on truckload volume -12%; Expeditors FTEs +6.0% and salaries +9.1% while margin expanded 63bp; Forward Air adjusted EBITDA +1.4% with zero AI mentions. A cycle that compressed or reversed the delta at four peers cannot explain CHRW's expansion, so the demotion's load-bearing premise \u2014 that this is a cycle-and-cost-discipline gain wearing an AI label \u2014 is refuted. The peer test does corroborate one lesser charge: rate inflation is market-wide, so the portion of operating-income gain riding on AGP is partly cyclical. A 87 -> 72 markdown was PROPOSED and DENIED on the adversarial pass. The -15 maps correctly onto the rubric's \"metric definitions that shift quarter to quarter\", but its predicate is UNPROVEN: the charge that \"shipments per person per day\" was withdrawn rests on its absence from an 8-K, and absence from a press release is not evidence of withdrawal when the venue in which it has always been disclosed \u2014 the call \u2014 has never been read. The Q2-2026 transcript has now been unobtainable from any permitted source for a THIRD consecutive run (MarketScreener paywalled, Seeking Alpha barred). Moving the calibration anchor of the entire scale on an unread primary source, in an append-only log, is not a cost worth one run's impatience. CONDITIONAL TRIGGER RECORDED \u2014 when the Q2-2026 transcript is obtained: (a) if management does NOT restate a per-person-per-day productivity metric on the call, apply the -15 immediately, 87 -> 72; (b) if it additionally fails to attribute any quantified opex reduction to named AI tooling, realized -> plan follows with a further markdown; (c) if the metric is restated intact, close the review at 87 and log the 8-K financial deterioration (personnel cost per employee +13.2%, opex +$4.9M YoY, $26.8M H1 severance) as a standing Q3 watch item. SOURCING ESCALATION for the next run: go to investor.chrobinson.com for the company's own webcast replay/transcript BEFORE spending budget on aggregators.",
    "thesis": "CHRW is the cleanest realized AI-operational-efficiency story in freight brokerage: a genuinely decoupled headcount/volume curve backed by a mechanism-specific, monotonically improving productivity-per-head metric explicitly credited to generative AI. Across all five of the last five quarters, average NAST headcount fell 11-13% YoY while volume held flat-to-up, and shipments per person per day rose from +30% (Q1'25) to +50%+ (Q1'26) since 2022, driving NAST operating margin from 34.3% (Q1'25) to ~39% (Q3'25) and +310bps YoY ex-restructuring in both Q4'25 and Q1'26. Management substantiates the AI attribution with hard throughput numbers (LTL-classification agent: 10 min to 10 sec on ~2,000 orders/day; 95% of missed-pickup checks automated, 350 hours/day saved; RFQ cycle 17-20 min to 32 seconds) rather than slogans. The main caveat: the headcount reductions carry recurring restructuring charges and a 'lean' baseline, so AI is the incremental productivity offset on top of a deliberate RIF, not the sole driver.",
    "evidence_detail": "Q1 2025: Generative AI named the key driver of a >30% productivity increase (2023-2024); AI agents performed 3M+ shipping tasks, 1M+ price quotes, 1M+ orders. Avg headcount -11% YoY; NAST operating margin 34.3% (up YoY and sequentially); total opex -6.5% YoY (-$34M).\n\nQ2 2025: LTL freight-classification AI agent determines class/code for ~2,000 orders/day, cutting processing from 10+ min to 10 sec/shipment. Productivity +35% since 2022; avg headcount -11.2% YoY; NAST operating margin ~38%; NAST gross margin +80bps YoY.\n\nQ3 2025: 450+ in-house engineers/data scientists; fleet of AI agents across quote-to-cash plus an 'always-on logistics planner' with 30+ connected agents, scaling only on token cost (no incremental tech spend). Productivity +40% since 2022 (NAST), +55% Global Forwarding; avg headcount -10.8% YoY decoupled from +3% volume; NAST adjusted operating margin 39%.\n\nQ4 2025: 30+ custom AI agents deployed; 95% of missed-LTL-pickup checks automated (350 hrs/day saved, 42% fewer return trips); RFQ completion 60%->100% and cycle 17-20 min -> 32 sec. NAST operating margin +310bps YoY ex-restructuring (company +320bps); avg headcount -12.9% YoY; shipments/person +40%+ since 2022, double-digit for FY2025.\n\nQ1 2026: Shipments per person per day now >50% higher than 2022; double-digit NAST productivity again in Q1. Avg headcount -12.3% YoY; personnel expense (ex-restructuring) -$13.4M / -3.9% YoY; NAST operating margin +310bps YoY; company operating margin +210bps YoY; total NAST volume flat vs CAS index -6.2%.",
    "risks": "Attribution entanglement is the core risk: headcount cuts carry recurring restructuring charges (e.g., $9.7M Q3'25, $3.9M Q2'25), so margin gains are quoted 'ex-restructuring' and AI is the productivity offset on top of a deliberate RIF plus a 'single-digit-per-year' lean baseline \u2014 AI is the incremental delta, not the whole gain. Gross-margin improvements (+140/+80/+70/+20bps) partly reflect pricing/contract-mix (contractual TL rose to ~70%) and spot-rate spread, not AI. The gains are occurring during a prolonged freight recession (CAS -6% to -8% YoY); an up-cycle could change the cost dynamics and lap increasingly tough productivity comps (already +50% since 2022), risking deceleration, and part of the 2026 guide is 'over-indexed to H2,' i.e. still forward promise. Management is heavily promoting a 'Lean AI'/AgenTeq narrative, so some AI-washing risk exists \u2014 but the specific per-head throughput metrics are hard and verifiable, which keeps it well above washing. Attribution is management's framing, not an independently decomposable fact. The headline margin expansion (34.3%->~39%; +310bps YoY) is driven primarily by an 11-13% YoY headcount reduction \u2014 a deliberate RIF carrying recurring restructuring charges \u2014 and \"shipments per person per day\" is a ratio that rises mechanically as heads are cut, whether or not AI did the cutting. Management never quantifies the AI share vs. RIF/process discipline, so \"explicitly credited to generative AI\" means credited by the CEO/CFO, not verified as AI-caused. Second, the productivity % (30/35/40/50%) is cumulative off a fixed 2022 base, so the quarter-over-quarter \"acceleration\" partly reflects a receding base year, not necessarily faster AI adoption. Third, NAST gross-margin/AGP moves also reflect truckload buy-sell spreads in a soft freight cycle \u2014 margin attribution to AI is looser than the (genuinely strong) task-throughput attribution. Net: the mechanism anecdotes are real and specific, which is why this survives; but the thesis should not treat management's AI credit for the aggregate margin/productivity numbers as independently proven.",
@@ -157,7 +132,7 @@
    "score": 71,
    "rank": 2,
    "admitted": "2026-07-21",
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": "Q1-2026 era (Phase 1)",
    "score_last_moved": "2026-07-21",
    "score_last_moved_reason": "Phase 1 baseline",
@@ -165,7 +140,7 @@
    "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets)",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": null,
+   "last_verdict": "Q2-2026 SCANNED. New quantified AI evidence (trailer-loading AI: load quality +40%, damages -50% at pilot sites) but ATTRIBUTION DRIFT on the banked metric \u2014 the productivity number is credited on-call to \"workforce planning technology,\" not AI, for the first time in six quarters. AI credit retained in the earnings release only, which is not primary evidence. Score HELD 71. Attribution-drift watch opened: if the Q3-2026 call again carries the productivity number without an on-call AI attribution, that is two consecutive quarters of dropped credit and XPO goes to demotion review with a target range of 55-60. Before any future raise, management must define the productivity denominator once.",
    "thesis": "XPO shows a genuine, realized, unusually durable AI-operational-efficiency signal: management has reported an AI-attributed labor-productivity gain in each of the last five quarters, accelerating as proprietary tools roll out network-wide \u2014 +1 pt (Q1'25), ~1 pt (Q2'25), +2.5 pts hours/shipment (Q3'25), +2 pts (Q4'25), +4% (Q1'26 vs a 1.5% long-term target). Critically, gains persisted as volumes fell (tonnage \u22127.5% Q1'25; shipments \u22123.5% / tonnage \u22126.1% Q3'25), a counter-cyclical decoupling management ties to AI route optimization (linehaul miles \u22123%, empty miles >10%, diversions >80%, more stops/hour), automated door-loading (shipments/trailer +low-single-digits), and AI trailer-load tools (damage claims to a record <0.2%). This supports adjusted-OR expansion that beat seasonality (+150-300bps YoY across 2025; +30bps sequential in Q1'25), with each productivity point worth ~$25-30M EBITDA. Caveats: OR expansion is also driven materially by pricing (yield ex-fuel ~+7%), and the AI-specific magnitude is management-attributed and not independently separable from ordinary down-cycle cost discipline. The headline \"purchased transportation \u221246-53%\" is linehaul INSOURCING, not AI, and should be discounted.",
    "evidence_detail": "Q1 2025: +1% improvement in hours per shipment despite tonnage down 7.5% YoY, attributed to proprietary tech that flexes labor in real time + newly deployed AI-driven linehaul models; adjusted OR +30bps to 85.9% beating seasonality\n\nQ2 2025: ~1% labor productivity gain; AI models cut normalized linehaul miles ~3%, empty miles >10%, diversions >80%; P&D AI route-optimization piloted at 4 terminals with positive stops/hour; adjusted OR +300bps sequentially to 82.9%\n\nQ3 2025: Labor hours per shipment improved +2.5 points even as shipments fell ~6 pts YoY, explicitly attributed to AI optimizing linehaul/dock/pickup; automated door-loading lifted shipments/trailer low-single-digits; adjusted OR +150bps YoY to 82.7%\n\nQ4 2025: +2 points labor productivity in Q4 (~1.5 pts full year with H2 ramp from tech rollouts); AI P&D route-optimization pilot completed across 12 service centers with each point of P&D efficiency worth ~$9M/yr; expanding to ~half of service centers; adjusted OR +180bps\n\nQ1 2026: Productivity +4%, well above the 1.5% long-term target, with AI P&D route tools now on ~half the network (full by year-end) and AI trailer-load tools driving damage claims to a record <0.2%; each productivity point ~$25-30M incremental EBITDA; adjusted OR +200bps YoY to 83.9%",
    "risks": "Attribution/confound: the single largest and most-cited cost number \u2014 purchased transportation down 46-53% YoY \u2014 is primarily linehaul insourcing (outsourced miles cut from ~9% to 5.1%), a vertical-integration decision, not AI efficiency; crediting it to AI (as the prior note did) overstates the case. OR/margin expansion is also entangled with strong LTL pricing and a freight-recession cost-out narrative, so the AI leg cannot be cleanly isolated in GAAP margins. The \"productivity points\" and the $9M- and $25-30M-per-point EBITDA sensitivities are management-defined, self-reported figures, not audited line items. Promotional risk is elevated \u2014 freight management leans hard into \"AI\" branding \u2014 though XPO backs it with specific mechanisms and a credible staged network rollout. Reversibility risk: some productivity in a down-volume environment reflects network rationalization that could unwind on a demand recovery, though the accelerating trend as tools scale argues against pure cyclicality. Attribution risk is the core weakness: every AI-productivity figure is management self-reported with no external audit, and cannot be cleanly separated from headcount reduction in a soft freight market, network rationalization, or the standard LTL efficiency playbook \u2014 \"AI\" is a convenient label on gains that would partly occur anyway. Much of the OR beat is pricing/yield (ex-fuel yield ~+7%), not AI. Productivity-per-shipment can also flatter mechanically when weight-per-shipment falls. The signal is real and recurring but its dollar quantification ($9M/P&D point, $25-30M/productivity point) is a management framework, not a booked, verifiable P&L line. Durability depends on continued rollout execution (P&D tools only ~half deployed) and holds only while the freight cycle stays soft enough to keep productivity the growth story.",
@@ -236,6 +211,19 @@
      "source_url": null,
      "added_by": "phase1-baseline",
      "added_on": "2026-07-21"
+    },
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "ATTRIBUTION DRIFT \u2014 highest-value finding of the run. New quantified AI disclosure: Mario Harik, Chairman & CEO \u2014 \"In the second quarter, at the pilot sites, load quality improved by more than 40%, while damages were reduced by 50%,\" preceded by an explicit AI attribution (\"This application uses AI to assess images of freight placed inside the trailers\"). But the BANKED metric lost its on-call AI credit: Q1 2026 paired the quantified productivity gain with \"proprietary tools that use AI to improve planning, optimize trade flows and enhance day-to-day execution\"; in Q2 the identical metric is credited to \"workforce planning technology\" \u2014 Harik: \"In the second quarter, we used our workforce planning technology to improve productivity by nearly 2.5 points versus last year.\" AI appears nowhere in that sentence. DEFINITION NOTE: the productivity series unit has moved again (Q3-25 \"2.5 points hours/shipment\", Q4-25 \"2 points\", Q1-26 \"4%\", Q2-26 \"2.5 points\"); the denominator has never been defined on any call. Mitigant: the Q2 earnings RELEASE does retain the AI credit (\"implementing new AI capabilities across the network\"), so this is script relocation, not corporate withdrawal \u2014 and per house rule a press release is not an earnings call, so it is not primary evidence. New number is pilot-scoped and denominated in quality units, not cost. Financial visibility real but price-led: salaries/wages/benefits $929M vs $871M (+6.7%) on revenue +13.2% (~250bp labour leverage); LTL adjusted OR 79.9% vs 82.9%, but LTL revenue +15.2% on shipments/day +2.8% with yield ex-fuel +4.4%. CFO Kyle Wismans bridge names \"productivity initiatives,\" never AI. SCORE HELD 71.",
+     "qualifies": true,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/xpo-xpo-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
     }
    ]
   },
@@ -1221,7 +1209,7 @@
    "score": 60,
    "rank": 13,
    "admitted": "2026-07-21",
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": "Q1-2026 era (Phase 1)",
    "score_last_moved": "2026-07-21",
    "score_last_moved_reason": "Phase 1 baseline",
@@ -1229,7 +1217,7 @@
    "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets) | 2026-07-28: Q2-2026 call held 28 Jul; no full transcript published on any permitted source after two checks (investing.com, fool, marketbeat, alphastreet, insidermonkey, stockanalysis, yahoo all top out at Q1-2026). MarketBeat highlights pages rejected as non-transcripts. Score held at 60, last_scanned NOT advanced. FLAG for the next run: SPGI has issued pro forma and recast financial results with updated segment information, so a metric that appears to shift definition may shift innocently through the recast \u2014 read the recast before concluding goalpost-shifting. | 2026-07-30: Q3 trigger \u2014 if \"nearly 60%\" has not advanced by the Q3 call, that becomes the demotion trigger this quarter was not.",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "Q2-2026 deep-reviewed, HELD AT 60. EDO \"nearly 60% of targeted $100 million in annualized cost savings through AI-driven efficiencies and other productivity initiatives\" \u2014 goalpost check PASSES cleanly (end-2027 deadline unchanged since the Q4-2025 call), but attribution is blended and inseparable, $100m is ~1.3% of ~$7.5bn company expenses, and CEO Cheung's own margin bridge credits \"disciplined expense management\" with no AI. Third consecutive run with no speaker-attributed primary source. No change.",
+   "last_verdict": "Q2-2026 SCANNED. FAIL on blended attribution \u2014 $100M EDO cost-savings target sourced by CEO Cheung to \"a combination of AI-driven efficiencies and traditional productivity initiatives.\" Score held 60. This is the reference blend-failure used to deny WTW a move on the same run.",
    "thesis": "S&P Global has genuine, quantified, explicitly AI/automation-attributed internal-efficiency datapoints, but they are small relative to the P&L and concentrated in only two of the last five quarters. The hard realized numbers come from the 2025 Enterprise Data Office (EDO) build-out: by Q4 2025 more than 50% of total data workflows were processed via automation tools, more than 10% of applications had been eliminated, and management cited $10M+ of research-productivity savings over the year (Q3 2025 added \"multiple millions\" from moving ~6,000 data operators onto an internally built content workflow tool). Management targets a >20% run-rate expense cut on the ~$0.5B EDO base (of a $7.5B cost base) by end-2027 and claims to be \"well ahead of pace\" \u2014 but that is a plan, not yet in the numbers. Crucially, the large margin expansion (52.1% adj. op margin, +330bps YoY in Q3 2025) is a multi-year operating-leverage/Ratings-cycle story management explicitly ties back to 2018, NOT cleanly AI-isolated, and by Q1 2026 the narrative had pivoted from internal efficiency to AI-as-revenue monetization. This is realized-but-entangled and immaterial, not elite.",
    "evidence_detail": "Q2 2025: Internal AI assistant 'Spark Assist' active users rose from ~30% to over 65% of the workforce over one year; internal use cases grew from 1,300 to over 3,000 YTD. Adoption ramp only \u2014 no cost savings quantified; TTM margin +150bps not AI-attributed.\n\nQ3 2025: EDO consolidated ~8,000 data-operations employees company-wide; ~6,000 moved onto an internally developed content workflow tool, yielding 'multiple millions of dollars of savings this year' (CFO Eric Aboaf); Commodity Insights AI drafting added 'multimillions' more. Adj. operating margin 52.1% (+330bps YoY) but explicitly framed as continuous since 2018, not AI-isolated.\n\nQ4 2025: More than 50% of total data workflows now processed via automation tools; more than 10% of applications eliminated in 2025; $10M+ research-productivity savings over the year (CFO). EDO expense base cited at ~$0.5B of a $7.5B total cost base \u2014 i.e., realized $ savings are immaterial to consolidated P&L.\n\nQ4 2025: EDO target: reduce run-rate expenses by more than 20% by end of 2027 (~$100M on the ~$0.5B base), management 'well ahead of pace'; guidance that revenue growth will outstrip headcount growth. This is a credible plan, not yet realized in margins.\n\nQ1 2026: Narrative pivoted to AI-as-revenue: 35-45% renewal premiums for AI access, API call volumes up 5x QoQ, higher retention among AI customers. NO new quantified internal-efficiency targets disclosed; new CTO named to scale AI. Red flag for durability of the efficiency (vs. revenue) thesis.",
    "risks": "Attribution ambiguity is the core problem: the impressive figure (52.1% margin, +330bps) is a multi-year operating-leverage and Ratings-cycle story management dates to 2018, not cleanly AI-isolated, while the cleanly AI-attributed savings ($10M+ research productivity, \"multiple millions\" EDO) are immaterial against a $7.5B cost base. Confounds: With Intelligence M&A synergies and ordinary data-ops reorg/consolidation are bundled into the \"automation\" story. Durability risk: hard efficiency numbers appear in only ~2 of 5 quarters (Q3/Q4 2025); Q1 2025 had none and Q1 2026 pivoted to AI monetization, suggesting the internal-efficiency framing may be giving way to a promotional AI-revenue narrative. The best quantified item \u2014 the >20% run-rate cut by 2027 \u2014 is a plan not yet visible in reported margins. Added risks the deep-dive under-weights: (1) Disclosure discontinuity \u2014 with the Q1 2026 pivot to AI-as-revenue and a new CTO, management has stopped issuing fresh internal-efficiency datapoints; the 2027 >20% EDO run-rate target may never be re-quantified against actuals, making the plan hard to hold management to. (2) Self-reported, unaudited magnitudes \u2014 the \"multiple millions\"/\"multimillions\" savings and the \"$10M+\" figure are management color, not separately disclosed line items; no external verification is possible. (3) Attribution entanglement is structural \u2014 the headline +330bps margin expansion is primarily Ratings issuance-cycle and multi-year operating leverage; a debt-issuance downturn would compress margins regardless of AI, and could be spun either way. (4) Denominator risk \u2014 even full success (~$100M) is ~1.3% of the cost base, so this thesis is essentially immaterial to consolidated EPS on its own.",
@@ -1300,6 +1288,19 @@
      "source_url": null,
      "added_by": "phase1-baseline",
      "added_on": "2026-07-21"
+    },
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 blended attribution. Martina Cheung, President & CEO: \"the EDO has achieved nearly 60% of its targeted $100 million in annualized cost savings.\" Real internal cost number (Enterprise Data Organization, ~20% of the EDO cost base, full delivery targeted before end-2027) but Cheung explicitly sources it to \"a combination of AI-driven efficiencies and traditional productivity initiatives\" \u2014 no clean AI attribution, so the number cannot be assigned to AI. All other AI-linked figures on the call (Kensho LLM-ready API volume 5x QoQ, 500+ clients, ACV growth 60% faster for AI customers) are product/customer demand, i.e. AI-as-revenue, explicitly out of scope. Score held 60. This blended-attribution failure is the reference standard used to deny WTW a score move on the same run.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-28",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-sp-global-q2-2026-profit-miss-weighs-on-shares-93CH-4817134",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
     }
    ]
   },
@@ -2364,7 +2365,7 @@
    "score": 54,
    "rank": 25,
    "admitted": "2026-07-21",
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": "Q1-2026 era (Phase 1)",
    "score_last_moved": "2026-07-21",
    "score_last_moved_reason": "Phase 1 baseline",
@@ -2372,7 +2373,7 @@
    "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets)",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": null,
+   "last_verdict": "Q2-2026 SCANNED. Substantial new disclosure (Propel: $400M run-rate on $625M investment; 4 hours -> 5 minutes, two-speaker corroborated; CFO ties AI to a realized 100bp of margin expansion) but SCORE MOVE 54 -> 62 DENIED on the adversarial pass. Blended \"AI and automation\" attribution with no AI share quantified is the SPGI failure; management declined Greenspan's direct request to break it down; freed capacity explicitly reinvested, so realized AI saving is $0; and AON produced 331bp of labour-ratio leverage in the same quarter with no AI story at all. Held plan / 54.",
    "thesis": "WTW's \"WeDo\" (WTW Enterprise Delivery Organization) is a genuine, named, multi-quarter AI-and-automation program that the CEO repeatedly credits for margin expansion, and it is backed by specific use-case metrics (Call Note Assist cut post-call wrap-up time 33% across 1.6M summarized calls in Q1 2026; a CRB affinity team cut endorsement processing time 90%; \"in some instances a 75% reduction in routine work\" in Q2 2025). But the hard financial margin lift is NOT cleanly AI-attributed: management's own words tie the bulk of the FY2025 +130bps (only +80bps ex-TRANZACT) and the big HWC gains (Q3 +390bps, but only +100bps ex-TRANZACT) to the TRANZACT divestiture and a legacy \"Transformation\" restructuring program that concluded in 2024. The verifiable AI wins are operational/anecdotal, not isolable in the consolidated P&L, so this is best graded a credible, well-articulated quantified plan with early realized proof points \u2014 not a clean realized-in-financials case. This refutes the prior 63/\"realized\" note and shades the conviction down.",
    "evidence_detail": "Q1 2025: Adjusted operating margin 21.6%, +100bps YoY, but management attributed it 'primarily to the sale of TRANZACT and savings from the Transformation program' \u2014 no WeDo/AI attribution in the release (confound baseline, not AI).\n\nQ2 2025: Adjusted operating margin 18.5%, +150bps YoY; CEO Carl Hess: 'Through WeDo we are raising AI literacy...'; cited '75% reduction in routine work and processing time' in some instances and Coverage Clarified construction AI tool '40% more efficient' \u2014 anecdotal use-case metrics, not P&L attribution.\n\nQ3 2025: Adjusted operating margin 20.4% (+230bps YoY), but HWC +390bps is only +100bps ex-TRANZACT; Hess: 'WeDo-backed automation projects...streamlined billing, collections, and payment to drive stronger margins and free cash flow, reflected in our results this quarter' (no quantified AI figure).\n\nQ4/FY 2025: FY2025 adjusted operating margin 25.2%, +130bps YoY \u2014 but only +80bps excluding TRANZACT; Hess: 'WeDo continues to be a major driver of our growing profitability...WeDo-enabled AI and automation are central to enhancing our efficiency' \u2014 one of several drivers, not isolated.\n\nQ1 2026: Adjusted operating margin 22.3%, +70bps YoY but only +30bps ex-FX tailwind; Call Note Assist summarized 1.6M calls enabling 33% reduction in post-call wrap-up time; a CRB affinity team achieved 90% reduction in endorsement processing time; Neuron AI operating system began global rollout \u2014 concrete AI wins but at task level, not consolidated margin.",
    "risks": "Attribution is the core red flag: the biggest quantified margin lever is the TRANZACT divestiture (mix/held-for-sale exit), and the second is a legacy 'Transformation' restructuring program that ended in 2024 \u2014 both ordinary, non-AI drivers that management itself cites first, especially in early quarters. Ex-TRANZACT and ex-FX, the true margin expansion is modest (FY2025 +80bps; Q1 2026 +30bps), and WeDo is always framed as 'a' or 'a critical' driver bundled with expense discipline and operating leverage, never separately quantified in the P&L. The genuinely AI-specific numbers (33% wrap-up cut, 90% endorsement-time cut, 75% 'in some instances') are narrow, self-reported use-case/pilot metrics with high promotional risk and no verifiable flow-through to headcount or the margin line. Additionally, Spike Lipkin's '50% more sales / attrition halved' claims are revenue/retention, not operational cost efficiency, and should not be counted toward the AI-opex thesis. Base-effect exhaustion / decelerating signal: the two drivers management actually credits for the hard margin lift are non-recurring \u2014 the TRANZACT divestiture (a one-time mix/comp effect that annualizes out) and the Transformation program that concluded in 2024. Ex-TRANZACT the FY2025 lift is only +80bps and HWC only +100bps; Q1 2026 is just +30bps ex-FX and the print was received as \"mixed\" with growth headwinds (stock fell). So as the legacy tailwinds roll off, WeDo/AI must increasingly carry margin expansion on its own \u2014 precisely the part that is not yet isolable in the financials. WeDo is a cost/efficiency program, not an AI revenue product, so there is no monetization optionality to underwrite. Net: the AI-efficiency case is a credible, well-evidenced PLAN with real early proof points, but the realized, AI-attributable P&L impact is unproven and the confounding non-AI drivers are diminishing \u2014 conviction should stay capped until an ex-TRANZACT, ex-FX margin trend clearly outperforms without the legacy crutches.",
@@ -2443,6 +2444,19 @@
      "source_url": null,
      "added_by": "phase1-baseline",
      "added_on": "2026-07-21"
+    },
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "Substantial new disclosure, SCORE MOVE DENIED (54 -> 62 proposed, killed on the adversarial pass). Carl Hess, CEO: \"Schedules of insurance that once took four hours are now generated in about five minutes,\" independently corroborated by Lucy Clarke, President Risk & Broking: \"The teams that are using the new tools have seen what was at least a four-hour project get done in about five minutes.\" Named platforms Neuron / Willis Navigator (via Newfront) / Violet. Program \"Propel\": Hess \u2014 \"We expect to capture efficiencies and generate approximately $400 million in run rate savings through an investment of approximately $625 million,\" bridging to ~30% adjusted operating margin in 2028. Andrew Krasner, CFO, against a REALIZED 100bp of adjusted operating margin expansion (19.5% vs 18.5%): \"A growing share of this expansion is structural, driven by AI and automation embedded across our operating model.\" KILL: (1) CONSISTENCY \u2014 this is the same blended attribution that failed SPGI on this same run, and weaker: SPGI at least attaches a dated $100m number to its blend, whereas \"a growing share\" of 100bp is anywhere between 1bp and 99bp, and Krasner's own predicate is \"strong operating discipline and expense management,\" with AI entering only in the following sentence; (2) management was asked to split it and declined \u2014 Elyse Greenspan (Wells Fargo) asked to \"break it down by contribution in dollars,\" and Krasner answered with categories instead, two of the three named $400m sources being non-AI (lower third-party spend = procurement; retiring duplicative and legacy technology = IT rationalisation); (3) the saving is disclaimed in the same breath \u2014 Krasner: \"the capacity these tools free up is being reinvested into higher value client-facing work and growth,\" which is the GSHD/AXP kill, realized AI-attributed saving $0; (4) PEER SET DECISIVE AGAINST \u2014 AON in the same quarter cut compensation and benefits to $2,271M from $2,360M (-3.8%) on revenue +2.2%, i.e. 331bp of labour-ratio leverage vs WTW's ~120bp, with GAAP operating margin +80bp against WTW's GAAP margin FALLING 150bp to 14.8% (transaction and integration expense $61M vs $2M) \u2014 and AON attributes none of it to AI; MMC's comp ratio was 8bp worse while running \"Thrive,\" a named automation program with no AI label; AJG's comp ratio was 230bp worse. Broker comp ratios in Q2 2026 dispersed from +331bp to -230bp with no relationship to AI disclosure. NOTE: the Newfront-confound charge was itself rejected on the adversarial pass \u2014 acquisitions accounted for ~3% of the 9% reported growth (~$68M), which moves a $2.47bn base by 15-20bp, not 120bp, so the labour leverage is probably real; it simply does not belong to AI. Held at plan / 54. Triggers: (i) Q3 2026 \u2014 if management still will not put a dollar or a percentage on the AI share of the $400M, apply the promotional-tone penalty and consider 54 -> high-40s; (ii) goalpost check \u2014 the ~30% 2028 margin and the $400M/$625M figures are now on the record and must be re-checked unchanged every quarter; (iii) if the \"AI and automation\" pairing persists without ever being decomposed, cap WTW below 70 permanently.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-wtw-tops-q2-2026-estimates-as-shares-rise-42-93CH-4825085",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
     }
    ]
   },
@@ -2456,7 +2470,7 @@
    "score": 54,
    "rank": 26,
    "admitted": "2026-07-21",
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": "Q1-2026 era (Phase 1)",
    "score_last_moved": "2026-07-21",
    "score_last_moved_reason": "Phase 1 baseline",
@@ -2464,7 +2478,7 @@
    "notes": "Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets)",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": null,
+   "last_verdict": "Q2-2026 SCANNED. First quantified AI operational metric (~20% fewer human-agent contacts) but PROMOTION DENIED: no denominator/baseline, gross subscriber adds -22% mechanically explains contact decline, and every financial line moved the wrong way (SG&A/revenue ~175bp worse, operating income -8%). Held plan / 54.",
    "thesis": "ADT has the most credible, durable *operational* AI story in consumer services: ~50% of service calls resolved remotely without truck rolls, sustained across at least four of the last five quarters, plus rising contact-center containment (chat 45%\u219260%, calls 16%\u219225% by April 2026) and over half of committed software code now AI-written with engineering headcount held flat. Every metric is specific, genuinely AI/automation-attributed, and repeated call-over-call. But the case fails the REALIZED bar: ADT has never disclosed an AI-attributed margin-bps, SG&A-leverage, or headcount-decoupling figure in its actual financials. The hardest dollar figure is CFO Jeff Likosar's soft Q1 2026 range of \"many millions, even tens of millions\" in call-center/truck-roll savings, and management (Q3 2025) explicitly conceded benefits are still scaling and promised \"more quantitative detail\" later. This is an exceptional, well-quantified operational plan with early proof \u2014 not yet demonstrably in the numbers.",
    "evidence_detail": "Q2 2025: ~50% of service calls use remote alternatives instead of in-home visits, avoiding \"thousands of truck rolls\"; 90% of customer-service chats processed by AI with ~50% resolved without a live agent; >50% reduction in false alarms YTD via Alarm Messenger.\n\nQ3 2025: 50% of in-home service calls eliminated via remote assistance, \"maintained for the last handful of quarters\"; ~50% of chats resolved by AI, ~20% voice-call containment (flat); management: \"AI-driven cost savings are beginning to materialize, particularly in call center operations\" and promised \"more quantitative detail as these benefits scale.\"\n\nQ4 2025: 50% of service calls resolved remotely without truck rolls; 23% of calls routed through AI in 2025; 100% of chats now use AI. (Origin AI positioned as a subscriber/RMR revenue product, not internal efficiency.)\n\nQ1 2026: Chat containment 45% rising to 60% by April; call containment 16% rising to 25% by April; all chats and ~half of phone calls routed through AI; over half of committed code written by AI with engineering headcount flat. CFO Jeff Likosar quantified call-center + truck-roll savings as \"many millions, even tens of millions.\"",
    "risks": "Attribution-to-financials gap is the core red flag: five quarters of strong operational metrics have never been converted into a disclosed, AI-attributed margin/SG&A/headcount number \u2014 the only dollar figure is the CFO's vague \"tens of millions\" range, and Q3 2025 management admitted savings are still scaling. Confounds are material: ADT's P&L is dominated by RMR/subscriber economics, and the recent period featured a revenue miss and customer-retention headwinds, so any field-cost benefit is easily masked and unverifiable in reported financials. Reversibility/deflection risk \u2014 \"containment\" can mean deferred rather than eliminated service demand. Promotional risk is elevated because ADT's most heavily marketed AI (Origin AI, Gemini features) is a growth/revenue narrative, not internal efficiency, and could be conflated by investors. Three risks the deep-dive understates: (1) Management's own Q3 2025 word was \"plateaued\" \u2014 remote-service resolution has been stuck at ~50% for several quarters, so the truck-roll lever may be near its ceiling, capping incremental savings. (2) Denominator/definition risk: \"100% of chats routed through AI\" and \"~half of calls routed through AI\" describe routing, not resolution; actual containment is far lower (chat 45-60%, calls 16-25%), and these are self-reported, non-audited operational metrics whose definitions can drift quarter to quarter. (3) Materiality: even \"tens of millions\" is small against ADT's ~$5B revenue and heavy interest burden, which is precisely why it has not shown up as a disclosed margin figure \u2014 the efficiency story is real but not yet financially load-bearing.",
@@ -2522,6 +2536,19 @@
      "source_url": null,
      "added_by": "phase1-baseline",
      "added_on": "2026-07-21"
+    },
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "First quantified AI operational metric, correctly ordered \u2014 but PROMOTION DENIED. Jim DeVries, Chairman/President/CEO: \"During the quarter, we combined AI-driven call routing with our virtual AI agents to improve first call resolution and reduce transfers,\" then \"we handled nearly 20% fewer customer contacts through human agents and reduced service tickets by a similar amount, all while achieving improved customer satisfaction.\" Omar Khan, Chief Business Officer: \"over three-quarters of our code generated by our product software team was generated and accepted and committed from AI\" (input metric, no cost denominator, does not qualify alone). KILL: (1) no denominator and no baseline \u2014 not stated per subscriber, per period, or against a stated contact base, and no dollar figure; DeVries says \"including cost savings\" and declines to size it, so the metric cannot be re-tested next quarter; (2) VOLUME CONFOUND \u2014 gross subscriber additions fell 22% in the quarter (190,000), which mechanically reduces human contact volume independent of any AI deflection; same failure pattern that killed FAF; (3) FINANCIAL VISIBILITY POINTS THE WRONG WAY \u2014 SG&A $386M vs $356M (+8%) on revenue +2%, i.e. 29.4% of revenue vs 27.7%, ~175bp WORSE; cost of revenue 20.1% vs 19.4%; operating income $316M vs $342M (-8%); adjusted EBITDA margin 51% vs 52%; (4) margin bridge fails decisively \u2014 the company's own release names \"higher selling, general, and administrative expenses\" as a driver of the income decline, with AI nowhere in the bridge. Held at plan / 54. Promotion trigger for Q3 2026: contact deflection restated per-subscriber with a baseline, AND SG&A/revenue inflecting below 27.7%, AND an AI mention in the margin bridge. A second quarter of a rising SG&A ratio alongside AI claims opens a demotion review.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-adt-tops-q2-2026-estimates-as-cash-flow-jumps-93CH-4825362",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
     }
    ]
   },
@@ -4422,7 +4449,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -4430,7 +4457,22 @@
    "notes": "",
    "cut_date": "2026-07-21",
    "cut_reason": "Phase 1 deep verification: claims failed AI-attribution / materiality bar",
-   "last_verdict": null
+   "last_verdict": "Q2-2026 quick check (cut name) \u2014 FAIL. No new evidence overcomes the recorded cut reason. Stays CUT.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 cut name, quick check, NOTHING NEW. Full transcript read. AI agents and \"agentic finance\" are discussed as a product/market narrative, not as an internal efficiency lever, and no cost, headcount, cycle-time or margin figure is attached to any AI mention. Nothing overcomes the recorded cut reason. Stays CUT.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-coinbase-posts-q2-2026-loss-revenue-miss-and-stock-falls-93CH-4826356",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "EQPT",
@@ -4542,7 +4584,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -4550,7 +4592,22 @@
    "notes": "",
    "cut_date": "2026-07-21",
    "cut_reason": "Phase 1 deep verification: claims failed AI-attribution / materiality bar",
-   "last_verdict": null
+   "last_verdict": "Q2-2026 quick check (cut name) \u2014 FAIL. No new evidence overcomes the recorded cut reason. Stays CUT.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 cut name, quick check, NOTHING NEW. Full transcript read. AI appears only as unquantified product/roadmap language (\"AI-powered app, MyLabcorp,\" integrating \"AI technologies\"), with no operational-efficiency metric attached. A named system exists but the hard number does not. Nothing overcomes the recorded cut reason. Stays CUT.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/labcorp-lh-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "LPLA",
@@ -4562,7 +4619,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -4570,7 +4627,22 @@
    "notes": "",
    "cut_date": "2026-07-21",
    "cut_reason": "Phase 1 deep verification: claims failed AI-attribution / materiality bar",
-   "last_verdict": null
+   "last_verdict": "Q2-2026 quick check (cut name) \u2014 FAIL. No new evidence overcomes the recorded cut reason. Stays CUT.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 cut name, quick check, NOTHING NEW, but the closest of the four. Richard Steinmeier, CEO: \"We have invested nearly $2 billion over the last few years in building the core foundational capabilities in our data, security, adviser technology, and AI\" \u2014 the only AI mention carrying a number, and it is an input-spend figure bundled across four categories with no AI-specific attribution and no efficiency outcome. The Cyan AI agent is described qualitatively \u2014 Matthew Audette, President & CFO, says such interactions \"can just be completely processed through by that agent\" \u2014 with zero quantification of STP rate, cycle time or cost. Stays CUT. Re-check trigger for Q3: LPL now has a named agent in production and management is describing STP-type behaviour; a quantified STP rate or cost-per-transaction disclosure would be a genuine trigger.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/lpl-financial-lpla-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "MRSH",
@@ -4822,7 +4894,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -4830,7 +4902,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Eric Hansotia, Chairman, President & CEO: \"AI based vision and inspection in our transmission and tractor plants in Germany are lifting quality and throughput\" \u2014 no number attached. The only hard efficiency number on the call ($60-70M of 2026 benefits, cited by Hansotia and CFO Damon Audia) is attributed to \"operational efficiency initiatives\" broadly, not to AI. Attribution/number linkage fails.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-agco-cuts-2026-outlook-after-q2-revenue-miss-93CH-4825457",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "CNH",
@@ -4942,7 +5029,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -4950,7 +5037,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Full transcript including Q&A returned NONE \u2014 no AI, ML or automation mention paired with any cost, productivity, headcount, cycle-time or margin figure. Clean negative; no AI-attributed efficiency number disclosed this quarter.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/darling-ingredients-dar-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "INGR",
@@ -5302,7 +5404,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -5310,7 +5412,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Full transcript including analyst Q&A read end to end. Zero instances of AI, machine learning or automation paired with any cost, productivity, headcount, cycle-time or margin figure. Clean negative; no AI-attributed efficiency number disclosed this quarter.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-mgic-tops-q2-2026-profit-view-shares-slip-93CH-4825210",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "RDN",
@@ -6064,7 +6181,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -6072,7 +6189,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Management referenced AI tools as early-stage in recruiting, pricing, forecasting and maintenance, and discussed AI-related productivity inside corporate costs, but attached no cost, headcount, cycle-time or margin figure to any of it. Qualitative only.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-gfl-raises-2026-outlook-after-strong-q2-93CH-4825016",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "ROL",
@@ -6204,7 +6336,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -6212,7 +6344,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 unquantified. Benjamin Jackson, President, on \"a voice assistant resolving common inbound calls before they reach a person taking cost out of the call center.\" The automation narrative is real and specific (workflow agents for service ordering, fee calculation, disclosure generation; a borrower-facing agent) but every claim is unquantified. The only hard number nearby \u2014 10.7 billion API and web services calls, +39% YoY \u2014 is platform throughput volume, not an AI-driven cost, headcount or cycle-time metric. HIGH-PROBABILITY FUTURE PASS if ICE ever quantifies the call-centre saving.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/ice-ice-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "MCO",
@@ -6324,7 +6471,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -6332,7 +6479,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 wrong sign. Tradeweb named several AI systems (TARA trading assistant, AiEX, SNAP+) and Billy Hult, CEO framed AI/automation as accelerating electronification \"with greater efficiency,\" but no figure was attached. The one AI-adjacent cost reference \u2014 Sara Furber, CFO: \"increased software costs, including AI\" \u2014 is directionally the wrong sign (AI as an expense headwind) and is unquantified, failing both the hard-number and the efficiency-meaning tests.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://ng.investing.com/news/transcripts/earnings-call-transcript-tradeweb-falls-12-after-q2-2026-revenue-miss-93CH-2628496",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "X",
@@ -7284,7 +7446,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -7292,7 +7454,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 linkage test. Mark S. Hoplamazian, Chairman, President & CEO: \"we have developed a large-scale AI platform to actually score and value every piece of group business that comes through the door\" \u2014 no number. The one hard efficiency number on the call, PMS cost to owners reduced by 40%, is attributed to a platform migration (new CRS, Opera Cloud, new RMS), not to AI. Management pairs AI language with a number that belongs to something else \u2014 the exact trap the three-gate test exists to catch. Re-screen next quarter.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/hyatt-h-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "HGV",
@@ -7304,7 +7481,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -7312,7 +7489,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Full transcript including Q&A returned no AI, machine learning or automation mention paired with any operational number. Clean negative; no AI-attributed efficiency number disclosed this quarter.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/hgv-hgv-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "HLT",
@@ -7384,7 +7576,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -7392,7 +7584,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Full transcript with Q&A read. John Chidsey referenced \"AI based\" tests within the cost-reduction discussion but attached no figure to them. Qualitative AI mention only \u2014 fails the hard-number test.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-norwegian-cruise-line-beats-q2-eps-but-stock-falls-on-outlook-93CH-4824892",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "RCL",
@@ -8244,7 +8451,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -8252,7 +8459,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED. Tier 1 PASS -> Tier 2 REJECTION, recorded as a near-miss at 25. Forward illustrative 600bps/400bps framework, analyst-prompted, self-haircut, zero AI dollars in the quarter; margin bridge credits \"productivity and quality efforts\"; peers (AON +70bps, ~60 of it from a named non-AI restructuring programme) beat it without any AI attribution.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "TIER 2 REJECTION \u2014 NEAR-MISS. Doug Howell, CFO, answering David Motemaden (Evercore ISI) on potential AI cost savings: \"That math would produce 600 basis points of margin expansion,\" on a framework of ~5% savings in the production layer, 10-15% in support, 20-30% in back office; \"I think it'll take us three to five years to fully realize those levels\"; self-haircut \"Maybe there's 400 basis points there in the way we look at it.\" Quote verified verbatim against two sources; call date pinned 2026-07-30 (the ph.investing.com 07-31 stamp is a UTC+8 timezone artifact, not a second call). KILL: forward, illustrative, analyst-prompted arithmetic with zero AI dollars in the quarter; margin bridge excludes AI entirely \u2014 Howell credits \"productivity and quality efforts\" for 50bps of underlying expansion and FY26 guidance was reaffirmed unchanged at 40-60bps; Q1 2026 set no quantified AI target so there is no track record to test; peer set decisive \u2014 AON expanded adjusted operating margin 70bps and attributed ~60bps of it to a named, dollarised, NON-AI restructuring programme ($25m in the quarter, $100m in 2026 toward $450m by 2027), while MMC runs a $400m \"Thrive\" programme whose stated levers include right-shoring. AJG's 50bps is at or below what its two largest peers delivered with no AI attribution, and below what one peer achieved through severance alone. Score 25 \u2014 far below the 38 admissibility floor. Recorded as a near-miss, not an admission.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/gallagher-ajg-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "GSHD",
@@ -8526,7 +8748,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -8534,7 +8756,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 classic adjacency near-miss. An analyst (Gabriel Angeli) asked about accelerated investment in AI and Deb Schoneman answered on AI spend, but the only numbers given were firm-wide non-comp expense and the comp ratio \u2014 not attributed to AI, and spend is an input, not an efficiency outcome. AI discussed adjacent to expense numbers without the causal link a PASS requires.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-piper-sandler-tops-q2-2026-eps-forecast-as-shares-fall-93CH-4824894",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "PJT",
@@ -9086,7 +9323,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -9094,7 +9331,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED. Tier 1 PASS -> Tier 2 REJECTION, recorded as a near-miss at 22. The thin screen's ellipsis inverted the meaning: the 30% is progress already earned by pre-Claude SmartDraft. No baseline, no scope, no dollars; beneficiary unresolved (billable study start-up work); margin bridge credits pass-through mix, cost actions and resourcing; $20.9M of restructuring for redundant-position elimination; IQVIA booked ~3x the restructuring with no AI label.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "TIER 2 REJECTION \u2014 NEAR-MISS. Thin screen misquoted by ellipsis; the full sentence inverts the meaning. Barry Balfe, CEO: \"SmartDraft will now have a Claude back end that helps us build on the progress we've already made, taking 30% out of the time of negotiating clinical trial contracts, as well as a range of functions in the back office, which are really more directly related to productivity than capability.\" The deleted clause \u2014 \"that helps us build on the progress we've already made\" \u2014 means the 30% is progress ALREADY earned by pre-Claude SmartDraft; the Claude back end is prospective. The ICON-Anthropic collaboration was announced 2026-07-28, one day before the call, entirely in future tense, and does not mention SmartDraft at all. KILL: no baseline, no scope, no dollars, no pilot-vs-production disclosure, and the figure appears in no company IR document \u2014 spoken remarks only; beneficiary unresolved (site-contract negotiation is billable study start-up work performed for sponsors, and management never said whether the saving is retained or passed through); margin bridge fails cleanly \u2014 CFO Nigel Clerkin credits \"higher pass-through activity,\" \"the cost actions that we have taken\" and \"constantly adjusting our resourcing,\" with AI absent from every driver, and Balfe's own release quote credits \"disciplined cost management\"; $20.9M of Q2 restructuring ($31.0M YTD) for \"realignment of its workforce, with the elimination of redundant positions\" independently explains the cost actions; Q1 2026 set no quantified AI target and never mentioned SmartDraft, so there is no metric continuity. Peer set decisive \u2014 IQVIA booked $63m of restructuring in the same quarter ($114m 1H, ~3x ICON's) and attributed none of it to AI, while Medpace converted 17.2% revenue growth into a 90bp SG&A-ratio improvement with no AI and no restructuring at all. The cost actions are the 2026 CRO downturn's sector-wide reflex. Score 22 \u2014 far below the 38 floor. Recorded as a near-miss.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-29",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-icon-beats-q2-2026-estimates-but-shares-slip-premarket-93CH-4824588",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "ILMN",
@@ -9106,7 +9358,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -9114,7 +9366,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. No AI, ML or automation reference tied to cost, productivity, headcount, cycle time or margin. The only quantified forward claim (new products adding one to two points of growth next year, CFO Ankur Dhingra) is product revenue and is not AI-attributed, failing both the attribution and the efficiency test.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/illumina-ilmn-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "IQV",
@@ -9306,7 +9573,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -9314,7 +9581,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 AI-as-revenue, logged not scored. Eric Lefkofsky, CEO: \"We expect an estimated $200 uplift in ASP, which equates to approximately $85 million on an annual basis beginning in 2027.\" Every quantified AI reference on the call is AI PRODUCT economics \u2014 ASP uplift, ~$400mm 2028 revenue expectation from xT CDx/xF approvals, ~$200mm of data-licensing bookings including the BioNTech deal. Selling AI is a different thesis. No internal cost, headcount, cycle-time or margin number was tied to AI. Clean confirmation of the AI-vendor exclusion rule.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-tempus-ai-beats-q2-2026-eps-view-as-stock-trims-gains-93CH-4826295",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "TMO",
@@ -9406,7 +9688,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -9414,7 +9696,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Full transcript including Q&A returned NONE. AI and the AVA stratification model are discussed, but always qualitatively, with no cost, MLR, headcount or cycle-time figure attached.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/alignment-healthcare-alhc-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "CNC",
@@ -9586,7 +9883,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -9594,7 +9891,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Vince Tizzio, President & CEO: \"...piloting AI across underwriting, claims, and operations.\" AI is a live strategic theme \u2014 Tizzio names Rahil Jagani as Head of AI and Technology Strategy and frames the \"How We Work\" program as scaling AI \u2014 but no expense ratio, headcount, STP rate or cycle-time number is attached to any AI statement.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-29",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-axis-capital-q2-2026-earnings-miss-weighs-on-shares-93CH-4820525",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "CINF",
@@ -9768,7 +10080,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -9776,7 +10088,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED. Tier 1 PASS -> Tier 2 REJECTION OUTRIGHT, recorded as a near-miss at 18. AI-as-revenue: Wilson converts the 50-90% underwriting cycle-time gain into a 50% larger London W&I book. Markel discloses no expense ratio at all, so the thesis is unscoreable in principle; combined ratio move is reserve development and cats; Cortex was designed with Bain & Company.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "TIER 2 REJECTION \u2014 OUTRIGHT (AI-as-revenue). Simon Wilson, Chief Executive Officer of Markel Insurance (speaker confirmed via markel.com press release; the investing.com transcript renders him first-name-only as \"Head of Insurance Operations\" \u2014 that is the vendor's label, NOT his corporate title, and must not be published): \"the reduction in time to have an initial risk assessment in front of an underwriter has fallen by between 50%-90%, depending on the line of business, and accuracy levels are above 90% in all cases.\" Also verified: new unit \"Cortex\" launched in wholesale and specialty; six classes of business \"comprehensively rewired\" over 12 months \"totaling over $500 million of existing GWP\" (partner: Harvey AI); AI accelerator fund launched February 2026. KILL: (1) PRIMARY \u2014 Wilson monetizes the metric as REVENUE in the same breath: \"This frees underwriters to focus on decision making, negotiation, and getting quotes out of the door. The result is higher levels of better quality business, with the WI portfolio in London growing by 50% in the year since we deployed Harvey.\" Underwriters are redeployed, not removed. AI-as-revenue is logged, never scored; (2) NO EXPENSE-RATIO DISCLOSURE AT ALL \u2014 the Q2 release discloses combined ratio only, the CFO offers only the adjective \"a slightly lower expense ratio,\" and Q1 2026 disclosed no expense ratio either, so there is no financial series in which an AI-driven expense benefit could ever be observed; (3) margin bridge excludes AI \u2014 the CFO attributes the 93% vs 97% combined ratio to \"more favorable prior year reserve development and a slightly lower expense ratio, partially offset by $41 million or 2 points of current year catastrophe losses,\" and the release adds \"a two point unfavorable impact from our exited Global Reinsurance division\"; (4) CONVENTIONAL RE-ENGINEERING NAMED \u2014 Cortex was designed with Bain & Company from March 2026, i.e. consultancy-led operating-model redesign wearing an AI label; (5) $500M is a PREMIUM denominator, not an expense denominator, so materiality against opex cannot be established even in principle; (6) peer set decisive \u2014 W.R. Berkley improved its combined ratio 160bps while holding its expense ratio dead flat at 28.5%, RLI deteriorated 110bps and Cincinnati Financial 590bps, all on catastrophe load and reserve development with no AI content. Q2 2026 P&C combined ratios moved on cats and reserves in both directions; expense ratios did not move. (7) Self-qualified: \"AI is only beneficial if it improves our service to customers while generating returns on capital over time.\" Score 18. Recorded as a near-miss.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-29",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-markel-group-q2-2026-beats-eps-shares-fall-58-93CH-4825203",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "ORI",
@@ -9948,7 +10275,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -9956,7 +10283,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL. Closest mention, unquantified \u2014 Tom Ryan, Chairman & CEO: \"the beauty of AI is you're taking your best sales techniques and everybody's getting the same training.\" CFO Eric Tanzberger said they are \"look[ing] for efficiencies through AI\" in app development. Every mention is qualitative; no cost, headcount, cycle-time or margin figure attached to AI anywhere on the call. Watch: this is the kind of language that tends to acquire a number a quarter or two later.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.investing.com/news/transcripts/earnings-call-transcript-service-corp-international-tops-q2-2026-estimates-93CH-4825084",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   },
   {
    "ticker": "ARW",
@@ -10328,7 +10670,7 @@
    "score": null,
    "rank": null,
    "admitted": null,
-   "last_scanned": "2026-07-21",
+   "last_scanned": "2026-07-31",
    "last_qtr_verified": null,
    "score_last_moved": null,
    "score_last_moved_reason": null,
@@ -10336,7 +10678,22 @@
    "notes": "",
    "cut_date": null,
    "cut_reason": null,
-   "last_verdict": "no qualifying evidence (Phase 1 screen)"
+   "last_verdict": "Q2-2026 SCANNED \u2014 FAIL. No AI-attributed efficiency number that clears all three gates. See evidence row.",
+   "evidence_rows": [
+    {
+     "period": "Q2 2026",
+     "sort": [
+      2026,
+      2
+     ],
+     "finding": "FAIL \u2014 right category, zero quantification. Indraneel Dev, CFO: \"as we invest more in digital transformation and now layering in AI, we have tools that we have never had before,\" in the context of analysing the data lake to compress the working-capital/inventory cycle. That is the right category of efficiency claim delivered with no number. No cost, headcount or cycle-time figure attached anywhere on the call. Watch item for a future quarter.",
+     "qualifies": false,
+     "source": "Q2 2026 earnings call, 2026-07-30",
+     "source_url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/wesco-wcc-q2-2026-earnings-call-transcript/",
+     "added_by": "scan-2026-07-31",
+     "added_on": "2026-07-31"
+    }
+   ]
   }
  ],
  "evidence_log": [
@@ -10367,6 +10724,10 @@
   {
    "date": "2026-07-30",
    "entry": "SCAN (30 Jul) \u2014 Tier 0 DEGRADED for a third consecutive run: finnhub.io returned PROVENANCE_REQUIRED to WebFetch and is proxy-blocked from the shell, so the calendar was rebuilt from earningscall.biz for 29 and 30 Jul and intersected with the universe. 88-name queue, 13 already scanned 29 Jul, 75 screened or attempted. 27 names scanned to a full transcript; 3 Tier 1 PASSes, all already-admitted names; 3 Tier 2 deep reviews with independent adversarial passes; 0 additions, 0 promotions, 0 demotions, 0 score moves. WM \u2014 the only cut-name reopen request of the run, DENIED. Fish's \"$300 million of run rate EBITDAs\" for Smart Truck is a first-time dollar label on a platform Morris dated to \"closer to a decade\" on the pre-cut Q1-2026 call, blends revenue capture with cost, is refused the AI framing by Fish himself, and sits against collection unit cost that ROSE 2.1%. Peer set decisive: Clean Harbors +190bp with no AI story; Waste Connections, with far better AI disclosure, books $20m realized against WM's unitemized $300m. Cut stands; recorded as a near-miss. PFSI \u2014 held at 63. The Q2 call introduced a genuinely new quantified framework (150 mapped origination tasks, 25% automated today, 80% targeted by YE2027, 40-80% cycle-time reduction, cost to originate down >50%), but the adversarial pass killed the score move: Spector attributes the $60m to \"rates being higher\" and a smaller market, AI is credited only with making the cut safe (\"while preserving operational capacity\"), CFO Perotti's entire expense bridge names volume and capacity and never AI, the 25% is an unweighted count of self-defined task types Spector concedes is \"low-hanging fruit\", and production expenses rose 35% YoY across five consecutive quarters. Realized AI-attributed saving this quarter: $0. No mortgage peer had reported Q2 yet, so the peer test has no control group \u2014 a further reason not to move. SPGI \u2014 held at 60. Goalpost check passes cleanly (end-2027 deadline unchanged since Q4-2025) but attribution is blended (\"AI-driven efficiencies and other productivity initiatives\"), the $100m target is ~1.3% of company expenses, and Cheung's margin bridge credits \"disciplined expense management\" with no AI. Third consecutive run with no speaker-attributed primary source. CHRW \u2014 DEMOTION REVIEW OPENED, SCORE HELD AT 87. The adversarial pass built a serious case for 87 to ~35: the productivity metric definition was withdrawn this quarter (prior calls named shipments per person per day; the Q2 8-K says only \"productivity\" and merges the previously separate NAST and Global Forwarding series into a single \">60%\" floor), opex ROSE $4.9m YoY so 112% of the operating-income gain came from gross profit, personnel cost per employee rose 13.2% on headcount down 10.8%, $26.8m of H1 severance is co-mingled with the AI headcount story, and the company's own disclosure of truckload rate per mile +25.5% points to rate inflation. It is held because the peer-set check \u2014 the runbook's single most decisive test, mandatory every run \u2014 could not be run once the session WebSearch budget was exhausted, and no full Q2 transcript was obtainable from any permitted source. A 52-point cut to the calibration anchor of the whole scale will not be taken on an incomplete Tier 2. CHRW carries pending_deep_review and is first in the queue next run. CORRECTION (append-only, supersedes nothing): the widely-quoted CHRW claim that the Lean AI Engineer \"can assess a supply chain in 25 to 30 minutes, compared with assessments that can take up to four weeks\" originates in a BusinessWire product-launch release dated 2026-05-20, not an earnings call, and is struck from the earnings-call evidence set. The \"more than 450 in-house engineers and data scientists\" figure has been unchanged for four quarters and is a static input metric. DISCLOSURE-ATTRITION FLAGS raised on three admitted names that reported and quantified nothing: HOOD (realized/70, zero AI operational disclosure this quarter), AON (plan/50) and OPCH (plan/47). None is a demotion yet; a second consecutive absent quarter makes each one. Closest outside names, all rejected: GWO \u2014 Empower CEO Ed Murphy ties AI and straight-through processing to \"driving our unit cost lower\" with no figure attached; FTV \u2014 Gordian Flash AI cuts construction cost estimating \"from days to minutes\", unquantified and customer-facing; THG \u2014 named proprietary tool Triage Pro, zero quantification; MC \u2014 Moelis discussed AI at length and the CFO expressly declined to quantify it. MORN flagged STRUCTURAL: Morningstar holds no earnings conference call and can never yield a transcript-based verdict; removed from the transcript requeue."
+  },
+  {
+   "date": "2026-07-31",
+   "entry": "SCAN (31 Jul) \u2014 Tier 0 DEGRADED for a FOURTH consecutive run: finnhub.io again returned PROVENANCE_REQUIRED to WebFetch and is proxy-blocked from the shell. Calendar rebuilt from digrin for 31 Jul; intersected with the universe it yielded exactly one new name (CBOE, which reports today and has no transcript yet), so the run was effectively the 47-name pending_requeue carried from 30 Jul. 48-name queue, 26 scanned to a full transcript, 22 requeued. CALIBRATION PASSED EXACTLY \u2014 the three frozen 2026-07-21 snapshots re-scored blind returned 87 / 53 / 38 against expected 87 / 53 / 38, zero deviation on all three anchors. Score decisions were therefore permitted this run. 6 Tier 1 PASSes, 5 independent adversarial passes run, 0 additions, 0 promotions, 0 demotions, 0 score moves, 3 new near-misses. AJG \u2014 Tier 1 PASS, REJECTED at 25. Howell's 600bps/400bps is analyst-prompted arithmetic he haircut himself, forward three-to-five years, with zero AI dollars in the quarter and a margin bridge that credits 'productivity and quality efforts'. Peer set decisive: AON expanded adjusted operating margin 70bps and dollarised ~60bps of it to a NAMED NON-AI restructuring programme; MMC runs a $400m Thrive programme whose levers include right-shoring. AJG's 50bps is below what peers delivered through severance alone. ICLR \u2014 Tier 1 PASS, REJECTED at 22, and a lesson in ellipsis. The thin screen's '...' deleted 'that helps us build on the progress we've already made', which inverts the sentence: the 30% belongs to pre-Claude SmartDraft, not to the Anthropic collaboration announced one day before the call in future tense. No baseline, no scope, no dollars, beneficiary unresolved (billable study start-up work). Clerkin's bridge credits pass-through mix, cost actions and resourcing. $20.9M Q2 restructuring for redundant-position elimination. Peer set: IQVIA booked ~3x the restructuring in the same quarter with no AI label; Medpace produced a 90bp SG&A-ratio improvement with no AI and no restructuring. MKL \u2014 Tier 1 PASS, REJECTED OUTRIGHT at 18 despite being the richest AI DEPLOYMENT disclosure of the run (Harvey AI, Cortex, Bain, February accelerator fund, six classes over $500m GWP). Two independent kills: Wilson monetizes the 50-90% underwriting cycle-time gain as REVENUE ('the WI portfolio in London growing by 50%'), which is AI-as-revenue and is logged not scored; and Markel discloses NO EXPENSE RATIO AT ALL, in the release or on either call, so the thesis is unscoreable in principle. Combined ratio 93% vs 97% is reserve development and cats. W.R. Berkley improved its combined ratio 160bps in the same quarter with its expense ratio dead flat at 28.5%. XPO \u2014 HIGHEST-VALUE FINDING OF THE RUN: the first case in this database of an admitted REALIZED name quietly dropping the AI credit from its flagship metric on the call. Q1-2026 paired the quantified productivity gain with 'proprietary tools that use AI'; Q2-2026 credits the identical metric to 'workforce planning technology', with AI absent from the sentence. The Q2 earnings RELEASE retains the AI credit, so this is script relocation rather than corporate withdrawal \u2014 but a press release is not an earnings call and is not primary evidence. New AI number this quarter (trailer-loading: load quality +40%, damages -50%) is pilot-scoped and denominated in quality units, not cost. Series unit has drifted again (points / hours-per-shipment / percent) and the denominator has never been defined on any call. Score HELD 71, attribution-drift watch opened with a Q3 demotion trigger at 55-60. ADT \u2014 promotion plan->realized DENIED. The ~20% human-agent contact reduction has no denominator or baseline, gross subscriber adds fell 22% which mechanically reduces contact volume, and every relevant financial line moved the wrong way (SG&A/revenue ~175bp worse, operating income -8%, adjusted EBITDA margin -100bp). The company's own release blames higher SG&A. Held 54. WTW \u2014 score move 54->62 PROPOSED and DENIED. Propel is genuinely new and substantial ($400M run-rate on $625M investment, 1.6x cost-to-achieve, ~30% margin 2028; 4 hours -> 5 minutes corroborated by two named executives; CFO Krasner attaching AI to a REALIZED 100bp of margin expansion). But 'a growing share ... driven by AI and automation' is the same blend that failed SPGI on this same run, and weaker \u2014 SPGI at least dates and dollarises its blend. Krasner declined Elyse Greenspan's direct request to break it down; two of his three named $400M levers (lower third-party spend, retiring legacy technology) are not AI; and he disclaims the saving in the same breath ('the capacity these tools free up is being reinvested'). Peer set decisive: AON cut compensation and benefits 3.8% in absolute dollars on revenue +2.2% \u2014 331bp of labour-ratio leverage, 2.8x WTW's \u2014 with no AI attribution, while WTW's GAAP operating margin FELL 150bp. NOTE: the Newfront-confound objection was itself rejected on the adversarial pass; acquisitions were ~3% of 9% growth (~$68M), moving a $2.47bn base 15-20bp, not 120bp. WTW's labour leverage is probably real; it just does not belong to AI. Held 54. CHRW \u2014 THE MANDATORY PEER-SET TEST WAS FINALLY RUN and it EXONERATES the name. The 2026 freight market is a rate UPCYCLE, not a recession, and it compressed peer broker margins: Landstar revenue +18.2% on loads +1.9%, revenue per load +17.0%, operating margin FLAT 4.6% vs 4.6%, SG&A +22.4%, CFO Jim Todd citing 'a 129 basis point compression in our brokerage net revenue margin'; RXO brokerage gross margin -50bp sequentially on truckload volume -12%; Expeditors ADDED FTEs +6.0% with salaries +9.1%; Forward Air adjusted EBITDA +1.4% with zero AI mentions. A cycle that compressed or reversed the delta at four peers cannot explain CHRW's expansion. The demotion's load-bearing premise is refuted. A fallback 87->72 markdown was then PROPOSED and DENIED: the -15 maps correctly onto the shifting-metric-definition penalty, but its predicate \u2014 that 'shipments per person per day' was withdrawn \u2014 rests on absence from an 8-K, and absence from a press release is not evidence of withdrawal when the venue in which it has always been disclosed has never been read. The Q2-2026 transcript has now been unobtainable for a THIRD consecutive run. Moving the calibration anchor of the entire scale on an unread primary source, in an append-only log, was rejected. Conditional trigger recorded: no per-person-per-day metric on the call -> 87->72 immediately; plus no quantified AI-attributed opex reduction -> realized->plan; metric restated intact -> close the review at 87. Sourcing escalation ordered: investor.chrobinson.com before aggregators. CUT NAMES \u2014 COIN, LH, LPLA quick-checked, all FAIL, nothing overcomes the recorded cut reasons; all stay CUT. LPLA is the only one worth a Q3 re-check (named agent 'Cyan' now in production with STP-type behaviour described but unquantified). CI could not be sourced and is requeued rather than treated as settled. SOURCING NOTE, now a structural problem rather than a one-off: 22 of 48 names could not be advanced, and only three of those are genuine timing (L reports 3 Aug, PRU 5 Aug, CBOE 31 Jul). The rest are sourcing failures \u2014 MarketScreener paywalled, Seeking Alpha barred by rule, several Fool URLs stale/404, and WebFetch's provenance gate blocks any URL not surfaced by a search result. None of these 22 were stamped last_scanned; all retry tomorrow."
   }
  ],
  "run_log": [
@@ -10397,6 +10758,10 @@
   {
    "date": "2026-07-30",
    "entry": "Scan of 30 Jul. Tier 0 degraded a third consecutive run (finnhub blocked; earningscall.biz substituted for 29-30 Jul) \u00b7 88 queued \u00b7 75 attempted \u00b7 27 scanned to full transcript \u00b7 3 PASS (all already admitted) \u00b7 3 Tier 2 deep reviews with independent adversarial passes \u00b7 1 cut-name reopen request DENIED (WM) \u00b7 0 additions \u00b7 0 promotions \u00b7 0 demotions \u00b7 0 score moves \u00b7 1 new near-miss (WM) \u00b7 1 demotion review opened and held pending the mandatory peer test (CHRW 87) \u00b7 3 disclosure-attrition flags (HOOD, AON, OPCH) \u00b7 1 evidence correction (CHRW 25-minute claim struck as marketing) \u00b7 48 requeued. Session WebSearch budget exhausted at 200/200, which blocked the CHRW peer set. Memo: yes."
+  },
+  {
+   "date": "2026-07-31",
+   "entry": "Scan of 31 Jul. Tier 0 degraded a fourth consecutive run (finnhub blocked; digrin substituted for 31 Jul, which added only CBOE, so the run was effectively the carried 47-name requeue) \u00b7 calibration PASSED exactly 87/53/38 \u00b7 48 queued \u00b7 26 scanned to full transcript \u00b7 6 PASS \u00b7 5 independent adversarial passes \u00b7 0 additions \u00b7 0 promotions \u00b7 0 demotions \u00b7 0 score moves \u00b7 3 new near-misses (AJG 25, ICLR 22, MKL 18) \u00b7 1 attribution-drift flag opened (XPO, first admitted realized name to drop the on-call AI credit) \u00b7 1 promotion denied (ADT) \u00b7 1 score move proposed and denied (WTW 54->62) \u00b7 CHRW mandatory peer test COMPLETED, result SURVIVES, demotion premise refuted, fallback 87->72 markdown denied pending the primary source, review held open \u00b7 3 cut names re-checked, all stay cut \u00b7 22 requeued. Memo: yes."
   }
  ],
  "near_misses": [
@@ -10572,6 +10937,95 @@
    "materiality": "$300m against implied FY26 opex of ~$18.2bn is 1.65% as stated, clearing the 0.5% floor on paper. But it is a stock, not a flow: gross EBITDA blending revenue and cost, no accumulation period disclosed, on a platform roughly ten years old. Annualised incrementally it is ~$30m, 0.17% of opex \u2014 below the floor by three times.",
    "watch": "Q3 2026 (late Oct): (1) is the $300m decomposed into AI-versus-cameras/telematics/routing and into service-upgrade revenue versus opex reduction; (2) is a baseline and vintage given so an incremental annual delta can be reconciled to the Collection & Disposal segment P&L; (3) does collection operating cost growth print BELOW volume growth, against this quarter's +1.7% cost on -0.4% volume; (4) does technology move from the headwind side of the CFO's bridge to a named, quantified benefit line. A repeat of \"$300 million\" unchanged with no reconciliation is confirmation of the UPS costing-constant pattern, not corroboration.",
    "note": "Peer set is decisive and was run: Clean Harbors posted +190bp of adjusted EBITDA margin \u2014 a company-record quarter and a $110m guidance raise \u2014 with zero AI attribution, and Waste Connections, whose AI disclosure is genuinely rigorous (seven initiatives, named tools, deployment dates, $100m invested), books just $20m of realized run-rate EBITDA today. WM's unitemized $300m is fifteen times WCN's itemized $20m. Republic Services, Casella and GFL had not published Q2-2026 transcripts in the window."
+  },
+  {
+   "ticker": "AJG",
+   "company": "ARTHUR J GALLAGHER",
+   "sub_industry": "Insurance Brokers",
+   "score": 25,
+   "call_date": "2026-07-30",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/gallagher-ajg-q2-2026-earnings-call-transcript/",
+   "headline": "A CFO validating an analyst's arithmetic is not a plan",
+   "quotes": [
+    {
+     "q": "That math would produce 600 basis points of margin expansion.",
+     "who": "Doug Howell, Chief Financial Officer"
+    },
+    {
+     "q": "Maybe there's 400 basis points there in the way we look at it.",
+     "who": "Doug Howell, Chief Financial Officer"
+    },
+    {
+     "q": "I think it'll take us three to five years to fully realize those levels.",
+     "who": "Doug Howell, Chief Financial Officer"
+    },
+    {
+     "q": "Our productivity and quality efforts again delivered another terrific quarter of underlying margin expansion of 50 basis points.",
+     "who": "Doug Howell, CFO \u2014 the actual margin bridge, with no AI in it"
+    }
+   ],
+   "kill": "Gallagher's case rests on a single CFO answer to an analyst's hypothetical. Howell did not table a plan; he validated David Motemaden's arithmetic and then immediately haircut it by a third, using the word \"maybe\" four times while constructing it. A quantification management declines to carry into guidance is not a plan, and FY26 guidance was reaffirmed unchanged at 40-60bps. Zero AI dollars appear in the quarter. The margin bridge that does exist credits \"productivity and quality efforts\" \u2014 the pre-existing programme, not AI. The peer set closes it: in the same quarter AON expanded adjusted operating margin 70bps and attributed roughly 60bps of that to a named, dollarised, NON-AI restructuring programme ($25m in the quarter, $100m in 2026 toward $450m by 2027), while MMC executes a $400m \"Thrive\" programme whose stated levers include right-shoring. Gallagher's 50bps is at or below what its two largest peers delivered with no AI attribution at all, and below what one peer achieved through severance alone. A thesis that cannot distinguish itself from its peer group's severance line does not enter the database.",
+   "survives": "The framework is specific and layered (5% production / 10-15% support / 20-30% back office) rather than sloganeering, and it was given by the CFO on the record. AJG's own forward-looking statements now itemise \"AI-washing\" as a risk factor, which is a mark of unusual self-awareness.",
+   "materiality": "400-600bps would be enormous if realized. The realized figure this quarter is $0 \u2014 no AI benefit is dollarized or expressed in basis points anywhere on the call.",
+   "watch": "Q3 2026 or the next Investor Day: does AJG restate the 400-600bps as a COMPANY target with a named base year and a dollar-denominated programme (as AON does with $450m-by-2027), and does the FY margin guide move above 40-60bps? Absent both, this stays out."
+  },
+  {
+   "ticker": "ICLR",
+   "company": "ICON PLC",
+   "sub_industry": "Life Sciences Tools & Services",
+   "score": 22,
+   "call_date": "2026-07-29",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-icon-beats-q2-2026-estimates-but-shares-slip-premarket-93CH-4824588",
+   "headline": "Four deleted words inverted the quote \u2014 the 30% predates the AI",
+   "quotes": [
+    {
+     "q": "SmartDraft will now have a Claude back end that helps us build on the progress we've already made, taking 30% out of the time of negotiating clinical trial contracts",
+     "who": "Barry Balfe, Chief Executive Officer"
+    },
+    {
+     "q": "which are really more directly related to productivity than capability",
+     "who": "Barry Balfe, CEO \u2014 the tail of the same sentence, downgrading his own claim"
+    },
+    {
+     "q": "the benefits of that mix effect as we talked about, as well as obviously the cost actions that we have taken",
+     "who": "Nigel Clerkin, CFO \u2014 the margin bridge, with no AI in it"
+    }
+   ],
+   "kill": "The quotation does not say what the case needs it to say. The thin screen's ellipsis deleted \"that helps us build on the progress we've already made\" \u2014 four words that invert the meaning. The 30% is progress already earned by the pre-Claude, rules-based SmartDraft; the Claude back end arrives prospectively. The ICON-Anthropic collaboration was announced 2026-07-28, one day before the call, entirely in future tense, and does not mention SmartDraft at all. The number carries no baseline, no scope and no dollar value, and appears in no company IR document \u2014 spoken remarks only. The beneficiary is unresolved: clinical trial site-contract negotiation is billable study start-up work performed for sponsors, so a cycle-time reduction there may be a sponsor-facing competitive claim rather than an ICON margin item, and management did not say which. The margin bridge fails cleanly \u2014 Clerkin credits pass-through mix, cost actions and resourcing, and Balfe's own release quote credits \"disciplined cost management\", with AI absent from every driver. $20.9M of Q2 restructuring ($31.0M YTD) for \"elimination of redundant positions\" independently explains the cost actions. The peer set removes the last doubt: IQVIA booked $63m of restructuring in the same quarter ($114m 1H, roughly 3x ICON's) and attributed none of it to AI, while Medpace turned 17.2% revenue growth into a 90bp SG&A-ratio improvement with no AI and no restructuring at all. Every element of ICON's financial story is being reproduced by peers without an AI narrative.",
+   "survives": "SmartDraft is a genuinely named system with a genuinely quantified cycle-time effect, stated by the CEO on the record, and the Anthropic collaboration is real and multi-year. If the benefit is retained and gets a post-Claude baseline, this becomes testable quickly.",
+   "materiality": "Unquantifiable. Q2 direct costs were $1,584.2M on $2,063.5M revenue and ICON's cost base is overwhelmingly billable delivery labour; contract negotiation is one sub-process inside study start-up. Cannot be shown to clear the ~0.5% of opex floor.",
+   "watch": "Q3/Q4 2026: does ICON quantify the Claude-enabled SmartDraft benefit in dollars or as a stated bps contribution to gross margin, AND state explicitly that the benefit is retained rather than passed to sponsors? A restated cycle-time figure with a post-Claude baseline distinct from the pre-Claude 30% is the minimum threshold."
+  },
+  {
+   "ticker": "MKL",
+   "company": "MARKEL GROUP",
+   "sub_industry": "Property & Casualty Insurance",
+   "score": 18,
+   "call_date": "2026-07-29",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-markel-group-q2-2026-beats-eps-shares-fall-58-93CH-4825203",
+   "headline": "Best AI deployment story of the run, monetized as revenue and invisible to the expense line",
+   "quotes": [
+    {
+     "q": "the reduction in time to have an initial risk assessment in front of an underwriter has fallen by between 50%-90%",
+     "who": "Simon Wilson, Chief Executive Officer, Markel Insurance"
+    },
+    {
+     "q": "The result is higher levels of better quality business, with the WI portfolio in London growing by 50% in the year since we deployed Harvey.",
+     "who": "Simon Wilson, CEO Markel Insurance \u2014 converting the metric into revenue"
+    },
+    {
+     "q": "The improvement was driven by more favorable prior year reserve development and a slightly lower expense ratio",
+     "who": "Markel CFO \u2014 the margin bridge, with no AI in it"
+    },
+    {
+     "q": "AI is only beneficial if it improves our service to customers while generating returns on capital over time.",
+     "who": "Simon Wilson, CEO Markel Insurance \u2014 self-qualification"
+    }
+   ],
+   "kill": "Markel fails the threshold test before any peer comparison is needed: it does not disclose an expense ratio at all, in either the Q2 release or the Q1 or Q2 calls, so there is no financial series in which an AI-driven expense benefit could ever be observed. The CFO's \"a slightly lower expense ratio\" is an adjective, not a number. The combined ratio of 93% versus 97% is fully accounted for by items management itself identifies as non-operating: favourable prior-year reserve development, offset by $41m of Middle East catastrophe losses and a two-point drag from the exited Global Reinsurance division. The 50-90% cycle-time gain is real and impressive, but Wilson converts it into a revenue claim in the same breath \u2014 the London W&I portfolio growing 50% \u2014 and underwriters are redeployed, not removed. Under this methodology that is an AI-as-revenue thesis: logged, never scored. The Bain & Company partnership compounds it \u2014 Cortex's underwriting tools were designed jointly with a strategy consultancy, making consultancy-led operating-model redesign the more parsimonious explanation for any operating improvement that eventually appears. And \"$500 million of existing GWP\" is a PREMIUM denominator, not an expense denominator, so materiality against opex cannot be established even in principle. The peer set forecloses the remainder: in the same quarter W.R. Berkley improved its combined ratio 160bps while holding its expense ratio unchanged at 28.5% to the tenth of a point, RLI's deteriorated 110bps on cats and Cincinnati Financial's 590bps on cats. Q2 2026 P&C combined ratios moved on catastrophe load and reserve development, in both directions, with no AI content. Markel moved the same way, for the same reasons, and disclosed less about its expenses than any peer in the comparison.",
+   "survives": "This is the richest AI DEPLOYMENT disclosure in the run \u2014 named vendors (Harvey AI, Bain, Cytura), a named new unit (Cortex, launched in wholesale and specialty), a dated capital vehicle (February AI accelerator fund, nine ideas into production in a single month), and a scoped footprint of six classes rewired over $500m of existing GWP. The technology is not in doubt. The accounting visibility is.",
+   "materiality": "Cannot be established. No expense figure of any size is disclosed, so the ~0.5%-of-opex floor cannot be tested even in principle.",
+   "watch": "Q3 2026 or the 2026 10-K: does Markel begin disclosing a Markel Insurance expense ratio as a standing metric, and does management attribute a quantified basis-point movement in it to Cortex/Harvey \u2014 separately from GWP growth and separately from the Bain engagement? A disclosed expense ratio is the precondition; without it MKL is permanently unscoreable on this thesis regardless of how good the technology is."
   }
  ]
 }

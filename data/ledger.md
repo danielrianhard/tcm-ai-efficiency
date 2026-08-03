@@ -5,9 +5,9 @@
 - **Universe:** 345 companies (boss-provided Bloomberg screen, "AI adoption .pdf")
 - **Baseline:** Phase 1 deep verification completed 2026-07-21
 - **Methodology:** see `claude/AI_Efficiency_Methodology.md` (admission criteria, strictness filter, scoring rubric, run procedure)
-- **Last run:** 2026-07-31 (Tier 0 degraded a fourth consecutive run — finnhub blocked; calendar rebuilt from digrin, which added only CBOE, so the run was effectively the carried 47-name requeue. Calibration PASSED exactly 87/53/38. 48 queued, 26 scanned to full transcript, 6 Tier 1 PASSes, 5 independent adversarial passes, 0 additions)
-- **Standing:** 21 realized · 25 plan · 23 cut · 276 outside · 9 near-misses · 0 additions since baseline
-- **Pending requeue (next run):** BG, BGC, CBOE, CHRW, CI, CR, FLS, GATX, GH, ITW, L, LECO, LNC, MMSI, PRU, RCL, RYAN, SAIA, SPXC, TTEK, VIRT, WERN (22) — CHRW is still first: `pending_deep_review` is retained and the demotion review stays open because the Q2-2026 transcript has now been unobtainable for three consecutive runs. Only three of the 22 are genuine timing (L reports 3 Aug, PRU 5 Aug, CBOE 31 Jul); the rest are sourcing failures — MarketScreener paywalled, Seeking Alpha barred by rule, stale Fool URLs, and WebFetch's provenance gate blocking any URL not surfaced by a search result. Next run must try investor.chrobinson.com directly before spending budget on aggregators.
+- **Last run:** 2026-08-03 (Tier 0 degraded a fifth consecutive run — finnhub blocked; calendar rebuilt from a substitute source for 3 Aug, 1-2 Aug a weekend. Calibration PASSED 88/54/38 vs 87/53/38. 26 queued, 20 scanned to full transcript, 2 Tier 1 PASSes, 2 independent adversarial passes, **0 additions, 2 material score moves: CHRW 87 -> 68 and RYAN 57 -> 42**, and one integrity correction voiding the 31 Jul peer test)
+- **Standing:** 21 realized · 25 plan · 23 cut · 276 outside · 10 near-misses · 0 additions since baseline. **Top score is now XPO 71; CHRW has fallen to 5th at 68.**
+- **Pending requeue (next run):** CHRW, CNH, JXN, L, MAR, PRU, WGS (7) — CHRW is first and stays first: `pending_deep_review` is retained and the demotion review remains open because **the mandatory peer-set test has still never validly run**. The other six are genuine timing, not sourcing failures: CNH, L, MAR, JXN and WGS all reported on 3 Aug with no transcript published yet, and PRU reports 4 Aug. Sourcing was materially better this run — 20 of 26 names reached a full transcript.
 
 ## Status codes
 
@@ -20,11 +20,13 @@
 
 ## ADMITTED — the database (46 names)
 
+> **Ranking note (2026-08-03):** CHRW's markdown to 68 moves it from rank 1 to rank 5, and RYAN's to 42 moves it to 43. The `#` column below is ordered as of the Phase 1 baseline and is stale for those two; `data/state.json` and the rendered site carry the live ranks.
+
 Ticker key: `TICKER·CN` = Canadian listing; all others US.
 
 | # | Ticker | Company | Sub-industry | Mkt Cap $B | Status | Score | Admitted | Last scanned | Last qtr verified | Notes / evidence pointer |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 1 | **CHRW** | CH ROBINSON | Air Freight & Logistics | 23.2 | realized | 87 | 2026-07-21 | 2026-07-21 | Q1-2026 era (Phase 1) | Phase 1 top score. Realized anchor: quantified AI productivity in shipments/person/day and opex. |
+| 5 | **CHRW** | CH ROBINSON | Air Freight & Logistics | 23.2 | realized | **68** | 2026-07-21 | 2026-08-03 | Q2-2026 (primary source) | **Marked down 87 -> 68 on 2026-08-03.** -10 AI-revenue conflation, -9 financial-statement visibility. The -15 metric-definition penalty was DISPROVEN and withdrawn. Demotion review REMAINS OPEN; mandatory peer test still never validly run. |
 | 2 | **XPO** | XPO INC | Cargo Ground Transportation | 24.6 | realized | 71 | 2026-07-21 | 2026-07-21 | Q1-2026 era (Phase 1) | Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets) |
 | 3 | **FDS** | FACTSET RESEARCH | Financial Exchanges & Data | 9.4 | realized | 70 | 2026-07-21 | 2026-07-21 | Q1-2026 era (Phase 1) | Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets) |
 | 4 | **HNGE** | HINGE HEALTH-A | Health Care Services | 7.0 | realized | 70 | 2026-07-21 | 2026-07-21 | Q1-2026 era (Phase 1) | Phase 1 evidence: see TCM_AI_Efficiency_Database_FINAL (tear-sheets) |
@@ -609,3 +611,103 @@ Held at 54. Triggers: if Q3 still puts no dollar or percentage on the AI share o
 **Closest outside names among the FAILs, all rejected:** ICE (Benjamin Jackson, President, on *"a voice assistant resolving common inbound calls before they reach a person taking cost out of the call center"* — an unusually specific mechanism with no number anywhere; the highest-probability future PASS in the batch), H — Hyatt (a large-scale AI platform for scoring group business, but the one hard number, PMS cost to owners −40%, belongs to a platform migration, not to AI), WCC (CFO Indraneel Dev ties AI to compressing the working-capital cycle — right category, zero quantification), PIPR (AI discussed adjacent to non-comp expense with no causal link), SCI (AI-driven sales training at scale, unquantified). **TEM — Tempus AI** is a clean confirmation of the AI-vendor exclusion rule: it produced the batch's only quantified AI figures and every one of them was product revenue.
 
 **Sourcing is now a structural problem, not a one-off.** 22 of 48 names could not be advanced, and only three are genuine timing. The rest failed on sourcing: MarketScreener paywalled, Seeking Alpha barred by rule, several Motley Fool URLs stale or 404, and WebFetch's provenance gate blocking any URL not surfaced by a search result. None of the 22 was stamped `last_scanned`; all retry tomorrow. Tier 0 has now been degraded four consecutive runs — finnhub.io is not reachable by any permitted route from this environment, and the calendar substitute of the day determines coverage. That is worth fixing before it silently narrows the universe.
+
+---
+
+# Run of 2026-08-03
+
+Tier 0 degraded a **fifth** consecutive run. finnhub.io returned `PROVENANCE_REQUIRED` to WebFetch and remains proxy-blocked from the shell; the 3 Aug calendar was rebuilt from a substitute source reached via search, and 1–2 Aug was a weekend with no US reporters. Intersected with the universe, the 3 Aug list yielded five names — CNH, L, MAR, JXN, WGS — all of which report today with no transcript yet, so the run was effectively the 22-name requeue carried from 31 Jul. **26 queued, 20 scanned to a full transcript, 6 requeued.**
+
+**Calibration PASSED.** The three frozen cases re-scored blind at **88 / 54 / 38** against expected 87 / 53 / 38 — all within the ±3 tolerance. Score decisions were therefore permitted, and two were taken.
+
+*Process note for the next calibration:* the blind file retained each case's `role` label, `tolerance` and prose `note`, one of which states its own expected score outright. **Strip `role`, `tolerance` and `note` before the next run.** This run's calibration should be treated as passed but not cleanly blind.
+
+## 1. The integrity correction — the 31 Jul peer test is VOID
+
+**The mandatory peer-set test recorded in the 31 Jul entry as `SURVIVES` did not happen, and the ledger must not rely on it.**
+
+Three of the four cited peers had not reported Q2 2026 on 31 Jul, and still had not as of today:
+
+| Peer | Cited in the 31 Jul entry as Q2-2026 | Actual Q2-2026 report date | Status |
+|---|---|---|---|
+| **LSTR** | revenue +18.2%, revenue/load +17.0%, operating margin flat 4.6%, SG&A +22.4% | reported late July | **valid** |
+| **RXO** | "brokerage gross margin fell 50bp sequentially on truckload volume −12%" | **2026-08-06** | **did not exist** |
+| **EXPD** | "added FTEs +6.0% with salaries +9.1% while expanding margin 63bp" | **2026-08-04** | **did not exist** |
+| **FWRD** | "adjusted EBITDA rose 1.4%, zero AI mentions" | **2026-08-05** | **did not exist** |
+
+Report dates verified independently today from the companies' own scheduling releases. The Expeditors figures are demonstrably that company's **Q1-2026** numbers mislabelled as Q2: FTEs 19,203 → 20,361 = **+6.0%**; salaries and related $457.9m → $499.6m = **+9.1%**. Exact match on both, to the decimal.
+
+**Consequence.** The runbook's "single most decisive test, mandatory every run" has now failed to run for **four consecutive runs**, and one of those failures is recorded in an append-only log as a pass. The cycle explanation for CHRW is therefore neither refuted nor established — it is **NULL**, not SURVIVES. The conditional trigger from 30 Jul branch (c), "if the metric is restated intact, close the review at 87", cannot be executed on a control group of one.
+
+This entry is the correction. Per the append-only rule the 31 Jul entry is not rewritten; it is superseded by this one.
+
+## 2. CHRW — marked down 87 → 68, review REMAINS OPEN
+
+The Q2-2026 call (29 Jul) was read to primary source for the first time in four attempts. The pivotal question resolved in the company's favour and against it at once.
+
+**The primary source the 31 Jul denial was waiting on now exists — and the claim is struck again on stronger grounds.** Arun Rajan, Chief Strategy and Innovation Officer, did say it, in prepared remarks: *"The Lean AI Engineer can assess an entire supply chain in 25-30 minutes ... compared to supply chain assessments that typically take up to four weeks."* But he frames it inside a revenue line — *"In our 4PL Managed Solutions business, our new technology, called Lean AI Engineer, works in concert with our Lean AI Planner"* — which makes it a customer-facing product claim measuring a **customer's** assessment cycle time, not CHRW's own cost base. The "up to four weeks" baseline has no stated source, sample, scope or measurer. **An earnings call is a venue, not a verification:** reading a product-launch claim into prepared remarks does not convert marketing into evidence. The 30 Jul strike stands in substance. **Rubric −10, AI-revenue conflation.**
+
+**The −15 metric-definition penalty is DISPROVEN and formally WITHDRAWN, and CHRW earned that outright.** Michael Castagnetto, President of NAST, Q1: *"Since the end of 2022, we have delivered a more than 50% increase in shipments per person per day, and this is measured across the entirety of our NAST organization."* Q2: *"...a greater than 60% increase since the end of 2022 in shipments per person per day, measured across the entirety of our NAST organization."* Identical base period, identical segment, identical qualifier. This is the strongest disclosure discipline in the database and the 30 Jul predicate — that the metric had been withdrawn — rested on its absence from an 8-K, exactly the inference the 31 Jul entry warned against. One real exception logged: CEO Dave Bozeman extended the NAST-only figure to *"both NAST and Global Forwarding"*, a segment for which no such figure has ever been disclosed in either quarter.
+
+**The markdown rests instead on new disconfirming evidence, on a leg the review had not previously attacked: financial-statement visibility.**
+
+- Damon Lee, CFO: *"Q2 personnel expenses were $338.5 million, including $8 million of restructuring charges."* Ex-restructuring $330.5m vs $331.4m = **−0.3%**; as-reported **+0.9%**.
+- Against average headcount *"down 10.8% year-over-year in Q2"* — so **personnel cost per head rose roughly 12–13%**.
+- Total opex **+1.0%** (+$4.9m). **$26.8m of H1-2026 severance**, a charge that is recurring and pre-dates the AI branding ($3.9m in Q2-2025).
+- FY personnel guided to *"the higher end of our range of $1.25 billion–$1.35 billion"* — a full year of "double-digit productivity improvements" plus an ~11% headcount cut is guided to produce **no reduction in absolute personnel cost**.
+- **No dollar figure is attached to AI anywhere on the call.** Realized AI-attributed saving this quarter: **$0**.
+- The productivity metric is ~88% denominator-driven: volume +1.5%, heads −10.8%, giving 1.015/0.892 ≈ +13.8% of the reported 15%.
+- Not one analyst asked a single question about AI, productivity sustainability or the headcount deceleration. Zero external verification pressure.
+
+The ledger's own stated basis for the 87 — *"quantified AI productivity in shipments/person/day **and opex**"* — is half false this quarter. **−9 financial-statement visibility. 87 → 68.**
+
+**In fairness, and the record should carry it:** CHRW held total operating expenses to +1.0% while revenue grew 19.3%, and the only peer that has actually reported let SG&A run +22.4% for a flat operating margin. On operating income as a share of net revenue, **LSTR +19bp against CHRW +360bp** — same quarter, same rate upcycle, same asset-light truckload brokerage, with volume beating the index for a 13th consecutive quarter (+1.5% vs −3.3%) so the productivity denominator is not being flattered by a shrinking book. No item on the kill list fully accounts for that gap. One peer is not a control group, but it is the only real evidence in the file that CHRW is doing something its sub-industry is not.
+
+**Why the review does not close, and why it does not go further.** Demotion to `plan` was considered and rejected: the peer test has still never validly run, and all three missing peers report within 72 hours. Equally, holding at 87 was rejected: the −10 and the opex disproof are complete today and depend on no peer at all. **Trigger set for 2026-08-07 or later:** if two or more of RXO / EXPD / FWRD post comparable net-revenue margin expansion with no AI attribution, `realized → plan` and **68 → ~45**. If they resemble Landstar, close the review at 68.
+
+## 3. RYAN — Tier 1 PASS, promotion DENIED, marked down 57 → 42, held at `plan`
+
+The only other PASS of the run, and the reason the deep scan exists. Promotion to `realized` requires the AI benefit to be visible in the financials. Every relevant line moved the other way.
+
+Two AI claims carry a number, both from **Miles Wuller, CEO of Underwriting Managers**, both volunteered unprompted in answers to questions about something else:
+
+> *"Proudly, with both investment and augmentation of AI, we're auditing five times as many files as we did last year."*
+
+> *"The average RSUM on property employee, and this is property employees, not just the underwriters, achieved 11% more quotes per head ... That certainly includes hustle, but it also represents our investments in automated data extraction, data structuring, enrichment, and rating pre-population coming to life."*
+
+Neither carries a dollar denominator. Management hedges the second itself — *"includes hustle"* — and Tim Turner, CEO, supplies the confound in the same call: *"While the prices on the CAT book were down as much as 25% or 35%, we were hanging on to the business."* A 25–35% price collapse drives remarketing and shopping volume up mechanically, so a quotes-per-head count rises with no tool involved. File audit, meanwhile, is second-line governance: doing five times more of it **consumes** resource. Neither number is a cost line.
+
+**Attribution defect, filed so the quote is never misused:** investing.com prints part of the 11% sentence under the label *"Tim Turner, Chief Executive Officer"* while the same speaker block opens *"This is Miles."* The quote is filed on internal evidence, not on the transcript label.
+
+**The financials, verified against the press release:** compensation and benefits **58.0% of revenue vs 56.7%** (+130bp worse); G&A **12.9% vs 12.5%**; adjusted EBITDAC margin **35.7% vs 36.1%**; opex **+10.9%** against revenue **+7.2%**; headcount **6,171, +479 (+8.4%)**; **revenue per employee −1.1%**.
+
+**Management's own bridge never says AI.** Janice Hamilton, CFO: *"Margins were supported by stronger than expected organic growth, disciplined cost management, as well as early progress in the operational efficiencies underway through Empower."* Full-year guidance did improve, from *"down approximately 100 basis points to 150 basis points"* to *"down approximately 50 to 100 basis points"* — but the only new clause in an otherwise word-for-word repeated sentence is *"offset by disciplined cost management and recent progress from the Empower program"*, and Empower's 8-K enumerates exactly two elements, *"(i) Business Platform Optimization"* ($115m) and *"(ii) Compensation and Benefits"* ($45m, severance-class), with $80m of savings dated **2029**. AI is not among them.
+
+**The decisive finding is total metric turnover.** None of Q1-2026's three quantified AI metrics — 24h → under 2h submission turnaround; 2h → minutes with ~10x submissions per underwriter at Ryan Re; 11x submit-to-bind uplift at Velocity — was restated in Q2, and two unrelated new ones replaced them. **Five quantified AI claims across two quarters with zero overlap, and therefore no time series.** Nothing RYAN has said about AI can ever be re-tested. This is worse than going quiet: going quiet is legible, whereas silent substitution manufactures a permanent *appearance* of progress for any reader who samples a single quarter.
+
+**Peer set — run in full, and fatal.** **AON** expanded adjusted operating margin **+70bp** and cut compensation dollars **−4% (−$89m)** on the same 5% organic growth, **with no AI efficiency story at all**. **BRO** held its comp ratio to **+20bp on negative organic growth**. A peer with no tool beat the name with the tool, on the same cycle, in the same quarter. In fairness: RYAN's −40bp was the second-best margin outcome in the five-peer set, ahead of BRO (−100bp) and AJG (−280bp). RYAN is not an outlier on margin — it is an outlier on the **comp ratio**, which is precisely the line AI would be expected to touch.
+
+**Penalties applied, and one deliberately withheld.** −10 AI-revenue conflation, applied **literally**: Turner's *"for our clients, our reinsurance FAC workbench now turns a submission into a priced decision-ready file in minutes, not days"* is client-facing, and *"our advantage is the proprietary data and hard-won expertise built into our platform"* is a moat argument. −5 for metric turnover: the rubric's −15 *"metric definitions that shift quarter to quarter"* is applied at **partial weight only**, because RYAN did not shift a definition, it replaced the metric set — a reasoned extension of the provision rather than a literal application — and because the on-point **ADT precedent** (plan/54 held one run ago on a near-identical fact pattern) counsels restraint. **Financial-visibility charges were considered and deliberately NOT applied:** RYAN is a `plan` name and must not be marked down on `realized`-name tests. **57 → 42.**
+
+Status held at `plan`, and demotion to `cut` rejected: `plan` requires a specific quantified credible plan, and Empower is exactly that — $160m, ~$80m by 2029, properly dated, no run-rate overclaim. The plan is real. Its attribution to AI is what fails. **Watch:** whether either Q2 metric is restated in Q3. A third consecutive full turnover justifies demotion to cut.
+
+## 4. The other 18 — all FAIL, all filed
+
+**Closest fail of the run: RCL.** Jason Liberty, Chairman and CEO, names AI as a margin lever with no number — *"expanding margins by continuously identifying efficiencies through prioritizing spend and leveraging technology and AI"* — while the one AI sentence carrying a number is revenue-side yield optimisation (*"about 20 million and growing price points to optimize our yield"*), which is a scale metric, not a cost outcome. Flagged so it is never miscoded: the *"90% of our guests now use our app"* statistic is digital adoption with no AI attribution and no cost linkage.
+
+**Richest unquantified AI footprint, and the highest-probability future convert in the universe: WERN.** Werner talks about AI more than any name screened this run — load planning, maintenance, safety, driver recruiting, appointment scheduling, roadside breakdown support, carrier payments — and attaches a number to none of it. If it ever quantifies the load-planning or carrier-payments automation, it converts.
+
+**Cut name upheld: CI.** Brian Evanko, President and CEO, on Pharmacy Forward: *"Our targeted use of AI is expected to cut time to therapy in half on average."* New disclosure, but forward-looking (*"is expected to"*, *"up to"*) and attached to a client- and patient-facing commercial programme measuring patient and clinician outcomes, not Cigna's own SG&A, admin expense ratio or headcount. It restates the recorded cut reason rather than overcoming it. Not re-litigated.
+
+**Logged to the separate AI-as-revenue thesis, never scored here:** BGC (Compute Infrastructure Markets — a brokerage market for compute capacity), TTEK (AI-enabled optimisation sold to clients), GH (InfinityAI as a discovery engine feeding pipeline and biopharma partnerships), SPXC (data-centre demand, i.e. AI as a demand driver for its products).
+
+**Said nothing about AI at all:** CBOE (confirmed against a second independent transcript — a completely AI-silent quarter for an exchange operator with a new CEO), VIRT, MMSI, BG. VIRT is logged as a known screen blind spot: for an automated market maker the silence is a disclosure convention, not an absence of technology.
+
+**Excluded by the methodology rather than by absence:** ITW, whose margin commentary is attributed to the 80/20 Front-to-Back programme — conventional process re-engineering; LECO, whose automation segment is welding robotics sold as product; SAIA, whose operating-ratio movement is ordinary freight pricing, volume and network maturation. Also FAIL with no AI number: CR, FLS, GATX, LNC.
+
+## 5. Standing after this run
+
+- 21 realized · 25 plan · 23 cut · 276 outside · **10 near-misses** · **0 additions since baseline**
+- **Top score is now XPO 71.** CHRW falls to rank 5 at 68 — the first time since the baseline that the Phase 1 anchor has not led the table.
+- The frozen calibration case CHRW-2026-07-21 **still scores 87 and always will.** That is the point of freezing it: the yardstick does not move when the live name does.
+- Requeue: CHRW (peer test), CNH, JXN, L, MAR, PRU, WGS.

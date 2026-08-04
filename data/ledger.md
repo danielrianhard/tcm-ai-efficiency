@@ -5,9 +5,9 @@
 - **Universe:** 345 companies (boss-provided Bloomberg screen, "AI adoption .pdf")
 - **Baseline:** Phase 1 deep verification completed 2026-07-21
 - **Methodology:** see `claude/AI_Efficiency_Methodology.md` (admission criteria, strictness filter, scoring rubric, run procedure)
-- **Last run:** 2026-08-03 (Tier 0 degraded a fifth consecutive run — finnhub blocked; calendar rebuilt from a substitute source for 3 Aug, 1-2 Aug a weekend. Calibration PASSED 88/54/38 vs 87/53/38. 26 queued, 20 scanned to full transcript, 2 Tier 1 PASSes, 2 independent adversarial passes, **0 additions, 2 material score moves: CHRW 87 -> 68 and RYAN 57 -> 42**, and one integrity correction voiding the 31 Jul peer test)
+- **Last run:** 2026-08-04 (Tier 0 degraded a **sixth** consecutive run — finnhub blocked on both 3 and 4 Aug; calendar rebuilt from Kiplinger's weekly 3-7 Aug calendar and **cross-checked against two Earnings Whispers day-lists**, a cross-check that recovered EXPD and APO — both omitted by the primary substitute, and EXPD is the load-bearing name in the open CHRW peer test. Calibration PASSED 86/51/38 vs 87/53/38. 35 queued, 3 scanned to full transcript, **0 PASS, 0 additions, 0 score moves**. The entire 4 Aug cohort was unscannable by construction — the scan ran at 07:34 ET, before any 4 Aug call had been held.)
 - **Standing:** 21 realized · 25 plan · 23 cut · 276 outside · 10 near-misses · 0 additions since baseline. **Top score is now XPO 71; CHRW has fallen to 5th at 68.**
-- **Pending requeue (next run):** CHRW, CNH, JXN, L, MAR, PRU, WGS (7) — CHRW is first and stays first: `pending_deep_review` is retained and the demotion review remains open because **the mandatory peer-set test has still never validly run**. The other six are genuine timing, not sourcing failures: CNH, L, MAR, JXN and WGS all reported on 3 Aug with no transcript published yet, and PRU reports 4 Aug. Sourcing was materially better this run — 20 of 26 names reached a full transcript.
+- **Pending requeue (next run):** 31 names — CHRW, JBTM, JXN, MAR (carried) plus the full 4 Aug cohort: ADM, AFG, AIZ, APO, BIO, BRKR, CACC, CRBG, DVA, EQH, EXPD, GWW, GXO, HNGE, HSIC, INGR, NPO, PLMR, PRU, RVTY, SYY, TKR, TOST, UPST, VOYA, WAT, XMTR. CHRW is first and stays first: `pending_deep_review` retained, demotion review open, **the mandatory peer-set test has still never validly run** and cannot until 2026-08-07. Priority tomorrow is the five admitted names that reported on 4 Aug — **XMTR (realized 66), HNGE (realized 70), TOST (realized 60), UPST (realized 66), CACC (plan 42)** — the database checking itself.
 
 ## Status codes
 
@@ -711,3 +711,48 @@ Status held at `plan`, and demotion to `cut` rejected: `plan` requires a specifi
 - **Top score is now XPO 71.** CHRW falls to rank 5 at 68 — the first time since the baseline that the Phase 1 anchor has not led the table.
 - The frozen calibration case CHRW-2026-07-21 **still scores 87 and always will.** That is the point of freezing it: the yardstick does not move when the live name does.
 - Requeue: CHRW (peer test), CNH, JXN, L, MAR, PRU, WGS.
+
+
+---
+
+# Run 2026-08-04 — quiet day, one structural cleanup
+
+**0 additions · 0 promotions · 0 demotions · 0 score moves · 0 new near-misses.** Calibration passed 86/51/38 against 87/53/38, so score decisions were permitted; none were warranted, because nothing passed Tier 1.
+
+## 1. Tier 0 — the calendar problem is now chronic, and the fix is redundancy
+
+finnhub.io returned `PROVENANCE_REQUIRED` for a **sixth consecutive run** on both 3 and 4 Aug, and earningswhispers.com and digrin.com failed the same way on direct fetch. The calendar was rebuilt from Kiplinger's weekly 3-7 Aug listing and **cross-checked against two Earnings Whispers day-lists surfaced through search**.
+
+**The cross-check earned its keep immediately.** Kiplinger's 4 Aug before-open list omitted **EXPD** and **APO**; the Earnings Whispers list carried both. EXPD is not an incidental miss — it is one of the four peers in the open CHRW test. A single-source calendar would have silently dropped it. **Two independent calendars are now the standing minimum until finnhub is restored.**
+
+Intersection with the universe: **27 reporters on 4 Aug** (13 before open, 14 after close) plus 4 carried from 3 Aug. The scan ran at **07:34 ET** — before any 4 Aug call had been held — so the whole 4 Aug cohort is unscannable by construction and requeues intact. That is timing, not a sourcing failure.
+
+## 2. Three transcripts read in full — three FAILs
+
+**WGS (GeneDx), Q2, 3 Aug — the closest thing to a candidate, and a clean demonstration of where the bar sits.**
+
+> *"We're applying artificial intelligence and other systems and processes around or across our entire Revenue Cycle operations to build a more intelligent and scalable function."* — Mark Gardner, President
+
+That is an explicit AI attribution to a named internal function, volunteered by the President. It still fails, because **not one number is attached to it anywhere in the call** — no cost, no headcount, no cycle time, no straight-through-processing rate, no margin. An attribution without a denominator is a slogan. **Watch item opened:** if GeneDx dollarises or rate-quantifies the revenue-cycle claim in Q3 2026, it becomes a genuine candidate.
+
+**CNH, Q2, 3 Aug — clean negative.** No AI, ML or automation language paired with any number anywhere in the call body. The one AI sentence on the page — *"advancing our precision technology capabilities with increasing adoption of connected and AI-enabled solutions"* — sits in **Investing.com's own editorial summary, not in the call**, and is a precision-agriculture *product* claim. Filed explicitly so the row is never re-read as a missed disclosure.
+
+**L (Loblaw, TSX), Q2, call 30 Jul — zero AI mentions of any kind.** Confirming negative against the 21 Jul cut. Nothing overcomes the recorded cut reason; not re-litigated.
+
+## 3. Structural cleanup — Loews retired from the queue
+
+**L (Loews Corp, US) holds no earnings conference call at all.** Its own release states it *"will also post earnings remarks on its website"* — commentary from CEO Ben Tisch and CFO Jane Wang — and its IR FAQ confirms online earnings remarks in place of a live call. Two retry passes across ten sources were spent on a transcript that **cannot exist in any quarter**.
+
+Retired from `pending_requeue` on the **MLI precedent (28 Jul)**. `last_scanned` deliberately **not** advanced, because no call was read. If Loews coverage is ever required, the substitute artifact is the quarterly Earnings Remarks PDF on loews.com, and it must be logged as a **distinct source type, never as a call transcript**.
+
+MAR, JXN and JBTM stay `NO_TRANSCRIPT` and requeue: JXN and JBTM both call at 10:00 ET **today**, after this scan; MAR called 3 Aug and no free verbatim transcript is published yet. MarketBeat's MAR *summary* references *"Ask Bonvoy, an artificial intelligence-powered conversational search feature"* with no efficiency number — noted here and **not scored**, because a summary is not a transcript and a guest-facing search feature is a product, not an operating-efficiency claim.
+
+## 4. CHRW — unchanged, and the wait is deliberate
+
+No new evidence read, **score held at 68, demotion review remains open**. Peer reporting dates were re-confirmed independently off today's calendar: **EXPD 4 Aug before open, FWRD 5 Aug after close, RXO 6 Aug before open.** The first date on which the mandatory four-name peer test (LSTR/EXPD/FWRD/RXO) can validly run is **2026-08-07**, exactly as recorded on 3 Aug. The 31 Jul peer test remains VOID. `pending_deep_review` retained; first in the queue.
+
+## 5. Standing after this run
+
+- 21 realized · 25 plan · 23 cut · 276 outside · **10 near-misses** · **0 additions since baseline**
+- **Top score remains XPO 71**; CHRW 68 at rank 5.
+- Requeue 31 names. Tomorrow's priority is the five admitted names that reported on 4 Aug — **XMTR, HNGE, TOST, UPST, CACC** — the database checking itself.
